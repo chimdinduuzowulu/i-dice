@@ -209,11 +209,16 @@ a:focus,
   width: 100%;
   padding: 0;
   background: url(../img/about.jpeg) center center no-repeat;
+  background-attachment: fixed;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+details, summary {
+  appearance: none;
+  -webkit-appearance: none;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.79);

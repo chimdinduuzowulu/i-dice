@@ -22,9 +22,9 @@ let key = 1;
                     </svg>
                 </div>
                 <div>
-                <details className="flex">
-                <summary>
-                  <h4 className="text-2xl font-bold text-gray-700">{faq.title}</h4>
+                <details className="">
+                <summary className="text-2xl font-bold text-gray-700"> 
+                  {faq.title}
                 </summary>
                 <p className="text-gray-600 my-2 leading-[36px] text-justify">{faq.text}</p>
                 <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline capitalize" title="Read More">Read More</a>

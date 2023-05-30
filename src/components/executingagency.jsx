@@ -5,7 +5,7 @@ export const ExecutingAgency = (props) => {
     <div id="features" className="text-center py-12">
       <div className="container">
         <div className="col-md-11 col-md-offset-1 section-title">
-          <h2 className="capitalize">Executing Agency - Bank of Industry (BOI)</h2>
+          <h2 className="capitalize text-[23px] font-bold">Executing Agency - Bank of Industry (BOI)</h2>
         </div>
         <div className="w-11/12 m-auto my-6 tracking-normal font-normal text-14 leading-[100px] mb-[39px]">
           <p className="leading-[38px] mt-8 text-justify">BOI has executed a number of impactful programs such as the AFDB $100 million SME financing program which funded over 40 SMEs in various sectors (agribusiness, manufacturing, hospitality & tourism, construction, food and beverages sectors), and generated over 20,000 direct jobs. BOI is one of the administering agencies for the World Bank’s US$ 750 million COVID-19 Action Recovery and Economic Stimulus Program (NG-CARES), a program set up to mitigate the effect of the pandemic on farmers, small business, the poor and vulnerable.</p>
