@@ -17,7 +17,7 @@ const Footer = () => {
                 </Link>
               </div>
               <Link to="#" className="text-white">
-                Hello@coderthemes.com
+                contact@idice.org
               </Link>
               <p className="text-white">+01 ( 1234 567 890 )</p>
 
