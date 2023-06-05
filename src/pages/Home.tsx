@@ -12,6 +12,11 @@ import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 import Counter from "../components/Counter";
 import Testimonial from "../components/Testimonial";
+import About from "../components/About";
+import ProgramComponents from "../components/ProgramComponents";
+import Agencies from "../components/Agencies";
+import News from "../components/News";
+import Partnership from "../components/Partnership";
 
 const Home = () => {
   return (
@@ -21,33 +26,31 @@ const Home = () => {
       {/* header and hero */}
       <div id="home">
         <Hero4 />
-        {/* how it work */}
-        <HowItWork />
       </div>
-      <div id="features">
-        {/* features1 */}
-        <Features1 />
-        {/* fetures2 */}
-        <Features2 />
-        {/* counter */}
-        <Counter />
+      <div id="about">
+        <About />
       </div>
-      <div id="screenshot">
-        {/* slider */}
-        <Slider />
+      <div id="components">
+        <ProgramComponents />
       </div>
-      {/* testimonial */}
-      <Testimonial />
-      <div id="pricing">
-        {/* pricing */}
-        <Pricing />
+      <div id="agencies">
+        {/* agencies */}
+        <Agencies />
+      </div>
+      <div id="news">
+        <News />
+      </div>
+      <div id="partnership">
+        <Partnership />
+      </div>
+      <div id="contact">
+        {/* contact */}
+        <Contact />
+      </div>
+      <div id="faq">
         {/* faqs */}
         <Faqs />
-        {/* cta */}
-        <Cta />
       </div>
-      {/* contact */}
-      <Contact />
       {/* footer */}
       <Footer />
       {/* back to top button */}

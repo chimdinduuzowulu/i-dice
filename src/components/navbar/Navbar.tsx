@@ -19,14 +19,12 @@ type NavbarProp = {
 
 const sectionData = [
   { id: "home", title: "Home" },
-  { id: "features", title: "Features" },
-  {
-    id: "screenshot",
-    title: "Screenshot",
-  },
-  { id: "testimonial", title: "Testimonial" },
-  { id: "pricing", title: "Pricing" },
-  { id: "contact", title: "Contact Us" },
+  { id: "about", title: "About iDICE" },
+  { id: "components", title: "Program Components" },
+  { id: "agencies", title: "Agencies" },
+  { id: "news", title: "News & Events" },
+  { id: "partnership", title: "Partnership" },
+  { id: "faq", title: "FAQ" },
 ];
 const SiteNavbar = ({ classname, isLogoDark }: NavbarProp) => {
   const [activeSection, setActiveSection] = useState<string>("home");
