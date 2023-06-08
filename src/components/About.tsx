@@ -1,5 +1,8 @@
 //images
 import logoMid from "../assets/images/logo-mid.png";
+import icon1 from "../assets/images/obj_icon_1.png";
+import icon2 from "../assets/images/obj_icon_2.png";
+import icon3 from "../assets/images/obj_icon_3.png";
 
 import { Col, Container, Row } from "react-bootstrap";
 const About = () => {
@@ -55,9 +58,11 @@ const About = () => {
         <Row>
           <Col lg={4}>
             <div className="work-box px-lg-5 text-center mb-5 mb-lg-0">
-              <div className="work-icon bg-soft-secondary mb-4">
+              {/* <div className="work-icon bg-soft-secondary mb-4">
                 <i className="mdi mdi-hand-heart-outline"></i>
-              </div>
+              </div> */}
+
+              <img src={icon1} alt="icon 1" className="w-75" />
               <p className="fs-18 fw-bold">
                 Harness Nigeria's youth talent pool (from ages 15 to 35 years)
                 and equip them with tech and creative skills to increase their
@@ -67,9 +72,10 @@ const About = () => {
           </Col>
           <Col lg={4}>
             <div className="work-box px-lg-5 text-center mb-5 mb-lg-0">
-              <div className="work-icon bg-soft-secondary mb-4">
+              {/* <div className="work-icon bg-soft-secondary mb-4">
                 <i className="mdi mdi-head-cog-outline"></i>
-              </div>
+              </div> */}
+              <img src={icon2} alt="icon 2" className="w-75" />
               <p className="fs-18 fw-bold">
                 Foster innovation, and support the emergence of more
                 entrepreneurs; supporting their growth and unlocking their
@@ -79,9 +85,10 @@ const About = () => {
           </Col>
           <Col lg={4}>
             <div className="work-box px-lg-5 text-center mb-5 mb-lg-0">
-              <div className="work-icon bg-soft-secondary mb-4">
+              {/* <div className="work-icon bg-soft-secondary mb-4">
                 <i className="mdi mdi-clipboard-check-multiple-outline"></i>
-              </div>
+              </div> */}
+              <img src={icon3} alt="icon 3" className="w-75" />
               <p className="fs-18 fw-bold">
                 Support enactment of enabling regulatory frameworks and policies
                 for new businesses and innovative ventures.
