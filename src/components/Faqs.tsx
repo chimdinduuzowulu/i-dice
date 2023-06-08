@@ -1,10 +1,10 @@
-import faq from "../assets/images/faq.png";
+import faq from "../assets/images/FAQ.jpg";
 import faqs from "../data/faq.json";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 
 const Faqs = () => {
   return (
-    <section className="section bg-light">
+    <section className="section">
       <Container>
         <Row className="justify-content-center mb-5">
           <Col md={8} lg={6} className="text-center">
@@ -13,8 +13,12 @@ const Faqs = () => {
         </Row>
 
         <Row className="align-items-center">
-          <Col lg={3}>
-            <img src={faq} alt="" className="img-fluid d-block mx-auto" />
+          <Col lg={3} className="align-items-bottom">
+            <img
+              src={faq}
+              alt=""
+              className="img-fluid d-block mx-auto w-full"
+            />
           </Col>
 
           <Col lg={8} className="offset-lg-1">

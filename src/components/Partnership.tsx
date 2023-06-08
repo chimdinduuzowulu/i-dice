@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Partnership = () => {
   return (
-    <section className="section">
+    <section className="section partnership-bg">
       <Container>
         <Row className="justify-content-center mb-2">
           <Col md={8} lg={6} className="text-center">
