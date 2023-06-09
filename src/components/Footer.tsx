@@ -16,13 +16,15 @@ const Footer = () => {
                   <img src={logoLight} alt="" />
                 </Link>
               </div>
-              <Link to="#" className="text-white">
-                contact@idice.org
+              <Link to="mailto:partnerships@idice.ng">
+                partnerships@idice.ng
               </Link>
-              <p className="text-white">+01 ( 1234 567 890 )</p>
+              {/* <p>+01 ( 1234 567 890 )</p> */}
 
-              <h5 className="fs-18 mb-3 text-white">Follow Us</h5>
-              <ul className="list-inline mt-5">
+              <h5 className="fs-18 my-3 fs-22 mb-3 fw-semibold text-white">
+                Follow Us
+              </h5>
+              <ul className="list-inline">
                 <li className="list-inline-item">
                   <Link to="#;" className="footer-social-icon">
                     <i className="mdi mdi-facebook"></i>

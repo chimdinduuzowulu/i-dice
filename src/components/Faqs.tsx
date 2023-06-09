@@ -12,8 +12,8 @@ const Faqs = () => {
           </Col>
         </Row>
 
-        <Row className="align-items-center">
-          <Col lg={3} className="align-items-bottom">
+        <Row className="align-items-top">
+          <Col lg={3} className="align-items-top">
             <img
               src={faq}
               alt=""
