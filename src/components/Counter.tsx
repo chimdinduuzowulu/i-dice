@@ -3,30 +3,20 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Counter = () => {
   const counterFunc = () => {
-    // counter
-    const counter = document.querySelectorAll(".counter_value");
-    const speed = 800; // The higher the slower
-
-    counter.forEach((counter_value) => {
+    const counters = document.querySelectorAll(".counter_value");
+    const speed = 200;
+    counters.forEach((counter) => {
       const updateCount = () => {
-        const targetStr = counter_value.getAttribute("data-target");
-
-        if (targetStr) {
-          const target = JSON.parse(targetStr);
-          const count = parseInt(counter_value.innerHTML);
-          if (target) {
-            const inc: number = target / speed;
-
-            // Check if target is reached
-            if (count < target) {
-              // Add inc to count and output in counter_value
-              counter_value.innerHTML = (count + inc).toFixed(0);
-              // Call function every ms
-              setTimeout(updateCount, 1);
-            } else {
-              counter_value.innerHTML = target;
-            }
-          }
+        const targetValue = counter.getAttribute("data-target");
+        if (targetValue === null) return;
+        const target = +targetValue;
+        const count = +counter.innerHTML;
+        const inc = target / speed;
+        if (count < target) {
+          counter.innerHTML = Math.ceil(count + inc).toString();
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerHTML = target.toLocaleString();
         }
       };
       updateCount();
@@ -34,93 +24,63 @@ const Counter = () => {
   };
 
   useEffect(() => {
-    counterFunc();
+    const observer = new IntersectionObserver(
+      (entries) => { if (entries[0].isIntersecting) { counterFunc(); observer.disconnect(); } },
+      { threshold: 0.5 }
+    );
+    const counterSection = document.getElementById("counter");
+    if (counterSection) observer.observe(counterSection);
+    return () => observer.disconnect();
   }, []);
 
+  const counterItems = [
+    { icon: "mdi-account-group-outline", color: "#f97316", target: 175000, suffix: "+", label: "Youth Trained" },
+    { icon: "mdi-rocket-launch-outline", color: "#6b21d6", target: 500, suffix: "+", label: "Startups Supported" },
+    { icon: "mdi-briefcase-outline", color: "#3b82f6", target: 6000000, suffix: "+", label: "Jobs Created" },
+    { icon: "mdi-currency-usd", color: "#fcb924", target: 64, suffix: "B+", label: "Economic Value (USD)" },
+  ];
+
   return (
-    <section className="section cta-bg">
-      <div className="bg-overlay bg-dark"></div>
+    <section style={{ background: "linear-gradient(135deg, #0f0520 0%, #1a0a3c 60%, #2d0a6b 100%)", padding: "80px 0" }}>
       <Container>
-        <Row id="counter">
-          <Col sm={6} lg={3}>
-            <div className="text-center my-3">
-              <div className="d-flex align-items-center counter-content text-start">
-                <div className="flex-shrink-0">
-                  <i className="mdi mdi-web text-white display-5"></i>
-                </div>
-                <div className="flex-grow-1 ms-4">
-                  <h1 className="text-white">
-                    <span className="counter_value" data-target="825">
-                      0
-                    </span>
-                  </h1>
-                  <p className="counter-name text-white opacity-75 mb-0 text-uppercase">
-                    Global Brands
-                  </p>
-                </div>
-              </div>
-            </div>
+        <Row className="justify-content-center mb-5">
+          <Col lg={8} className="text-center" data-aos="fade-up">
+            <h6 style={{ color: "#fdba74", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>Our Ambition</h6>
+            <h2 style={{ color: "#fff", fontWeight: 800 }}>Expected Impact</h2>
+            <p style={{ color: "#9d8aaa", marginBottom: 0, fontSize: 15 }}>
+              The iDICE programme aims to drive transformative economic outcomes across Nigeria's innovation ecosystem.
+            </p>
           </Col>
-          <Col sm={6} lg={3}>
-            <div className="text-center my-3">
-              <div className="d-flex align-items-center counter-content text-start">
-                <div className="flex-shrink-0">
-                  <i className="mdi mdi-emoticon-happy text-white display-5"></i>
+        </Row>
+        <Row id="counter" className="g-4">
+          {counterItems.map((item, idx) => (
+            <Col sm={6} lg={3} key={idx}>
+              <div
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+                style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 20, padding: "32px 24px", textAlign: "center", backdropFilter: "blur(8px)", transition: "all 0.3s" }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = item.color;
+                  (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)";
+                  (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)";
+                }}
+              >
+                <div style={{ width: 60, height: 60, borderRadius: "50%", background: `${item.color}20`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                  <i className={`mdi ${item.icon}`} style={{ fontSize: 28, color: item.color }}></i>
                 </div>
-                <div className="flex-grow-1 ms-4">
-                  <h1 className="text-white">
-                    <span className="counter_value" data-target="1800">
-                      0
-                    </span>
-                    +
-                  </h1>
-                  <p className="counter-name text-white opacity-75 mb-0 text-uppercase">
-                    Happy Clients
-                  </p>
-                </div>
+                <h2 style={{ color: "#fff", fontWeight: 800, fontSize: 36, margin: 0 }}>
+                  <span className="counter_value" data-target={item.target}>0</span>
+                  {item.suffix}
+                </h2>
+                <p style={{ color: "#9d8aaa", fontSize: 13, marginTop: 8, marginBottom: 0, textTransform: "uppercase", letterSpacing: 0.8 }}>
+                  {item.label}
+                </p>
               </div>
-            </div>
-          </Col>
-          <Col sm={6} lg={3}>
-            <div className="text-center my-3">
-              <div className="d-flex align-items-center counter-content text-start">
-                <div className="flex-shrink-0">
-                  <i className="mdi mdi-lightbulb-on text-white display-5"></i>
-                </div>
-                <div className="flex-grow-1 ms-4">
-                  <h1 className="text-white">
-                    <span className="counter_value" data-target="599">
-                      0
-                    </span>
-                    +
-                  </h1>
-                  <p className="counter-name text-white opacity-75 mb-0 text-uppercase">
-                    Creative Idea
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Col>
-          <Col sm={6} lg={3}>
-            <div className="text-center my-3">
-              <div className="d-flex align-items-center counter-content text-start">
-                <div className="flex-shrink-0">
-                  <i className="mdi mdi-account-multiple text-white display-5"></i>
-                </div>
-                <div className="flex-grow-1 ms-4">
-                  <h1 className="text-white">
-                    <span className="counter_value" data-target="2000">
-                      0
-                    </span>
-                    +
-                  </h1>
-                  <p className="counter-name text-white opacity-75 mb-0 text-uppercase">
-                    User clients
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Col>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>

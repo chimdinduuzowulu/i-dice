@@ -7,7 +7,7 @@ import icon3 from "../assets/images/obj_icon_3.png";
 import { Col, Container, Row } from "react-bootstrap";
 const About = () => {
   return (
-    <section className="section">
+    <section className="section mt-4">
       <Container>
         <Row className="justify-content-center mb-5">
           <Col md={8} lg={6} className="text-center">

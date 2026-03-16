@@ -7,11 +7,15 @@ import isdbLogo from "../assets/images/brand-logo/IsDB-logo.jpg";
 
 const Agencies = () => {
   return (
-    <section className="section">
+    <section className="section bg-light overflow-hidden">
       <Container>
-        <Row className="justify-content-center mb-2">
-          <Col md={8} lg={6} className="text-center">
-            <h2 className="title text-primary">Agencies</h2>
+        <Row className="justify-content-center mb-5 mt-4">
+          <Col lg={8} className="text-center" data-aos="fade-up">
+            <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">Partners</h6>
+            <h2 className="title">Executing Agency & Co-Financiers</h2>
+            <p className="text-muted fs-17">
+              The iDICE programme is powered by a strategic partnership between the Federal Government of Nigeria and leading international development finance institutions.
+            </p>
           </Col>
         </Row>
 
@@ -73,76 +77,48 @@ const Agencies = () => {
           </Col>
         </Row>
 
-        <Row className="align-items-center my-2 p-3">
-          <Col lg={3}>
-            <img
-              src={afdbLogo}
-              alt=""
-              className="img-fluid d-block mx-auto ms-lg-auto"
-              style={{ height: "120px", width: "auto" }}
-            />
-          </Col>
-          <Col lg={9}>
-            <h4 className="mb-3 fs-20 fw-bold">
-              African Development Bank (AfDB)
-            </h4>
-            <p className="fs-18">
-              The African Development Bank (AfDB) is a regional multilateral
-              development finance institution established to contribute to the
-              economic development and social prograss of its member countries.
-              In line with its mission to reduce poverty rate in Africa, AfDB
-              has been involved with a number of societal interventions in
-              various key sectors across all states in Nigeria.
-            </p>
+        {/* Co-Financiers Title */}
+        <Row className="mb-4">
+          <Col data-aos="fade-right">
+            <h3 className="fw-bold h4 mb-0">Co-Financiers</h3>
+            <hr className="w-25 border-primary border-2 opacity-100 mt-2" />
           </Col>
         </Row>
 
-        <Row className="align-items-center my-2 p-3">
-          <Col lg={3}>
-            <img
-              src={afdLogo}
-              alt=""
-              className="img-fluid d-block mx-auto ms-lg-auto"
-              style={{ height: "120px", width: "auto" }}
-            />
-          </Col>
-          <Col lg={9}>
-            <h4 className="mb-3 fs-20 fw-bold">
-              Agence française de développement (AFD)
-            </h4>
-            <p className="fs-18">
-              Also known as the French Development Agency, AFD seeks to fund,
-              support and accelerate transitions to a more sustainable world.
-              The group has partnerned with the Federal Govenment of Nigeria in
-              key sectors such as education, digital and creative innovation and
-              governance through direct investments and financing major projects
-              that support policies, capacity building and entreprenuership.
-            </p>
-          </Col>
-        </Row>
-
-        <Row className="align-items-center my-2 p-3">
-          <Col lg={3}>
-            <img
-              src={isdbLogo}
-              alt=""
-              className="img-fluid d-block mx-auto ms-lg-auto"
-              style={{ height: "120px", width: "auto" }}
-            />
-          </Col>
-          <Col lg={9}>
-            <h4 className="mb-3 fs-20 fw-bold">
-              Islamic Development Bank (IsDB)
-            </h4>
-            <p className="fs-18">
-              The Islamic Development Bank is a multilateral Development Bank
-              (MDB), whose mission is to promote social and economic development
-              and deliver impact in its member countries and Muslim communities
-              across the world. With 128 projects in Nigeria, the IsDB has
-              financed infrastructure development, human capital and
-              agriculture.
-            </p>
-          </Col>
+        {/* Financiers Grid */}
+        <Row className="g-4">
+          {[
+            {
+              logo: afdbLogo,
+              name: "African Development Bank (AfDB)",
+              text: "A regional multilateral development finance institution established to contribute to the economic development and social progress of its member countries. AfDB has been involved with a number of societal interventions across Nigeria.",
+              delay: 100
+            },
+            {
+              logo: afdLogo,
+              name: "Agence Française de Développement (AFD)",
+              text: "Also known as the French Development Agency, AFD seeks to fund, support and accelerate transitions to a more sustainable world, partnering with Nigeria in key sectors like digital and creative innovation.",
+              delay: 200
+            },
+            {
+              logo: isdbLogo,
+              name: "Islamic Development Bank (IsDB)",
+              text: "A multilateral Development Bank whose mission is to promote social and economic development. With 128 projects in Nigeria, IsDB has financed infrastructure development, human capital and agriculture.",
+              delay: 300
+            }
+          ].map((item, idx) => (
+            <Col lg={4} key={idx} data-aos="fade-up" data-aos-delay={item.delay}>
+              <div className="p-4 bg-white rounded-4 shadow-sm h-100 border-0 transition-hover">
+                <div className="p-3 bg-light rounded-4 mb-4 text-center" style={{ height: "140px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <img src={item.logo} alt={item.name} className="img-fluid" style={{ maxHeight: "80px" }} />
+                </div>
+                <h5 className="fw-bold mb-3">{item.name}</h5>
+                <p className="text-muted fs-15 mb-0">
+                  {item.text}
+                </p>
+              </div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>

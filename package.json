@@ -1,7 +1,6 @@
 {
   "name": "appexy-react",
   "version": "0.1.0",
-  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -40,7 +39,7 @@
       "react-app/jest"
     ]
   },
-  "browserslist":   {
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",

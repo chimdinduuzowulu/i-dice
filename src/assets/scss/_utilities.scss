@@ -32,3 +32,21 @@
 .text-muted {
     color: $text-muted !important;
 }
+
+.transition-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    &:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+.btn-white {
+    background-color: $white !important;
+    color: $primary !important;
+    border: 1px solid transparent !important;
+    &:hover {
+        background-color: rgba($white, 0.9) !important;
+        color: darken($primary, 10%) !important;
+    }
+}

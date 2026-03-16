@@ -1,10 +1,10 @@
 //
 // variables.scss
+// Updated to match iDICE brand identity
 //
 
 // Color variables
-
-$white: #fff;
+$white:    #fff;
 $gray-100: #f8f9fa;
 $gray-200: #eff1f5;
 $gray-300: #e2e7f1;
@@ -14,54 +14,62 @@ $gray-600: #6c757d;
 $gray-700: #536976;
 $gray-800: #292e49;
 $gray-900: #343a40;
-$black: #000;
+$black:    #000;
 
-$blue: #1f61eb;
-$green: #1ce1ac;
-$cyan: #4bbbce;
-$yellow: #fcb924;
-$red: #ff5f4f;
-$purple: #8129d7;
+// iDICE brand colors extracted from logo
+$brand-navy:    #1a0a3c;   // deep dark purple-navy from logo bg
+$brand-purple:  #6b21d6;   // vibrant purple in logo mark
+$brand-orange:  #f97316;   // orange from logo gradient
+$brand-gold:    #fcb924;   // yellow-gold from original theme (kept)
+$brand-blue:    #3b82f6;   // blue accent in logo
 
-$primary: $yellow;
-$secondary: $purple;
-$info: $cyan;
-$warning: $yellow;
-$success: $green;
-$danger: $red;
-$light: $gray-100;
-$dark: $gray-900;
-$white: $white;
+$blue:    $brand-blue;
+$green:   #10b981;
+$cyan:    #06b6d4;
+$yellow:  $brand-gold;
+$red:     #ef4444;
+$purple:  $brand-purple;
+$orange:  $brand-orange;
+
+// Bootstrap theme overrides — primary = iDICE orange-gold, secondary = purple
+$primary:   $brand-orange;   // #f97316 orange — main CTA color
+$secondary: $brand-purple;   // #6b21d6 purple
+$info:      $brand-blue;
+$warning:   $brand-gold;
+$success:   $green;
+$danger:    $red;
+$light:     $gray-100;
+$dark:      $brand-navy;
 
 $theme-colors: (
-  "primary": $primary,
+  "primary":   $primary,
   "secondary": $secondary,
-  "info": $info,
-  "warning": $warning,
-  "success": $success,
-  "danger": $danger,
-  "dark": $dark,
-  "light": $light,
-  "white": $white,
+  "info":      $info,
+  "warning":   $warning,
+  "success":   $success,
+  "danger":    $danger,
+  "dark":      $dark,
+  "light":     $light,
+  "white":     $white,
 );
 
-$bg-overlay: #10161e;
+$bg-overlay: #0f0520;
 
 $text-muted: $gray-600;
 
 $base-font: 18px;
 
-$font-primary: "Mandali", sans-serif;
-$font-secondary: "Cerebri Sans,sans-serif";
+$font-primary:   "Mandali", sans-serif;
+$font-secondary: "Cerebri Sans, sans-serif";
 
 // font-weight
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-medium: 500;
+$font-weight-light:    300;
+$font-weight-normal:   400;
+$font-weight-medium:   500;
 $font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight-bold:     700;
 
 // box-shadow
 $box-shadow-sm: 0 4px 8px rgba($gray-900, 0.08);
-$box-shadow: 0 5px 20px rgba($gray-900, 0.1);
+$box-shadow:    0 5px 20px rgba($gray-900, 0.1);
 $box-shadow-lg: 0 5px 20px rgba($gray-900, 0.2);

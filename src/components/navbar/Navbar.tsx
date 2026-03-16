@@ -1,155 +1,137 @@
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import classNames from "classnames";
-import { Nav } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
-
-// images
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import logoDark from "../../assets/images/logo-dark.png";
 import logoLight from "../../assets/images/logo-light.png";
 
-import Container from "react-bootstrap/esm/Container";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
-import Navbar from "react-bootstrap/Navbar";
-
-type NavbarProp = {
-  classname?: string;
-  isLogoDark: boolean;
-};
-
-const sectionData = [
-  { id: "home", title: "Home" },
-  { id: "about", title: "About iDICE" },
-  { id: "components", title: "Program Components" },
-  { id: "agencies", title: "Agencies" },
-  { id: "news", title: "News & Events" },
-  { id: "partnership", title: "Partnership" },
-  { id: "faq", title: "FAQ" },
-];
-const SiteNavbar = ({ classname, isLogoDark }: NavbarProp) => {
-  const [activeSection, setActiveSection] = useState<string>("home");
-  const navbar = useRef<HTMLDivElement>(null);
+const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      e.preventDefault();
-      // Navbar class
-      const navbar1 = navbar.current;
-      if (navbar1 != null) {
-        if (classname) {
-          navbar1.classList.add(classname);
-        }
-
-        if (
-          document.body.scrollTop >= 50 ||
-          document.documentElement.scrollTop >= 50
-        ) {
-          navbar1.classList.add("nav-sticky");
-        } else {
-          navbar1.classList.remove("nav-sticky");
-        }
-      }
-    });
-
-    //adding active class
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      let sections: (HTMLElement | null)[] = [];
-      for (let i = 0; i < sectionData.length; i++) {
-        sections.push(document.getElementById(sectionData[i].id));
-        let currentActive = -1;
-        sections.forEach((section, index) => {
-          if (section) {
-            const sectionTop = section.offsetTop - 70;
-            const sectionHeight = section.offsetHeight;
-
-            if (
-              scrollPosition >= sectionTop &&
-              scrollPosition < sectionTop + sectionHeight
-            ) {
-              currentActive = index;
-            }
-          }
-        });
-        if (currentActive !== -1) {
-          setActiveSection(sectionData[currentActive].id);
-        }
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = (id: string) => {
-    const section = document.getElementById(id);
-    if (section != null) {
-      const sectionTop = section.offsetTop;
+  useEffect(() => {
+    setExpanded(false);
+  }, [location]);
 
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      });
-    }
-  };
+  const isActive = (path: string) => location.pathname === path;
+
+  // Pages with dark hero backgrounds — show light logo
+  const darkHeroPages = ["/", "/about", "/opportunities", "/news", "/gallery", "/faqs", "/blog", "/contact"];
+  const onDarkPage = darkHeroPages.includes(location.pathname) || location.pathname.startsWith("/news/") || location.pathname.startsWith("/blog/");
 
   return (
-    <>
-      <Nav
-        className={classNames(
-          "navbar navbar-expand-lg fixed-top navbar-custom sticky-dark m-0",
-          classname
-        )}
-        ref={navbar}
-        id="navbar-sticky"
-      >
-        <Container>
-          <Navbar.Brand>
-            <Link className="logo text-uppercase" to="#">
-              {isLogoDark ? (
-                <img src={logoDark} alt="" className="logo-dark" />
-              ) : (
-                <>
-                  <img src={logoDark} alt="" className="logo-dark" />
-                  <img src={logoLight} alt="" className="logo-light" />
-                </>
-              )}
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i className="mdi mdi-menu"></i>
-          </Navbar.Toggle>
-          <NavbarCollapse id="navbarCollapse">
-            <Nav className="navbar-nav mx-auto navbar-center" id="mySidenav">
-              {sectionData.map((section) => (
-                <Nav.Item as="li" key={section.id}>
-                  <HashLink
-                    smooth
-                    to={"#" + section.id}
-                    className={classNames(
-                      "nav-link",
-                      activeSection === section.id ? "active" : ""
-                    )}
-                    onClick={() => handleLinkClick(section.id)}
-                  >
-                    {section.title}
-                  </HashLink>
-                </Nav.Item>
-              ))}
-            </Nav>
-          </NavbarCollapse>
-        </Container>
-      </Nav>
-    </>
+    <Navbar
+      expand="lg"
+      expanded={expanded}
+      onToggle={setExpanded}
+      fixed="top"
+      style={{
+        backgroundColor: scrolled ? "#fff" : "transparent",
+        padding: "10px 0",
+        transition: "all 0.35s ease",
+        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.08)" : "none",
+      }}
+    >
+      <Container>
+        {/* Logo */}
+        <Navbar.Brand as={Link} to="/" style={{ padding: 0 }}>
+          <img
+            src={scrolled || !onDarkPage ? logoDark : logoLight}
+            alt="iDICE"
+            style={{ height: 44, width: "auto" }}
+          />
+        </Navbar.Brand>
+
+        <Navbar.Toggle
+          aria-controls="idice-navbar-nav"
+          style={{ border: "none", outline: "none", boxShadow: "none" }}
+        >
+          <span
+            className="mdi mdi-menu"
+            style={{ fontSize: 26, color: scrolled ? "#1a0a3c" : "#fff" }}
+          ></span>
+        </Navbar.Toggle>
+
+        <Navbar.Collapse id="idice-navbar-nav">
+          <Nav className="ms-auto align-items-lg-center" style={{ gap: 2 }}>
+            {[
+              { path: "/", label: "Home" },
+              { path: "/about", label: "About iDICE" },
+              { path: "/opportunities", label: "Opportunities" },
+              { path: "/news", label: "News" },
+              { path: "/gallery", label: "Gallery" },
+              { path: "/blog", label: "Blog" },
+              { path: "/faqs", label: "FAQs" },
+            ].map((item) => {
+              const active = isActive(item.path);
+              return (
+                <Nav.Link
+                  key={item.path}
+                  as={Link}
+                  to={item.path}
+                  style={{
+                    color: active
+                      ? "#f97316"
+                      : scrolled
+                      ? "#1a0a3c"
+                      : "rgba(255,255,255,0.9)",
+                    fontWeight: active ? 700 : 500,
+                    fontSize: 14.5,
+                    padding: "6px 14px",
+                    borderBottom: active ? "2px solid #f97316" : "2px solid transparent",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!active) (e.currentTarget as HTMLElement).style.color = "#f97316";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!active)
+                      (e.currentTarget as HTMLElement).style.color = scrolled
+                        ? "#1a0a3c"
+                        : "rgba(255,255,255,0.9)";
+                  }}
+                >
+                  {item.label}
+                </Nav.Link>
+              );
+            })}
+
+            <Nav.Link as={Link} to="/contact" className="ms-lg-2">
+              <span
+                style={{
+                  background: "linear-gradient(135deg, #f97316, #ea580c)",
+                  color: "#fff",
+                  padding: "9px 22px",
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  display: "inline-block",
+                  boxShadow: "0 4px 15px rgba(249,115,22,0.35)",
+                  transition: "all 0.2s",
+                }}
+              >
+                Contact Us
+              </span>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+
+      {/* Mobile nav white background */}
+      <style>{`
+        @media (max-width: 991px) {
+          .navbar { background-color: #fff !important; }
+          .navbar .nav-link { color: #1a0a3c !important; }
+        }
+      `}</style>
+    </Navbar>
   );
 };
 
-export default SiteNavbar;
+export default NavBar;

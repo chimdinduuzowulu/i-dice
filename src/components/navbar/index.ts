@@ -1,3 +1,3 @@
-import SiteNavbar from "./Navbar";
+import SiteNavbar from "./NavBar";
 
 export { SiteNavbar };
