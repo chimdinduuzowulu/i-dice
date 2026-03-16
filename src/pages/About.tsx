@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
-import NavBar from "../components/navbar/NavBar";
+import NavBar from "../components/navbar/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 import Counter from "../components/Counter";
