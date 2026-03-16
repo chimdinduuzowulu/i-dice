@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             <div className="d-flex gap-3 mt-4">
               {[
-                { icon: "ri-twitter-x-fill", href: "#" },
+                { icon: "ri-twitter-fill", href: "#" },
                 { icon: "ri-linkedin-fill", href: "#" },
                 { icon: "ri-facebook-fill", href: "#" },
                 { icon: "ri-instagram-fill", href: "#" },
@@ -121,8 +121,8 @@ const Footer = () => {
             <div className="d-flex flex-column gap-3">
               {[
                 { icon: "ri-mail-line", label: "General Enquiries", value: "info@idice.ng", href: "mailto:info@idice.ng" },
-                { icon: "ri-news-line", label: "Media Enquiries", value: "media@idice.ng", href: "mailto:media@idice.ng" },
-                { icon: "ri-shake-hands-line", label: "Partnerships", value: "partnerships@idice.ng", href: "mailto:partnerships@idice.ng" },
+                { icon: "ri-newspaper-line", label: "Media Enquiries", value: "media@idice.ng", href: "mailto:media@idice.ng" },
+                { icon: "ri-team-line", label: "Partnerships", value: "partnerships@idice.ng", href: "mailto:partnerships@idice.ng" },
               ].map((c, i) => (
                 <div key={i} className="d-flex align-items-start gap-3">
                   <div style={{ width: 36, height: 36, borderRadius: 8, background: "rgba(249,115,22,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>

@@ -10,7 +10,7 @@ const ProgramComponents = () => {
       text: "Equips youth (15–35) with tech and creative skills, generates high-potential startups, and builds a community of developers, engineers, and designers — linking them to global companies and creative enterprises.",
     },
     {
-      icon: "mdi-currency-usd-circle-outline",
+      icon: "mdi-currency-usd-circle",
       color: "#6b21d6",
       bg: "#f5f3ff",
       title: "Access to Finance",
