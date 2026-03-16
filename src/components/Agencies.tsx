@@ -1,4 +1,3 @@
-//image
 import { Col, Container, Row } from "react-bootstrap";
 import boiLogo from "../assets/images/brand-logo/boi-logo.png";
 import afdbLogo from "../assets/images/brand-logo/AfDB-logo.jpg";
