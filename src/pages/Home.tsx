@@ -231,7 +231,7 @@ const Home = () => {
               { icon: "ri-lightbulb-line", title: "Innovation Hubs", desc: "Innovation hubs and accelerators." },
               { icon: "ri-team-line", title: "Enterprise Support Organisations", desc: "Enterprise Support Organisations (ESOs)." },
               { icon: "ri-funds-line", title: "Venture Builders & VCs", desc: "Venture builders and venture capital firms." },
-              { icon: "ri-graduation-cap-line", title: "Students & Young Entrepreneurs", desc: "Students and young entrepreneurs." },
+              { icon: "ri-user-3-line", title: "Students & Young Entrepreneurs", desc: "Students and young entrepreneurs." },
               { icon: "ri-building-2-line", title: "Universities & Polytechnics", desc: "Institutions participating in innovation programmes." },
             ].map((item, i) => (
               <Col md={6} lg={4} key={item.title} data-aos="fade-up" data-aos-delay={i * 80}>
