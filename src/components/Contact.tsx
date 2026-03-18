@@ -88,7 +88,7 @@ const Contact = () => {
                         <Form.Label htmlFor="formJobTItle">Country</Form.Label>
                         <Form.Select
                           id="formCountry"
-                          placeholder="Your country"
+                          // placeholder="Your country"
                           required
                         >
                           <option value="">Country</option>

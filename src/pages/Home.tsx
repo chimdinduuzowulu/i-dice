@@ -26,15 +26,6 @@ const Home = () => {
     { label: "BOI", full: "Bank of Industry" },
   ];
 
-  const whoWeSupport = [
-    { icon: "ri-code-s-slash-line", label: "Technology Startups" },
-    { icon: "ri-film-line", label: "Creative Enterprises" },
-    { icon: "ri-lightbulb-line", label: "Innovation Hubs" },
-    { icon: "ri-team-line", label: "Enterprise Support Orgs" },
-    { icon: "ri-funds-line", label: "Venture Builders & VCs" },
-    { icon: "ri-graduation-cap-line", label: "Students & Youth" },
-  ];
-
   return (
     <>
       <NavBar />
@@ -58,7 +49,7 @@ const Home = () => {
         <div style={{ position: "absolute", bottom: -80, left: -60, width: 350, height: 350, borderRadius: "50%", background: "rgba(249,115,22,0.1)", pointerEvents: "none", zIndex: 1 }} />
 
         <Container style={{ position: "relative", zIndex: 2 }}>
-          <Row className="align-items-center gy-5">
+          <Row className="align-items-stretch gy-5">
             <Col lg={6} data-aos="fade-right" data-aos-duration="800">
               {/* Badge */}
               <div
@@ -66,7 +57,7 @@ const Home = () => {
                 style={{ background: "rgba(249,115,22,0.15)", border: "1px solid rgba(249,115,22,0.35)", borderRadius: 30, padding: "6px 18px" }}
               >
                 <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#f97316", display: "inline-block" }}></span>
-                <span style={{ color: "#fdba74", fontSize: 13, fontWeight: 600 }}>A Federal Government of Nigeria Initiative</span>
+                <span style={{ color: "#fdba74", fontSize: 13, fontWeight: 600 }}>Explore opportunities. Build innovative businesses. Shape Nigeria’s future.</span>
               </div>
 
               <h1 style={{ color: "#fff", fontSize: "clamp(2rem, 4.5vw, 3.4rem)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24 }}>
@@ -84,10 +75,10 @@ const Home = () => {
               <p style={{ color: "#c4b5d0", fontSize: "clamp(14px, 1.8vw, 16px)", lineHeight: 1.85, marginBottom: 14, maxWidth: 540 }}>
                 iDICE is a flagship initiative of the Federal Government of Nigeria designed to unlock the economic potential of Nigeria's fast-growing technology and creative sectors.
               </p>
-              <p style={{ color: "#9d8aaa", fontSize: 15, lineHeight: 1.8, marginBottom: 36, maxWidth: 520 }}>
-                Explore opportunities. Build innovative businesses. Shape Nigeria's future.
+              <p style={{ color: "#c4b5d0", fontSize: 15, lineHeight: 1.85, marginBottom: 14, maxWidth: 560 }}>
+                Through targeted programmes, ecosystem development, skills training, and access to investment capital, iDICE is enabling Nigerian entrepreneurs, innovators, and creators to build globally competitive businesses and create sustainable jobs.
               </p>
-
+            
               <div className="d-flex flex-wrap gap-3">
                 <Link
                   to="/about"
@@ -119,12 +110,42 @@ const Home = () => {
             </Col>
 
             {/* Right — hero image */}
-            <Col lg={6} data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" className="text-center">
-              <img
-                src={heroImage}
-                alt="iDICE - Investment in Digital and Creative Enterprises"
-                style={{ maxWidth: "100%", width: "90%", filter: "drop-shadow(0 20px 60px rgba(249,115,22,0.3))" }}
-              />
+            <Col lg={6} data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+              <div
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  borderRadius: 24,
+                  padding: 24,
+                  backdropFilter: "blur(8px)",
+                  boxShadow: "0 18px 60px rgba(15,5,32,0.45)",
+                }}
+              >
+                <img
+                  src={heroImage}
+                  alt="iDICE - Investment in Digital and Creative Enterprises"
+                  style={{
+                    width: "100%",
+                    maxWidth: 520,
+                    display: "block",
+                    margin: "0 auto",
+                    filter: "drop-shadow(0 22px 60px rgba(249,115,22,0.3))",
+                  }}
+                />
+                <div
+                  style={{
+                    marginTop: 20,
+                    background: "rgba(15,5,32,0.45)",
+                    border: "1px solid rgba(249,115,22,0.25)",
+                    borderRadius: 16,
+                    padding: "16px 18px",
+                  }}
+                >
+                  <p style={{ color: "#e6d7f2", fontSize: 15, lineHeight: 1.8, margin: 0 }}>
+                    Nigeria’s digital and creative industries represent one of the country’s greatest opportunities for economic transformation. iDICE is designed to harness this potential and position Nigeria as a leading hub for innovation, technology, and creative enterprise in Africa.
+                  </p>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>
@@ -133,75 +154,133 @@ const Home = () => {
       {/* ── WHAT IS IDICE ── */}
       <section className="section" style={{ background: "#fff" }}>
         <Container>
-          <Row className="justify-content-center mb-5">
-            <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 style={{ color: "#f97316", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>About the Programme</h6>
-              <h2 className="title">What is iDICE?</h2>
-            </Col>
-          </Row>
           <Row className="align-items-center gy-5">
             <Col lg={6} data-aos="fade-right">
-              <div style={{ borderRadius: 20, background: "linear-gradient(135deg, #fef3e2, #faf5ff)", padding: "40px", height: "100%", border: "1px solid #fde8c8" }}>
-                <div style={{ width: 60, height: 60, borderRadius: 16, background: "linear-gradient(135deg, #f97316, #6b21d6)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
-                  <i className="ri-government-line" style={{ fontSize: 28, color: "#fff" }}></i>
-                </div>
-                <h3 className="fw-bold mb-3" style={{ fontSize: 22 }}>A National Initiative</h3>
-                <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                  The Investment in Digital and Creative Enterprises (iDICE) programme is a national initiative designed to support the growth of Nigeria's digital technology and creative industries by strengthening entrepreneurship, innovation, and access to finance.
-                </p>
-                <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                  Launched in March 2023, the programme aims to address key challenges faced by entrepreneurs including limited access to capital, insufficient ecosystem support, and gaps in skills development.
-                </p>
-                <div style={{ background: "#fff", borderRadius: 12, padding: "16px 20px", border: "1px solid #fde8c8", display: "flex", alignItems: "center", gap: 16 }}>
-                  <i className="ri-money-dollar-circle-fill" style={{ fontSize: 32, color: "#f97316" }}></i>
-                  <div>
-                    <h4 style={{ margin: 0, color: "#f97316", fontWeight: 800 }}>$618 Million</h4>
-                    <p style={{ margin: 0, fontSize: 13, color: "#64748b" }}>Total investment in Nigeria's digital future</p>
-                  </div>
-                </div>
-              </div>
+              <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">The Programme</h6>
+              <h2 className="title mb-4">About the Programme</h2>
+              <p className="text-muted mb-4" style={{ lineHeight: 1.8, fontSize: 16 }}>
+                The Investment in Digital and Creative Enterprises (iDICE) programme is a national initiative designed to support the growth of Nigeria’s digital technology and creative industries by strengthening entrepreneurial ecosystems, expanding access to finance, and developing the capacity of young innovators.
+              </p>
+              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
+                Launched in March 2023, the programme aims to address key challenges faced by entrepreneurs including limited access to capital, insufficient ecosystem support, and gaps in skills development.
+              </p>
+              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
+                The programme is also designed to leverage additional private sector investment, potentially mobilizing hundreds of millions of dollars into Nigeria’s startup ecosystem.
+              </p>
+              <Link to="/opportunities" className="btn btn-primary px-4 py-2 rounded-pill fw-semibold">
+                Explore Opportunities <i className="ri-arrow-right-line ms-1"></i>
+              </Link>
             </Col>
 
             <Col lg={6} data-aos="fade-left">
-              <h3 className="fw-bold mb-4">Who iDICE Supports</h3>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                iDICE is designed to support a broad ecosystem of innovators and entrepreneurs across Nigeria's digital and creative sectors.
-              </p>
-              <Row className="g-3">
-                {whoWeSupport.map((item, i) => (
-                  <Col xs={6} key={i}>
-                    <div
-                      style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 12, padding: "16px", display: "flex", alignItems: "center", gap: 12, transition: "all 0.2s" }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.borderColor = "#f97316";
-                        (e.currentTarget as HTMLElement).style.background = "#fef3e2";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
-                        (e.currentTarget as HTMLElement).style.background = "#f8fafc";
-                      }}
-                    >
-                      <i className={item.icon} style={{ fontSize: 22, color: "#f97316", flexShrink: 0 }}></i>
-                      <span style={{ fontSize: 13, fontWeight: 600, color: "#334155" }}>{item.label}</span>
-                    </div>
-                  </Col>
+              <div
+                style={{
+                  background: "linear-gradient(135deg, #0f0520, #1a0a3c)",
+                  borderRadius: 24,
+                  padding: "40px",
+                  color: "#fff",
+                }}
+              >
+                <h4 className="fw-bold mb-4" style={{ color: "#fff" }}>Funding Overview</h4>
+                <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: 28 }}>
+                  The iDICE programme represents one of the largest coordinated investments in Nigeria’s digital and creative sectors.
+                </p>
+                {[
+                  { icon: "ri-check-double-line", text: "African Development Bank (AfDB)", color: "#fdba74" },
+                  { icon: "ri-check-double-line", text: "Agence Française de Développement (AFD)", color: "#fdba74" },
+                  { icon: "ri-check-double-line", text: "Islamic Development Bank (IsDB)", color: "#fdba74" },
+                  { icon: "ri-check-double-line", text: "Bank of Industry (BOI) as the implementing agency", color: "#fdba74" },
+                ].map((item, i) => (
+                  <div key={i} className="d-flex align-items-start gap-3 mb-3">
+                    <i className={item.icon} style={{ color: item.color, fontSize: 20, flexShrink: 0, marginTop: 2 }}></i>
+                    <p style={{ color: "#94a3b8", margin: 0, fontSize: 15 }}>{item.text}</p>
+                  </div>
                 ))}
-              </Row>
-              <div className="mt-4 pt-2">
-                <Link to="/about" className="btn px-5 py-2 rounded-pill fw-semibold" style={{ background: "linear-gradient(135deg,#f97316,#ea580c)", color: "#fff", border: "none", boxShadow: "0 4px 16px rgba(249,115,22,0.3)" }}>
-                  Learn More About iDICE <i className="ri-arrow-right-line ms-1"></i>
-                </Link>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 24, marginTop: 24 }}>
+                  <p style={{ color: "#fdba74", fontWeight: 600, fontSize: 15, margin: 0 }}>
+                    AfDB is providing approximately $170 million, AFD €100 million, and IsDB $70 million, while the Bank of Industry provides counterpart financing and implementation support.{" "}
+                    <a href="https://www.afdb.org" style={{ color: "#fdba74", fontWeight: 600 }}>
+                      African Development Bank
+                    </a>
+                  </p>
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
-
-      {/* ── PROGRAM COMPONENTS ── */}
-      <ProgramComponents />
-
       {/* ── EXPECTED IMPACT COUNTER ── */}
       <Counter />
+      <section className="section" style={{ background: "#f8fafc" }}>
+        <Container>
+          <Row className="justify-content-center mb-5">
+            <Col lg={8} className="text-center" data-aos="fade-up">
+              <h6 style={{ color: "#f97316", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>
+                Who iDICE Supports
+              </h6>
+              <h2 className="title">Who iDICE Supports</h2>
+              <p className="text-muted" style={{ lineHeight: 1.8 }}>
+                iDICE is designed to support a broad ecosystem of innovators and entrepreneurs, including:
+              </p>
+            </Col>
+          </Row>
+          <Row className="g-4">
+            {[
+              { icon: "ri-code-s-slash-line", title: "Technology Startups", desc: "Technology startups and digital businesses." },
+              { icon: "ri-film-line", title: "Creative Sector Enterprises", desc: "Film, music, animation, gaming, fashion, design, and digital media." },
+              { icon: "ri-lightbulb-line", title: "Innovation Hubs", desc: "Innovation hubs and accelerators." },
+              { icon: "ri-team-line", title: "Enterprise Support Organisations", desc: "Enterprise Support Organisations (ESOs)." },
+              { icon: "ri-funds-line", title: "Venture Builders & VCs", desc: "Venture builders and venture capital firms." },
+              { icon: "ri-graduation-cap-line", title: "Students & Young Entrepreneurs", desc: "Students and young entrepreneurs." },
+              { icon: "ri-building-2-line", title: "Universities & Polytechnics", desc: "Institutions participating in innovation programmes." },
+            ].map((item, i) => (
+              <Col md={6} lg={4} key={item.title} data-aos="fade-up" data-aos-delay={i * 80}>
+                <div
+                  style={{
+                    background: "#fff",
+                    border: "1px solid #e2e8f0",
+                    borderRadius: 16,
+                    padding: 24,
+                    height: "100%",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#f97316";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(249,115,22,0.12)";
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 52,
+                      height: 52,
+                      borderRadius: 14,
+                      background: "#fef3e2",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: 16,
+                    }}
+                  >
+                    <i className={item.icon} style={{ fontSize: 24, color: "#f97316" }}></i>
+                  </div>
+                  <h5 className="fw-bold mb-2" style={{ fontSize: 17 }}>
+                    {item.title}
+                  </h5>
+                  <p className="text-muted mb-0" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
 
       {/* ── EXPLORE OPPORTUNITIES ── */}
       <section className="section" style={{ background: "#fff" }}>
@@ -261,6 +340,10 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      {/* ── PROGRAM COMPONENTS ── */}
+      {/* <ProgramComponents /> */}
+
+
 
       {/* ── NEWS ── */}
       <News />
