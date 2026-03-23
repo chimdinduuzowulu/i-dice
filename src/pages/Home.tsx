@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 
 import Footer from "../components/Footer";
-import ProgramComponents from "../components/ProgramComponents";
 import Counter from "../components/Counter";
 import Partnership from "../components/Partnership";
 import News from "../components/News";
