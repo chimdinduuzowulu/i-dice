@@ -12,7 +12,6 @@ const Footer = () => {
         color: "#cbd5e1",
         paddingTop: 64,
         paddingBottom: 24,
-        overflowX: "hidden",
       }}
     >
       <Container>
@@ -22,7 +21,7 @@ const Footer = () => {
             <div className="mb-4">
               <img src={logoLight} alt="iDICE" style={{ height: 48, width: "auto" }} />
             </div>
-            <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: 14, maxWidth: 320, overflowWrap: "anywhere", wordBreak: "break-word" }}>
+            <p style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: 14, maxWidth: 320 }}>
               Investment in Digital and Creative Enterprises — a Federal Government of Nigeria
               initiative unlocking the economic potential of Nigeria's technology and creative industries.
             </p>
@@ -80,9 +79,9 @@ const Footer = () => {
                 { label: "FAQs", to: "/faqs" },
               ].map((link, i) => (
                 <li key={i} style={{ marginBottom: 10 }}>
-                    <Link
+                  <Link
                     to={link.to}
-                    style={{ color: "#94a3b8", textDecoration: "none", fontSize: 14, transition: "color 0.2s", overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    style={{ color: "#94a3b8", textDecoration: "none", fontSize: 14, transition: "color 0.2s" }}
                     onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#f97316")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#94a3b8")}
                   >
@@ -101,9 +100,9 @@ const Footer = () => {
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {["Startup Bridge", "BPO Programme", "Hackathons", "Creathons", "ICE Centres", "DICE Funds"].map((item, i) => (
                 <li key={i} style={{ marginBottom: 10 }}>
-                    <Link
+                  <Link
                     to="/opportunities"
-                    style={{ color: "#94a3b8", textDecoration: "none", fontSize: 14, transition: "color 0.2s", overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    style={{ color: "#94a3b8", textDecoration: "none", fontSize: 14, transition: "color 0.2s" }}
                     onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#f97316")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#94a3b8")}
                   >
@@ -131,7 +130,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p style={{ color: "#64748b", fontSize: 11, margin: 0, textTransform: "uppercase", letterSpacing: 0.5 }}>{c.label}</p>
-                    <a href={c.href} style={{ color: "#94a3b8", fontSize: 14, textDecoration: "none", overflowWrap: "anywhere", wordBreak: "break-word" }}>{c.value}</a>
+                    <a href={c.href} style={{ color: "#94a3b8", fontSize: 14, textDecoration: "none" }}>{c.value}</a>
                   </div>
                 </div>
               ))}
@@ -156,7 +155,7 @@ const Footer = () => {
           <p style={{ color: "#475569", fontSize: 13, margin: 0 }}>
             &copy; {year} iDICE — Investment in Digital and Creative Enterprises. All rights reserved.
           </p>
-          <p style={{ color: "#475569", fontSize: 13, margin: 0, overflowWrap: "anywhere", wordBreak: "break-word" }}>
+          <p style={{ color: "#475569", fontSize: 13, margin: 0 }}>
             Implemented by{" "}
             <a href="https://boi.ng" target="_blank" rel="noreferrer" style={{ color: "#f97316", textDecoration: "none" }}>
               Bank of Industry (BOI)

@@ -35,9 +35,9 @@ const Counter = () => {
 
   const counterItems = [
     { icon: "mdi-account-group-outline", color: "#f97316", target: 175000, suffix: "+", label: "Youth Trained" },
-    { icon: "mdi-rocket-launch-outline", color: "#6b21d6", target: 100, suffix: "+", label: "Startups Supported" },
+    { icon: "mdi-rocket-launch-outline", color: "#6b21d6", target: 500, suffix: "+", label: "Startups Supported" },
     { icon: "mdi-briefcase-outline", color: "#3b82f6", target: 6000000, suffix: "+", label: "Jobs Created" },
-    { icon: "mdi-currency-usd", color: "#fcb924", target: 6.4, suffix: "B+", label: "Economic Value (USD)" },
+    { icon: "mdi-currency-usd", color: "#fcb924", target: 64, suffix: "B+", label: "Economic Value (USD)" },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Counter = () => {
             <h6 style={{ color: "#fdba74", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>Our Ambition</h6>
             <h2 style={{ color: "#fff", fontWeight: 800 }}>Expected Impact</h2>
             <p style={{ color: "#9d8aaa", marginBottom: 0, fontSize: 15 }}>
-              The iDICE programme aims to drive transformative economic outcomes across Nigeria's innovation ecosystem. Strengthening Nigeria’s startup and innovation ecosystem nationwide.
+              The iDICE programme aims to drive transformative economic outcomes across Nigeria's innovation ecosystem.
             </p>
           </Col>
         </Row>
