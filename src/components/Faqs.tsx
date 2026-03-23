@@ -36,7 +36,7 @@ const Faqs = () => {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="section" style={{ background: "#fff", overflowX: "hidden" }}>
+    <section className="section" style={{ background: "#fff" }}>
       <Container>
         <Row className="justify-content-center mb-5">
           <Col md={8} lg={6} className="text-center" data-aos="fade-up">
@@ -106,8 +106,6 @@ const Faqs = () => {
                           color: isOpen ? "#f97316" : "#1a0a3c",
                           lineHeight: 1.4,
                           transition: "color 0.2s",
-                          overflowWrap: "anywhere",
-                          wordBreak: "break-word",
                         }}
                       >
                         {q.title}
@@ -149,8 +147,6 @@ const Faqs = () => {
                           fontSize: 14,
                           color: "#475569",
                           lineHeight: 1.8,
-                          overflowWrap: "anywhere",
-                          wordBreak: "break-word",
                         }}
                       >
                         {q.content}
