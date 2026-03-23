@@ -56,7 +56,6 @@ const Home = () => {
                 className="d-inline-flex align-items-center gap-2 mb-4"
                 style={{ background: "rgba(249,115,22,0.15)", border: "1px solid rgba(249,115,22,0.35)", borderRadius: 30, padding: "6px 18px" }}
               >
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#f97316", display: "inline-block" }}></span>
                 <span style={{ color: "#fdba74", fontSize: 13, fontWeight: 600 }}>Explore opportunities. Build innovative businesses. Shape Nigeria’s future.</span>
               </div>
 
