@@ -7,27 +7,27 @@ const faqData = [
   {
     title: "What is the iDICE programme?",
     content:
-      "iDICE (Investment in Digital and Creative Enterprises) is a Federal Government initiative to support Nigeria's digital and creative sectors through skills development, ecosystem support, and access to financing. It is implemented by the Bank of Industry (BOI) and co-financed by AfDB, AFD, and IsDB.",
+      "iDICE (Investment in Digital and Creative Enterprises) is a Federal Government initiative designed to support Nigeria's digital and creative sectors through skills development, ecosystem support, and access to financing.",
   },
   {
     title: "Who can apply for iDICE programmes?",
     content:
-      "Eligibility varies by programme but includes startups, creative enterprises, innovation hubs, students, young entrepreneurs, and enterprise support organisations. Each initiative publishes its own criteria when applications open.",
+      "Eligibility varies by programme but may include:\n\n• startups\n• creative enterprises\n• innovation hubs\n• students and young entrepreneurs\n• enterprise support organisations",
   },
   {
-    title: "How much funding does iDICE provide?",
+    title: "How much funding does the iDICE programme provide?",
     content:
-      "The programme has a total envelope of approximately $618 million, mobilised through partnerships including AfDB (~$170M), AFD (€100M), and IsDB ($70M), alongside BOI counterpart financing.",
+      "The programme has a total funding envelope of approximately $618 million, mobilised through partnerships between the Federal Government of Nigeria and international development partners.",
   },
   {
     title: "Is there a cost to apply?",
     content:
-      "No. Applying to any iDICE initiative is completely free. Any request for payment is fraudulent — please report it to info@idice.ng.",
+      "No. Applying to iDICE initiatives is free.",
   },
   {
-    title: "How do I stay updated on new opportunities?",
+    title: "How will beneficiaries be selected?",
     content:
-      "All official calls for applications are published on the iDICE website and official social media channels. You can also contact info@idice.ng or visit the Opportunities page for the latest announcements.",
+      "Applications are evaluated through competitive selection processes based on programme-specific criteria.",
   },
 ];
 
@@ -151,6 +151,7 @@ const Faqs = () => {
                           lineHeight: 1.8,
                           overflowWrap: "anywhere",
                           wordBreak: "break-word",
+                          whiteSpace: "pre-line",
                         }}
                       >
                         {q.content}

@@ -17,85 +17,31 @@ const allFaqs: FAQ[] = [
     category: "About iDICE",
     title: "What is the iDICE programme?",
     content:
-      "iDICE (Investment in Digital and Creative Enterprises) is a Federal Government initiative designed to support Nigeria's digital and creative sectors through skills development, ecosystem support, and access to financing. The programme is implemented by the Bank of Industry (BOI) and co-financed by the African Development Bank (AfDB), Agence Française de Développement (AFD), and the Islamic Development Bank (IsDB).",
-  },
-  {
-    category: "About iDICE",
-    title: "When was iDICE launched?",
-    content:
-      "The iDICE programme was officially launched in March 2023 by the Federal Government of Nigeria. It represents one of the largest coordinated investments in Nigeria's digital and creative sectors, with a total funding envelope of approximately $618 million.",
-  },
-  {
-    category: "About iDICE",
-    title: "Who implements the iDICE programme?",
-    content:
-      "The Bank of Industry (BOI) serves as the implementing agency responsible for programme execution, coordination, and oversight. A multi-stakeholder governance structure ensures transparency, accountability, and effective programme delivery.",
+      "iDICE (Investment in Digital and Creative Enterprises) is a Federal Government initiative designed to support Nigeria's digital and creative sectors through skills development, ecosystem support, and access to financing.",
   },
   {
     category: "Eligibility & Applications",
     title: "Who can apply for iDICE programmes?",
     content:
-      "Eligibility varies by programme but may include: startups, creative enterprises, innovation hubs, students and young entrepreneurs, and enterprise support organisations. Each initiative has its own specific eligibility criteria which are published when applications open.",
-  },
-  {
-    category: "Eligibility & Applications",
-    title: "Is there a cost to apply?",
-    content:
-      "No. Applying to iDICE initiatives is completely free. Any communication requesting payment to apply for an iDICE programme should be treated as fraudulent. Please report such communications to info@idice.ng.",
-  },
-  {
-    category: "Eligibility & Applications",
-    title: "How will beneficiaries be selected?",
-    content:
-      "Applications are evaluated through competitive selection processes based on programme-specific criteria. Selection is merit-based and transparent, ensuring the best candidates are supported to build scalable and impactful businesses.",
-  },
-  {
-    category: "Eligibility & Applications",
-    title: "How do I apply for an iDICE programme?",
-    content:
-      "To apply, review the eligibility requirements for the specific programme, complete the online application form through the designated portal, submit all required documentation, and await confirmation and next steps. All official calls for applications are published on this website and through iDICE communication channels.",
+      "Eligibility varies by programme but may include:\n\n• startups\n• creative enterprises\n• innovation hubs\n• students and young entrepreneurs\n• enterprise support organisations",
   },
   {
     category: "Funding & Finance",
     title: "How much funding does the iDICE programme provide?",
     content:
-      "The programme has a total funding envelope of approximately $618 million, mobilised through partnerships between the Federal Government of Nigeria and international development partners. The African Development Bank provides approximately $170 million, AFD €100 million, and IsDB $70 million, while BOI provides counterpart financing.",
+      "The programme has a total funding envelope of approximately $618 million, mobilised through partnerships between the Federal Government of Nigeria and international development partners.",
   },
   {
-    category: "Funding & Finance",
-    title: "What types of financial support does iDICE offer?",
+    category: "Eligibility & Applications",
+    title: "Is there a cost to apply?",
     content:
-      "Through the DICE Funds, iDICE provides venture capital investments, equity and quasi-equity financing, startup funding programmes, and grants and enterprise development support. The programme also supports the creation of venture capital funds and investment vehicles to strengthen Nigeria's startup financing ecosystem.",
+      "No. Applying to iDICE initiatives is free.",
   },
   {
-    category: "Sectors & Support",
-    title: "What sectors does iDICE support?",
+    category: "Eligibility & Applications",
+    title: "How will beneficiaries be selected?",
     content:
-      "iDICE supports Nigeria's technology and creative industries including software development, fintech, digital services, animation, gaming, film production, music, digital media, fashion, and design, among others. The programme also supports innovation hubs, accelerators, and enterprise support organisations working in these sectors.",
-  },
-  {
-    category: "Sectors & Support",
-    title: "What is the iDICE Startup Bridge programme?",
-    content:
-      "The Startup Bridge Capacity Building Programme is designed to support early-stage entrepreneurs and innovators in Nigeria's digital economy. It provides structured entrepreneurial training, mentorship and ecosystem support, access to startup development resources, and pathways to investment opportunities. Applications are currently open at startupbridge.ng.",
-  },
-  {
-    category: "Sectors & Support",
-    title: "What are ICE Centres?",
-    content:
-      "Innovation and Creativity Enterprise (ICE) Centres are being established by iDICE across 33 universities and 33 polytechnics in Nigeria. These centres serve as hubs for student innovation, startup incubation, digital skills training, and collaboration between academia and industry.",
-  },
-  {
-    category: "Staying Informed",
-    title: "How can I stay updated on new opportunities?",
-    content:
-      "All official calls for applications are published on the iDICE website and through our official communication channels. You can also follow iDICE on social media and subscribe to our newsletter for the latest announcements, programme launches, and ecosystem updates.",
-  },
-  {
-    category: "Staying Informed",
-    title: "How can I contact iDICE?",
-    content:
-      "For general enquiries, email info@idice.ng. For media enquiries, contact media@idice.ng. For partnership opportunities, reach out to partnerships@idice.ng. You can also use the contact form on our Contact page.",
+      "Applications are evaluated through competitive selection processes based on programme-specific criteria.",
   },
 ];
 
@@ -459,6 +405,7 @@ const FAQsPage = () => {
                             color: "#475569",
                             fontSize: 15,
                             lineHeight: 1.8,
+                            whiteSpace: "pre-line",
                           }}
                         >
                           {faq.content}
@@ -512,7 +459,7 @@ const FAQsPage = () => {
                       border: "1px solid rgba(255,255,255,0.2)",
                       borderRadius: 10,
                       padding: "12px 24px",
-                      fontWeight: 600,
+                      fontWeight: 200,
                       fontSize: 14,
                     }}
                   >
