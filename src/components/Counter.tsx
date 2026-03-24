@@ -34,10 +34,6 @@ const Counter = () => {
   }, []);
 
   const counterItems = [
-    { icon: "mdi-account-group-outline", color: "#f97316", target: 175000, suffix: "+", label: "Youth Trained" },
-    { icon: "mdi-rocket-launch-outline", color: "#6b21d6", target: 500, suffix: "+", label: "Startups Supported" },
-    { icon: "mdi-briefcase-outline", color: "#3b82f6", target: 6000000, suffix: "+", label: "Jobs Created" },
-    { icon: "mdi-currency-usd", color: "#fcb924", target: 64, suffix: "B+", label: "Economic Value (USD)" },
     { icon: "mdi-account-group-outline", color: "#f97316", target: 175000, suffix: "+", label: "Young Nigerians trained in digital and creative skills" },
     { icon: "mdi-rocket-launch-outline", color: "#6b21d6", target: 100, suffix: "+", label: "Startups and creative enterprises supported" },
     { icon: "mdi-briefcase-outline", color: "#3b82f6", target: 6000000, suffix: "+", label: "Jobs created, both directly and indirectly" },
@@ -54,7 +50,6 @@ const Counter = () => {
             </h6>
             <h2 style={{ color: "#fff", fontWeight: 800 }}>Expected Impact</h2>
             <p style={{ color: "#9d8aaa", marginBottom: 0, fontSize: 15 }}>
-              The iDICE programme aims to drive transformative economic outcomes across Nigeria's innovation ecosystem.
               The iDICE programme aims to drive transformative economic outcomes across Nigeria's innovation ecosystem.
             </p>
             <p style={{ color: "#9d8aaa", marginTop: 8, fontSize: 14 }}>
