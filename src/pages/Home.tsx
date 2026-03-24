@@ -24,12 +24,12 @@ const Home = () => {
     { label: "BOI", full: "Bank of Industry" },
   ];
 
-  const expectedOutcomes = [
-    { number: "175,000+", label: "young Nigerians trained in digital and creative skills" },
-    { number: "Hundreds", label: "of startups and creative enterprises supported" },
-    { number: "6 million+", label: "jobs created, both directly and indirectly" },
-    { number: "$6.4 billion", label: "in economic value unlocked" },
-  ];
+  // const expectedOutcomes = [
+  //   { number: "175,000+", label: "young Nigerians trained in digital and creative skills" },
+  //   { number: "Hundreds", label: "of startups and creative enterprises supported" },
+  //   { number: "6 million+", label: "jobs created, both directly and indirectly" },
+  //   { number: "$6.4 billion", label: "in economic value unlocked" },
+  // ];
 
   return (
     <>

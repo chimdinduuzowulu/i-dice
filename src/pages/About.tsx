@@ -5,8 +5,7 @@ import AOS from "aos";
 import NavBar from "../components/navbar/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
-import Counter from "../components/Counter";
-import Partnership from "../components/Partnership";
+
 
 const About = () => {
   useEffect(() => {
@@ -66,12 +65,12 @@ const About = () => {
     },
   ];
 
-  const funders = [
-    { name: "African Development Bank (AfDB)", amount: "~$170 million", icon: "ri-bank-line" },
-    { name: "Agence Française de Développement (AFD)", amount: "€100 million", icon: "ri-global-line" },
-    { name: "Islamic Development Bank (IsDB)", amount: "$70 million", icon: "ri-building-line" },
-    { name: "Bank of Industry (BOI)", amount: "Counterpart Financing", icon: "ri-government-line" },
-  ];
+  // const funders = [
+  //   { name: "African Development Bank (AfDB)", amount: "~$170 million", icon: "ri-bank-line" },
+  //   { name: "Agence Française de Développement (AFD)", amount: "€100 million", icon: "ri-global-line" },
+  //   { name: "Islamic Development Bank (IsDB)", amount: "$70 million", icon: "ri-building-line" },
+  //   { name: "Bank of Industry (BOI)", amount: "Counterpart Financing", icon: "ri-government-line" },
+  // ];
 
   return (
     <>
