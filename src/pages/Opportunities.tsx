@@ -24,122 +24,77 @@ const Opportunities = () => {
       date: "Applications Open: March 16",
       desc: "The Startup Bridge Capacity Building Programme is designed to support early-stage entrepreneurs and innovators in Nigeria's digital economy. Startup Bridge helps founders move from idea stage to investment readiness, equipping them with the tools and networks needed to build scalable businesses.",
       provides: [
-        "Structured entrepreneurial training",
-        "Mentorship and ecosystem support",
-        "Access to startup development resources",
-        "Pathways to investment opportunities",
+        "structured entrepreneurial training",
+        "mentorship and ecosystem support",
+        "access to startup development resources",
+        "pathways to investment opportunities",
       ],
       cta: "Apply Now",
       ctaLink: "https://startupbridge.ng/",
       external: true,
     },
+  ];
+
+  const upcomingInitiatives = [
     {
-      tag: "Upcoming",
-      tagColor: "#d97706",
-      tagBg: "#fffbeb",
       icon: "ri-customer-service-2-line",
       iconColor: "#7c3aed",
       iconBg: "#f5f3ff",
       title: "Business Process Outsourcing (BPO) Programme",
-      date: "Coming Soon",
       desc: "The BPO programme is designed to prepare Nigerian youth for employment opportunities in the global digital services economy. The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
       provides: [
-        "Remote service delivery training",
-        "Digital customer support",
-        "Business process outsourcing operations",
-        "Global freelancing opportunities",
+        "remote service delivery",
+        "digital customer support",
+        "business process outsourcing operations",
+        "global freelancing opportunities",
       ],
-      cta: "Learn More",
-      ctaLink: "/contact",
-      external: false,
     },
     {
-      tag: "Upcoming",
-      tagColor: "#d97706",
-      tagBg: "#fffbeb",
       icon: "ri-code-box-line",
       iconColor: "#6b21d6",
       iconBg: "#f0fdf4",
       title: "iDICE Hackathons",
-      date: "Dates to be Announced",
-      desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology. Winning teams may receive mentorship, incubation support, and opportunities to scale their solutions.",
+      desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology. Participants collaborate to develop innovative solutions.",
       provides: [
-        "Digital services & AI challenges",
-        "Fintech innovation tracks",
-        "Public sector innovation",
-        "Mentorship and incubation for winners",
+        "digital services",
+        "artificial intelligence",
+        "fintech",
+        "public sector innovation",
       ],
-      cta: "Stay Updated",
-      ctaLink: "/contact",
-      external: false,
     },
     {
-      tag: "Upcoming",
-      tagColor: "#d97706",
-      tagBg: "#fffbeb",
       icon: "ri-palette-line",
       iconColor: "#dc2626",
       iconBg: "#fff1f2",
       title: "iDICE Creathons",
-      date: "Dates to be Announced",
-      desc: "Creathons are innovation challenges designed specifically for the creative industry. These programmes provide a platform for collaboration, innovation, and creative entrepreneurship, bringing together Nigeria's most talented creatives.",
+      desc: "Creathons are innovation challenges designed specifically for the creative industry. These programmes bring together creatives and provide a platform for collaboration, innovation, and creative entrepreneurship.",
       provides: [
-        "Film and storytelling challenges",
-        "Animation and gaming tracks",
-        "Music and digital media",
-        "Design and visual arts",
+        "film and storytelling",
+        "animation and gaming",
+        "music and digital media",
+        "design and visual arts",
       ],
-      cta: "Stay Updated",
-      ctaLink: "/contact",
-      external: false,
     },
     {
-      tag: "In Progress",
-      tagColor: "#f97316",
-      tagBg: "#fef3e2",
       icon: "ri-building-2-line",
       iconColor: "#0891b2",
       iconBg: "#f0f9ff",
       title: "Innovation and Creativity Centres (ICE Centres)",
-      date: "Nationwide Rollout Underway",
-      desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria in 33 universities and 33 polytechnics. These centres serve as hubs for student innovation, startup incubation, digital skills training, and collaboration between academia and industry.",
+      desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria. These centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
       provides: [
-        "Located in 33 universities",
-        "Located in 33 polytechnics",
-        "Startup incubation support",
-        "Digital skills training facilities",
+        "33 universities",
+        "33 polytechnics",
+        "startup incubation support",
+        "digital skills training facilities",
       ],
-      cta: "Learn More",
-      ctaLink: "/about",
-      external: false,
-    },
-    {
-      tag: "Active",
-      tagColor: "#6b21d6",
-      tagBg: "#f0fdf4",
-      icon: "ri-funds-line",
-      iconColor: "#b45309",
-      iconBg: "#fffbeb",
-      title: "DICE Funds",
-      date: "Ongoing Investment Programme",
-      desc: "The DICE Funds provide financial support to high-growth technology startups and investment funds operating within Nigeria's innovation ecosystem. The programme also supports the creation of venture capital funds and investment vehicles to strengthen Nigeria's startup financing ecosystem.",
-      provides: [
-        "Venture capital investments",
-        "Equity and quasi-equity financing",
-        "Startup funding programmes",
-        "Enterprise development support",
-      ],
-      cta: "Learn More",
-      ctaLink: "/contact",
-      external: false,
     },
   ];
 
   const howToApply = [
-    { step: "01", icon: "ri-search-eye-line", title: "Review Eligibility", desc: "Check the eligibility requirements for the specific programme you are interested in applying for." },
-    { step: "02", icon: "ri-edit-2-line", title: "Complete Application", desc: "Fill in the online application form with accurate information about yourself and your venture." },
-    { step: "03", icon: "ri-file-upload-line", title: "Submit Documents", desc: "Upload all required supporting documentation as specified in the application guidelines." },
-    { step: "04", icon: "ri-mail-check-line", title: "Await Confirmation", desc: "After submission, await confirmation and next steps from the iDICE programme team." },
+    { step: "01", icon: "ri-search-eye-line", title: "Review Eligibility", desc: "Review eligibility requirements for the programme" },
+    { step: "02", icon: "ri-edit-2-line", title: "Complete Application", desc: "Complete the online application form" },
+    { step: "03", icon: "ri-file-upload-line", title: "Submit Documents", desc: "Submit all required documentation" },
+    { step: "04", icon: "ri-mail-check-line", title: "Await Confirmation", desc: "Await confirmation and next steps" },
   ];
 
   return (
@@ -172,20 +127,30 @@ const Opportunities = () => {
                   the iDICE Programme
                 </span>
               </h1>
-              <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto 32px" }}>
-                iDICE delivers a range of initiatives designed to support entrepreneurs, innovators, and ecosystem actors across Nigeria's digital and creative sectors.
+              <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto 24px" }}>
+                The iDICE programme delivers a range of initiatives designed to support entrepreneurs, innovators, and ecosystem actors across Nigeria's digital and creative sectors.
               </p>
               <div
                 style={{
-                  background: "rgba(14,159,110,0.15)",
-                  border: "1px solid rgba(14,159,110,0.3)",
-                  borderRadius: 12,
-                  padding: "16px 24px",
-                  display: "inline-block",
+                  background: "rgba(255,255,255,0.05)",
+                  borderRadius: 16,
+                  padding: "24px 32px",
+                  maxWidth: 800,
+                  margin: "0 auto",
                 }}
               >
-                <p style={{ color: "#fb923c", margin: 0, fontWeight: 600 }}>
-                  <i className="ri-information-line me-2"></i>
+                <p style={{ color: "#fff", marginBottom: 12, fontWeight: 600, fontSize: 14 }}>
+                  These initiatives provide opportunities for:
+                </p>
+                <div className="d-flex flex-wrap gap-2 justify-content-center">
+                  {["skills development", "entrepreneurship training", "business development support", "ecosystem participation", "investment readiness"].map((item, idx) => (
+                    <span key={idx} style={{ background: "rgba(249,115,22,0.2)", color: "#fdba74", padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <p style={{ color: "#fb923c", marginTop: 16, fontSize: 13 }}>
+                  {/* <i className="ri-information-line me-2"></i> */}
                   Applications for programmes are announced periodically and will be published on this page.
                 </p>
               </div>
@@ -194,7 +159,7 @@ const Opportunities = () => {
         </Container>
       </section>
 
-      {/* Opportunities List */}
+      {/* Current Opportunities */}
       <section className="section" style={{ background: "#f8fafc" }}>
         <Container>
           <Row className="justify-content-center mb-5">
@@ -242,13 +207,13 @@ const Opportunities = () => {
                           </span>
                         </div>
                         <h3 className="fw-bold mb-3" style={{ fontSize: 20 }}>{opp.title}</h3>
-                        <p className="text-muted mb-0" style={{ lineHeight: 1.8, fontSize: 15 }}>{opp.desc}</p>
+                        <p className="text-muted mb-3" style={{ lineHeight: 1.8, fontSize: 15 }}>{opp.desc}</p>
                       </div>
                     </div>
                   </Col>
                   <Col lg={4}>
                     <div style={{ background: "#f8fafc", borderRadius: 12, padding: 20 }}>
-                      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", color: "#64748b", letterSpacing: 0.5, marginBottom: 12 }}>Programme Provides:</p>
+                      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", color: "#64748b", letterSpacing: 0.5, marginBottom: 12 }}>The programme provides:</p>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                         {opp.provides.map((p, j) => (
                           <li key={j} className="d-flex align-items-center gap-2 mb-2">
@@ -264,7 +229,7 @@ const Opportunities = () => {
                             target="_blank"
                             rel="noreferrer"
                             className="btn btn-primary w-100 py-2 rounded-pill fw-semibold"
-                            style={{ fontSize: 14 }}
+                            style={{ fontSize: 14, background: "linear-gradient(135deg, #f97316, #ea580c)", border: "none" }}
                           >
                             {opp.cta} <i className="ri-external-link-line ms-1"></i>
                           </a>
@@ -287,15 +252,73 @@ const Opportunities = () => {
         </Container>
       </section>
 
-      {/* How to Apply */}
+      {/* Upcoming and Ongoing Initiatives */}
       <section className="section" style={{ background: "#fff" }}>
+        <Container>
+          <Row className="justify-content-center mb-5">
+            <Col lg={8} className="text-center" data-aos="fade-up">
+              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Coming Soon</h6>
+              <h2 className="title">Upcoming and Ongoing Initiatives</h2>
+              <p className="text-muted">
+                Explore the various programmes being rolled out under the iDICE initiative.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="g-4">
+            {upcomingInitiatives.map((initiative, i) => (
+              <Col lg={6} key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+                <div
+                  style={{
+                    background: "#f8fafc",
+                    borderRadius: 20,
+                    padding: "32px",
+                    height: "100%",
+                    border: "1px solid #e2e8f0",
+                    transition: "all 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 12px 32px rgba(0,0,0,0.08)";
+                    (e.currentTarget as HTMLElement).style.borderColor = initiative.iconColor;
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                    (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
+                  }}
+                >
+                  <div className="d-flex align-items-start gap-3 mb-3">
+                    <div style={{ width: 48, height: 48, borderRadius: 12, background: initiative.iconBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <i className={initiative.icon} style={{ fontSize: 24, color: initiative.iconColor }}></i>
+                    </div>
+                    <h3 className="fw-bold mb-0" style={{ fontSize: 18, lineHeight: 1.4 }}>{initiative.title}</h3>
+                  </div>
+                  <p className="text-muted mb-3" style={{ fontSize: 14, lineHeight: 1.7 }}>{initiative.desc}</p>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: initiative.iconColor, marginBottom: 8 }}>Participants will receive training in areas such as:</p>
+                  <div className="d-flex flex-wrap gap-2">
+                    {initiative.provides.map((item, idx) => (
+                      <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* How to Apply */}
+      <section className="section" style={{ background: "#f8fafc" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
               <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Application Process</h6>
               <h2 className="title">How to Apply</h2>
               <p className="text-muted">
-                Applications for each initiative are conducted through designated application portals. All official calls for applications will be published on this page.
+                Applications for each initiative are conducted through designated application portals. All official calls for applications will be published on this page and through iDICE communication channels.
               </p>
             </Col>
           </Row>
@@ -304,7 +327,7 @@ const Opportunities = () => {
               <Col lg={3} md={6} key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div
                   style={{
-                    background: "#f8fafc",
+                    background: "#fff",
                     borderRadius: 20,
                     padding: 32,
                     textAlign: "center",
@@ -318,7 +341,7 @@ const Opportunities = () => {
                     (e.currentTarget as HTMLElement).style.borderColor = "#f97316";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "#f8fafc";
+                    (e.currentTarget as HTMLElement).style.background = "#fff";
                     (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
                   }}
                 >

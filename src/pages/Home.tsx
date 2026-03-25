@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
-
 import Footer from "../components/Footer";
 import Counter from "../components/Counter";
 import Partnership from "../components/Partnership";
@@ -23,6 +22,13 @@ const Home = () => {
     { label: "AFD", full: "Agence Française de Développement" },
     { label: "IsDB", full: "Islamic Development Bank" },
     { label: "BOI", full: "Bank of Industry" },
+  ];
+
+  const expectedOutcomes = [
+    { number: "175,000+", label: "young Nigerians trained in digital and creative skills" },
+    { number: "Hundreds", label: "of startups and creative enterprises supported" },
+    { number: "6 million+", label: "jobs created, both directly and indirectly" },
+    { number: "$6.4 billion", label: "in economic value unlocked" },
   ];
 
   return (
@@ -55,11 +61,11 @@ const Home = () => {
                 className="d-inline-flex align-items-center gap-2 mb-4"
                 style={{ background: "rgba(249,115,22,0.15)", border: "1px solid rgba(249,115,22,0.35)", borderRadius: 30, padding: "6px 18px" }}
               >
-                <span style={{ color: "#fdba74", fontSize: 13, fontWeight: 600 }}>Explore opportunities. Build innovative businesses. Shape Nigeria’s future.</span>
+                <span style={{ color: "#fdba74", fontSize: 13, fontWeight: 600 }}>Explore opportunities. Build innovative businesses. Shape Nigeria's future.</span>
               </div>
 
               <h1 style={{ color: "#fff", fontSize: "clamp(2rem, 4.5vw, 3.4rem)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24 }}>
-                Investment in{" "}
+                Empowering Nigeria's{" "}
                 <span style={{ background: "linear-gradient(90deg, #f97316, #fcb924)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                   Digital
                 </span>{" "}
@@ -67,11 +73,11 @@ const Home = () => {
                 <span style={{ background: "linear-gradient(90deg, #f97316, #fcb924)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                   Creative
                 </span>{" "}
-                Enterprises
+                Economy
               </h1>
 
               <p style={{ color: "#c4b5d0", fontSize: "clamp(14px, 1.8vw, 16px)", lineHeight: 1.85, marginBottom: 14, maxWidth: 540 }}>
-                iDICE is a flagship initiative of the Federal Government of Nigeria designed to unlock the economic potential of Nigeria's fast-growing technology and creative sectors.
+                Investment in Digital and Creative Enterprises (iDICE) is a flagship initiative of the Federal Government of Nigeria designed to unlock the economic potential of Nigeria's fast-growing technology and creative sectors.
               </p>
               <p style={{ color: "#c4b5d0", fontSize: 15, lineHeight: 1.85, marginBottom: 14, maxWidth: 560 }}>
                 Through targeted programmes, ecosystem development, skills training, and access to investment capital, iDICE is enabling Nigerian entrepreneurs, innovators, and creators to build globally competitive businesses and create sustainable jobs.
@@ -140,7 +146,7 @@ const Home = () => {
                   }}
                 >
                   <p style={{ color: "#e6d7f2", fontSize: 15, lineHeight: 1.8, margin: 0 }}>
-                    Nigeria’s digital and creative industries represent one of the country’s greatest opportunities for economic transformation. iDICE is designed to harness this potential and position Nigeria as a leading hub for innovation, technology, and creative enterprise in Africa.
+                    Nigeria's digital and creative industries represent one of the country's greatest opportunities for economic transformation. iDICE is designed to harness this potential and position Nigeria as a leading hub for innovation, technology, and creative enterprise in Africa.
                   </p>
                 </div>
               </div>
@@ -149,7 +155,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* ── WHAT IS IDICE ── */}
+      {/* ── WHAT IS iDICE ── */}
       <section className="section" style={{ background: "#fff" }}>
         <Container>
           <Row className="align-items-center gy-5">
@@ -197,19 +203,27 @@ const Home = () => {
                 <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 24, marginTop: 24 }}>
                   <p style={{ color: "#fdba74", fontWeight: 600, fontSize: 15, margin: 0 }}>
                     AfDB is providing approximately $170 million, AFD €100 million, and IsDB $70 million, while the Bank of Industry provides counterpart financing and implementation support.{" "}
-                    <a href="https://www.afdb.org" style={{ color: "#fdba74", fontWeight: 600 }}>
+                    <a href="https://www.afdb.org" target="_blank" rel="noopener noreferrer" style={{ color: "#fdba74", fontWeight: 600, textDecoration: "underline" }}>
                       African Development Bank
                     </a>
                   </p>
                 </div>
+                <p className="mt-3" style={{ color: "#94a3b8", fontSize: 14, lineHeight: 1.7 }}>
+                  The programme is also designed to leverage additional private sector investment, potentially mobilizing hundreds of millions of dollars into Nigeria's startup ecosystem.
+                </p>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
+
       {/* ── EXPECTED IMPACT COUNTER ── */}
       <Counter />
-      <section className="section" style={{ background: "#f8fafc" }}>
+
+    
+
+      {/* ── WHO iDICE SUPPORTS ── */}
+      <section className="section" style={{ background: "#fff" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
@@ -230,7 +244,7 @@ const Home = () => {
               { icon: "ri-team-line", title: "Enterprise Support Organisations", desc: "Enterprise Support Organisations (ESOs)." },
               { icon: "ri-funds-line", title: "Venture Builders & VCs", desc: "Venture builders and venture capital firms." },
               { icon: "ri-user-3-line", title: "Students & Young Entrepreneurs", desc: "Students and young entrepreneurs." },
-              { icon: "ri-building-2-line", title: "Universities & Polytechnics", desc: "Institutions participating in innovation programmes." },
+              { icon: "ri-building-2-line", title: "Universities & Polytechnics", desc: "Universities and polytechnics participating in innovation programmes." },
             ].map((item, i) => (
               <Col md={6} lg={4} key={item.title} data-aos="fade-up" data-aos-delay={i * 80}>
                 <div
@@ -281,7 +295,7 @@ const Home = () => {
       </section>
 
       {/* ── EXPLORE OPPORTUNITIES ── */}
-      <section className="section" style={{ background: "#fff" }}>
+      <section className="section" style={{ background: "#f8fafc" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
@@ -290,16 +304,18 @@ const Home = () => {
               <p className="text-muted">
                 Through a series of programmes and initiatives, iDICE provides entrepreneurs and ecosystem actors with opportunities to build skills, grow businesses, and access funding.
               </p>
+              <p className="text-muted mt-2">
+                Explore current opportunities including:
+              </p>
             </Col>
           </Row>
-          <Row className="g-4">
+          <Row className="g-4 justify-content-center">
             {[
-              { icon: "ri-rocket-2-line", color: "#f97316", bg: "#fef3e2", title: "Startup Bridge", desc: "Capacity building programme for early-stage entrepreneurs moving from idea stage to investment readiness.", tag: "Applications Open", tagColor: "#10b981" },
-              { icon: "ri-customer-service-2-line", color: "#6b21d6", bg: "#f5f3ff", title: "BPO Programme", desc: "Training for Nigerian youth in remote service delivery, digital customer support, and global freelancing.", tag: "Upcoming", tagColor: "#d97706" },
-              { icon: "ri-code-box-line", color: "#0891b2", bg: "#f0f9ff", title: "Hackathons", desc: "Solve real-world problems using technology. Winners receive mentorship, incubation support, and funding.", tag: "Upcoming", tagColor: "#d97706" },
-              { icon: "ri-palette-line", color: "#dc2626", bg: "#fff1f2", title: "Creathons", desc: "Innovation challenges for the creative industry — film, animation, music, gaming, design and visual arts.", tag: "Upcoming", tagColor: "#d97706" },
-              { icon: "ri-building-2-line", color: "#3b82f6", bg: "#eff6ff", title: "ICE Centres", desc: "Innovation and Creativity Enterprise Centres in 33 universities and 33 polytechnics across Nigeria.", tag: "In Progress", tagColor: "#3b82f6" },
-              { icon: "ri-funds-line", color: "#f97316", bg: "#fef3e2", title: "DICE Funds", desc: "Venture capital investments, equity financing, and startup funding programmes for growth-stage businesses.", tag: "Active", tagColor: "#10b981" },
+              { icon: "ri-rocket-2-line", color: "#f97316", bg: "#fef3e2", title: "Startup Capacity Building", desc: "Programmes for early-stage entrepreneurs moving from idea stage to investment readiness." },
+              { icon: "ri-code-box-line", color: "#0891b2", bg: "#f0f9ff", title: "Innovation Challenges", desc: "Hackathons and innovation challenges to solve real-world problems." },
+              { icon: "ri-palette-line", color: "#dc2626", bg: "#fff1f2", title: "Creative Industry Programmes", desc: "Creathons and support for film, animation, music, gaming, and design." },
+              { icon: "ri-customer-service-2-line", color: "#6b21d6", bg: "#f5f3ff", title: "BPO Training", desc: "Business Process Outsourcing training for global freelancing opportunities." },
+              { icon: "ri-building-2-line", color: "#3b82f6", bg: "#eff6ff", title: "ICE Centres", desc: "Innovation centres in 33 universities and 33 polytechnics across Nigeria." },
             ].map((item, i) => (
               <Col lg={4} md={6} key={i} data-aos="fade-up" data-aos-delay={i * 80}>
                 <div
@@ -319,9 +335,6 @@ const Home = () => {
                     <div style={{ width: 52, height: 52, borderRadius: 14, background: item.bg, display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <i className={item.icon} style={{ fontSize: 24, color: item.color }}></i>
                     </div>
-                    <span style={{ background: `${item.tagColor}18`, color: item.tagColor, fontSize: 11, fontWeight: 700, padding: "4px 10px", borderRadius: 20, border: `1px solid ${item.tagColor}30` }}>
-                      {item.tag}
-                    </span>
                   </div>
                   <h5 className="fw-bold mb-2" style={{ fontSize: 17 }}>{item.title}</h5>
                   <p className="text-muted mb-0" style={{ fontSize: 14, lineHeight: 1.7 }}>{item.desc}</p>
@@ -332,16 +345,12 @@ const Home = () => {
           <Row className="mt-5">
             <Col className="text-center">
               <Link to="/opportunities" className="btn px-5 py-2 rounded-pill fw-semibold" style={{ background: "linear-gradient(135deg,#f97316,#ea580c)", color: "#fff", border: "none", boxShadow: "0 4px 16px rgba(249,115,22,0.3)" }}>
-                View All Opportunities <i className="ri-arrow-right-line ms-1"></i>
+                Visit Opportunities Page <i className="ri-arrow-right-line ms-1"></i>
               </Link>
             </Col>
           </Row>
         </Container>
       </section>
-      {/* ── PROGRAM COMPONENTS ── */}
-      {/* <ProgramComponents /> */}
-
-
 
       {/* ── NEWS ── */}
       <News />

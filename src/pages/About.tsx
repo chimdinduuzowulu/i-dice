@@ -21,8 +21,14 @@ const About = () => {
       color: "#f97316",
       bg: "#fef3e2",
       title: "Enterprise and Skills Development",
-      desc: "This component focuses on building the capacity of entrepreneurs and innovators through training programmes, incubation and acceleration initiatives, mentorship and ecosystem support, and entrepreneurship development programmes. It also supports collaboration between startups, universities, and industry.",
-      items: ["Training programmes", "Incubation & acceleration", "Mentorship & ecosystem support", "Entrepreneurship development"],
+      desc: "This component focuses on building the capacity of entrepreneurs and innovators through:",
+      items: [
+        "training programmes",
+        "incubation and acceleration initiatives",
+        "mentorship and ecosystem support",
+        "entrepreneurship development programmes"
+      ],
+      extra: "It also supports collaboration between startups, universities, and industry to strengthen Nigeria's innovation pipeline.",
     },
     {
       number: "02",
@@ -30,17 +36,33 @@ const About = () => {
       color: "#6b21d6",
       bg: "#f0fdf4",
       title: "Expanding Access to Finance",
-      desc: "Access to capital remains one of the biggest barriers to startup growth. Through the DICE Funds, the programme provides financial support through venture capital investments, equity and quasi-equity financing, startup funding programmes, and grants and enterprise development support.",
-      items: ["Venture capital investments", "Equity & quasi-equity financing", "Startup funding programmes", "Grants & enterprise support"],
+      desc: "Access to capital remains one of the biggest barriers to startup growth. Through the DICE Funds, the programme provides financial support through:",
+      items: [
+        "venture capital investments",
+        "equity and quasi-equity financing",
+        "startup funding programmes",
+        "grants and enterprise development support"
+      ],
+      extra: "The programme also supports the creation of venture capital funds and investment vehicles to strengthen Nigeria's startup financing ecosystem. ",
+      extraLink: {
+        text: "African Development Bank",
+        url: "https://www.afdb.org/"
+      },
     },
     {
       number: "03",
       icon: "ri-shield-check-line",
       color: "#7c3aed",
       bg: "#f5f3ff",
-      title: "Enabling Environment & Ecosystem Support",
-      desc: "This component focuses on strengthening the broader innovation ecosystem through partnerships with universities and research institutions, support for innovation hubs and accelerators, investment promotion for digital and creative industries, and collaboration with government agencies.",
-      items: ["University partnerships", "Innovation hub support", "Investment promotion", "Nigeria Startup Act implementation"],
+      title: "Enabling Environment and Ecosystem Support",
+      desc: "This component focuses on strengthening the broader innovation ecosystem through:",
+      items: [
+        "partnerships with universities and research institutions",
+        "support for innovation hubs and accelerators",
+        "investment promotion for digital and creative industries",
+        "collaboration with government agencies and regulators"
+      ],
+      extra: "The programme also contributes to the implementation of Nigeria's Startup Act and innovation policy framework.",
     },
   ];
 
@@ -79,7 +101,7 @@ const About = () => {
                 About the <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>iDICE Programme</span>
               </h1>
               <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto" }}>
-                A national initiative of the Federal Government of Nigeria aimed at strengthening the country's technology and creative ecosystem.
+                A national initiative of the Federal Government of Nigeria aimed at strengthening the country's technology and creative ecosystems.
               </p>
             </Col>
           </Row>
@@ -91,20 +113,24 @@ const About = () => {
         <Container>
           <Row className="align-items-center gy-5">
             <Col lg={6} data-aos="fade-right">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">The Programme</h6>
+              <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">About iDICE</h6>
               <h2 className="title mb-4">About the Programme</h2>
               <p className="text-muted mb-4" style={{ lineHeight: 1.8, fontSize: 16 }}>
-                The Investment in Digital and Creative Enterprises (iDICE) programme is a national initiative of the Federal Government of Nigeria aimed at strengthening the country's technology and creative ecosystem.
+                The Investment in Digital and Creative Enterprises (iDICE) programme is a national initiative of the Federal Government of Nigeria aimed at strengthening the country's technology and creative ecosystems.
               </p>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                The programme supports entrepreneurs, innovators, and creators by providing skills development and capacity building, access to financing and investment opportunities, ecosystem development support, and partnerships with universities, innovation hubs, and private sector actors.
+              <p className="text-muted mb-3" style={{ lineHeight: 1.8 }}>
+                The programme supports entrepreneurs, innovators, and creators by providing:
               </p>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                The goal is to create a thriving environment where innovative Nigerian businesses can grow, scale globally, and create sustainable employment for millions of young Nigerians.
+              <div className="d-flex flex-wrap gap-2 mb-4">
+                {["skills development and capacity building", "access to financing and investment opportunities", "ecosystem development support", "partnerships with universities, innovation hubs, and private sector actors"].map((item, idx) => (
+                  <span key={idx} style={{ background: "#fef3e2", color: "#f97316", padding: "5px 14px", borderRadius: 20, fontSize: 13 }}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <p className="text-muted mb-0" style={{ lineHeight: 1.8 }}>
+                The goal is to create a thriving environment where innovative Nigerian businesses can grow, scale globally, and create sustainable employment.
               </p>
-              <Link to="/opportunities" className="btn btn-primary px-4 py-2 rounded-pill fw-semibold">
-                Explore Opportunities <i className="ri-arrow-right-line ms-1"></i>
-              </Link>
             </Col>
 
             <Col lg={6} data-aos="fade-left">
@@ -117,13 +143,13 @@ const About = () => {
                 }}
               >
                 <h4 className="fw-bold mb-4" style={{ color: "#fff" }}>Why iDICE Matters</h4>
-                <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: 28 }}>
-                  Nigeria is home to one of the largest youth populations in the world and a rapidly growing digital economy. Yet entrepreneurs in the technology and creative sectors face serious barriers:
+                <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: 20 }}>
+                  Nigeria is home to one of the largest youth populations in the world and a rapidly growing digital economy. At the same time, entrepreneurs in the technology and creative sectors often face barriers including:
                 </p>
                 {[
-                  { icon: "ri-close-circle-line", text: "Limited access to early-stage capital", color: "#f87171" },
-                  { icon: "ri-close-circle-line", text: "Insufficient ecosystem infrastructure", color: "#f87171" },
-                  { icon: "ri-close-circle-line", text: "Gaps in entrepreneurial skills and business development support", color: "#f87171" },
+                  { icon: "ri-close-circle-line", text: "limited access to early-stage capital", color: "#f87171" },
+                  { icon: "ri-close-circle-line", text: "insufficient ecosystem infrastructure", color: "#f87171" },
+                  { icon: "ri-close-circle-line", text: "gaps in entrepreneurial skills and business development support", color: "#f87171" },
                 ].map((item, i) => (
                   <div key={i} className="d-flex align-items-start gap-3 mb-3">
                     <i className={item.icon} style={{ color: item.color, fontSize: 20, flexShrink: 0, marginTop: 2 }}></i>
@@ -143,7 +169,7 @@ const About = () => {
       </section>
 
       {/* Funding Section */}
-      <section className="section bg-light">
+      {/* <section className="section bg-light">
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
@@ -187,7 +213,7 @@ const About = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* Programme Components */}
       <section className="section" style={{ background: "#fff" }}>
@@ -228,7 +254,7 @@ const About = () => {
                     <i className={comp.icon} style={{ fontSize: 26, color: comp.color }}></i>
                   </div>
                   <h4 className="fw-bold mb-3" style={{ fontSize: 18 }}>{comp.title}</h4>
-                  <p className="text-muted mb-4" style={{ fontSize: 14, lineHeight: 1.8 }}>{comp.desc}</p>
+                  <p className="text-muted mb-3" style={{ fontSize: 14, lineHeight: 1.8 }}>{comp.desc}</p>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {comp.items.map((item, j) => (
                       <li key={j} className="d-flex align-items-center gap-2 mb-2">
@@ -237,6 +263,23 @@ const About = () => {
                       </li>
                     ))}
                   </ul>
+                  {comp.extra && (
+                    <p className="text-muted mt-3" style={{ fontSize: 13, lineHeight: 1.7 }}>
+                      {comp.extra}
+                      {comp.extraLink && (
+                        <a 
+                          href={comp.extraLink.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          style={{ color: comp.color, fontWeight: 600, textDecoration: "none" }}
+                          onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                          onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                        >
+                          {comp.extraLink.text}
+                        </a>
+                      )}
+                    </p>
+                  )}
                 </div>
               </Col>
             ))}
@@ -249,10 +292,13 @@ const About = () => {
         <Container>
           <Row className="align-items-center gy-4">
             <Col lg={6} data-aos="fade-right">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">Governance</h6>
+              {/* <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">Governance</h6> */}
               <h2 className="title mb-4">Implementation Structure</h2>
               <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
-                The Bank of Industry (BOI) serves as the implementing agency responsible for programme execution, coordination, and oversight. A multi-stakeholder governance structure ensures transparency, accountability, and effective programme delivery.
+                The Bank of Industry (BOI) serves as the implementing agency responsible for programme execution, coordination, and oversight.
+              </p>
+              <p className="text-muted mb-4" style={{ lineHeight: 1.8, fontSize: 15 }}>
+                A multi-stakeholder governance structure ensures transparency, accountability, and effective programme delivery.
               </p>
               <div
                 style={{
@@ -273,6 +319,7 @@ const About = () => {
               </div>
             </Col>
             <Col lg={5} className="offset-lg-1" data-aos="fade-left">
+              
               {[
                 { icon: "ri-shield-check-line", title: "Transparency", desc: "Regular reporting and public accountability mechanisms" },
                 { icon: "ri-team-line", title: "Multi-stakeholder Governance", desc: "Inclusive oversight involving government, development partners, and private sector" },
@@ -293,8 +340,8 @@ const About = () => {
         </Container>
       </section>
 
-      <Counter />
-      <Partnership />
+      {/* <Counter /> */}
+      {/* <Partnership /> */}
       <Footer />
       <BackToTop />
     </>

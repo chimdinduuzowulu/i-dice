@@ -6,29 +6,25 @@ import NavBar from "../components/navbar/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 
-const WP_API = process.env.REACT_APP_WP_API_URL || "https://your-wordpress-domain.com/wp-json/wp/v2";
-
-interface WPPost {
+interface NewsItem {
   id: number;
-  title: { rendered: string };
-  excerpt: { rendered: string };
-  content: { rendered: string };
+  title: string;
+  excerpt: string;
   date: string;
-  slug: string;
-  _embedded?: {
-    "wp:featuredmedia"?: Array<{ source_url: string; alt_text: string }>;
-    "wp:term"?: Array<Array<{ name: string }>>;
-  };
+  category: string;
+  image: string | null;
+  link: string;
 }
 
-const fallbackPosts = [
+const newsItems: NewsItem[] = [
   {
     id: 1,
     title: "Federal Government Launches iDICE Programme",
     excerpt: "The Federal Government launched the iDICE programme to strengthen Nigeria's digital technology and creative industries and create opportunities for young innovators and entrepreneurs.",
     date: "2023-03-15",
-    category: "Programme Launch",
-    image: null,
+    category: "Youth Initiative",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
+    link: "https://yid.fmyd.gov.ng/the-idice-program-federal-government-youth-initiative/?utm_source=chatgpt.com",
   },
   {
     id: 2,
@@ -36,7 +32,8 @@ const fallbackPosts = [
     excerpt: "The programme has begun deploying funding to support high-growth technology startups and investment funds operating within Nigeria's innovation ecosystem.",
     date: "2023-09-10",
     category: "Investment",
-    image: null,
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
+    link: "https://insidebusiness.ng/236273/nigeria-deploys-618m-idice-fund-makes-first-direct-investment-in-tech-startups/?utm_source=chatgpt.com",
   },
   {
     id: 3,
@@ -44,39 +41,31 @@ const fallbackPosts = [
     excerpt: "iDICE supports a wide range of creative industry subsectors including animation, gaming, digital media, fashion, film production, and design.",
     date: "2024-01-20",
     category: "Creative Economy",
-    image: null,
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop",
+    link: "https://nairametrics.com/2024/02/02/fg-afdb-set-to-roll-out-617-million-idice-fund-for-digital-creative-industry/?utm_source=chatgpt.com",
   },
 ];
 
 const NewsPage = () => {
-  const [posts, setPosts] = useState<WPPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const [categories, setCategories] = useState<string[]>(["All"]);
 
   useEffect(() => {
     AOS.refresh();
     window.scrollTo(0, 0);
-    fetch(`${WP_API}/posts?_embed&per_page=20&orderby=date&order=desc`)
-      .then((res) => { if (!res.ok) throw new Error(); return res.json(); })
-      .then((data: WPPost[]) => {
-        setPosts(data);
-        const cats = Array.from(new Set(
-          data.flatMap((p) => p._embedded?.["wp:term"]?.[0]?.map((t) => t.name) || [])
-        ));
-        setCategories(["All", ...cats]);
-        setLoading(false);
-      })
-      .catch(() => { setError(true); setLoading(false); });
+    
+    // Extract unique categories from news items
+    const uniqueCategories = Array.from(new Set(newsItems.map((item) => item.category)));
+    setCategories(["All", ...uniqueCategories]);
   }, []);
 
   const formatDate = (d: string) =>
     new Date(d).toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric" });
 
-  const stripHtml = (html: string) => html.replace(/<[^>]+>/g, "");
-
-  const useFallback = error || posts.length === 0;
+  const filteredNews = newsItems.filter((item) => {
+    if (activeCategory === "All") return true;
+    return item.category === activeCategory;
+  });
 
   return (
     <>
@@ -109,7 +98,7 @@ const NewsPage = () => {
                 </span>
               </h1>
               <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8 }}>
-                Stay informed about the latest developments from the iDICE programme, including programme launches, partnerships, ecosystem initiatives, and success stories.
+                Stay informed about the latest developments from the iDICE programme, including programme launches, partnerships, ecosystem initiatives, and success stories from Nigerian entrepreneurs.
               </p>
             </Col>
           </Row>
@@ -120,8 +109,8 @@ const NewsPage = () => {
       <section className="section" style={{ background: "#f8fafc", minHeight: 400 }}>
         <Container>
 
-          {/* Category filter — only show if we have real WP data */}
-          {!useFallback && categories.length > 1 && (
+          {/* Category filter */}
+          {categories.length > 1 && (
             <Row className="mb-5">
               <Col>
                 <div className="d-flex flex-wrap gap-2 justify-content-center">
@@ -149,95 +138,110 @@ const NewsPage = () => {
             </Row>
           )}
 
-          {loading && (
-            <Row className="justify-content-center py-5">
-              <Col md={4} className="text-center">
-                <div className="spinner-border text-primary mb-3" role="status" />
-                <p className="text-muted">Loading news...</p>
-              </Col>
-            </Row>
-          )}
-
-          {!loading && (
-            <Row className="g-4">
-              {(useFallback ? fallbackPosts : posts.filter((p) => {
-                if (activeCategory === "All") return true;
-                return p._embedded?.["wp:term"]?.[0]?.some((t) => t.name === activeCategory);
-              })).map((post: any, idx: number) => {
-                const thumbnail = post.image || post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-                const category = post.category || post._embedded?.["wp:term"]?.[0]?.[0]?.name || "News";
-                const title = post.title?.rendered || post.title;
-                const excerpt = post.excerpt?.rendered ? stripHtml(post.excerpt.rendered) : post.excerpt;
-                return (
-                  <Col lg={4} md={6} key={post.id} data-aos="fade-up" data-aos-delay={idx * 60}>
-                    <div
-                      style={{
-                        background: "#fff",
-                        borderRadius: 20,
-                        overflow: "hidden",
-                        height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        border: "1px solid #e2e8f0",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)";
-                        (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 48px rgba(249,115,22,0.12)";
-                        (e.currentTarget as HTMLElement).style.borderColor = "#f97316";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-                        (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                        (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
-                      }}
-                    >
-                      {/* Image */}
-                      {thumbnail ? (
-                        <img src={thumbnail} alt={title} style={{ width: "100%", height: 220, objectFit: "cover" }} />
-                      ) : (
-                        <div style={{ height: 220, background: "linear-gradient(135deg, #fef3e2, #f0fdf4)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                          <i className="ri-newspaper-line" style={{ fontSize: 56, color: "#f9731630" }}></i>
-                        </div>
-                      )}
-
-                      <div className="p-4 d-flex flex-column flex-grow-1">
-                        <div className="d-flex align-items-center justify-content-between mb-3">
-                          <span style={{ background: "#fef3e2", color: "#f97316", fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 20, textTransform: "uppercase", letterSpacing: 0.5 }}>
-                            {category}
-                          </span>
-                          <small className="text-muted" style={{ fontSize: 12 }}>
-                            <i className="ri-calendar-line me-1"></i>
-                            {formatDate(post.date)}
-                          </small>
-                        </div>
-
-                        <h5
-                          className="fw-bold mb-3"
-                          style={{ fontSize: 17, lineHeight: 1.5 }}
-                          dangerouslySetInnerHTML={{ __html: title }}
-                        />
-
-                        <p className="text-muted mb-4 flex-grow-1" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                          {excerpt.substring(0, 140)}...
-                        </p>
-
-                        <div>
-                          {useFallback ? (
-                            <Link to="/news" style={{ color: "#f97316", fontWeight: 700, fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-                              Read More <i className="ri-arrow-right-line"></i>
-                            </Link>
-                          ) : (
-                            <Link to={`/news/${post.id}`} style={{ color: "#f97316", fontWeight: 700, fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-                              Read More <i className="ri-arrow-right-line"></i>
-                            </Link>
-                          )}
-                        </div>
-                      </div>
+          <Row className="g-4">
+            {filteredNews.map((item, idx) => (
+              <Col lg={4} md={6} key={item.id} data-aos="fade-up" data-aos-delay={idx * 60}>
+                <div
+                  style={{
+                    background: "#fff",
+                    borderRadius: 20,
+                    overflow: "hidden",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    border: "1px solid #e2e8f0",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 48px rgba(249,115,22,0.12)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "#f97316";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                    (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
+                  }}
+                >
+                  {/* Image */}
+                  {item.image ? (
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      style={{ width: "100%", height: 220, objectFit: "cover" }} 
+                    />
+                  ) : (
+                    <div style={{ height: 220, background: "linear-gradient(135deg, #fef3e2, #f0fdf4)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <i className="ri-newspaper-line" style={{ fontSize: 56, color: "#f9731630" }}></i>
                     </div>
-                  </Col>
-                );
-              })}
+                  )}
+
+                  <div className="p-4 d-flex flex-column flex-grow-1">
+                    <div className="d-flex align-items-center justify-content-between mb-3">
+                      <span style={{ background: "#fef3e2", color: "#f97316", fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 20, textTransform: "uppercase", letterSpacing: 0.5 }}>
+                        {item.category}
+                      </span>
+                      <small className="text-muted" style={{ fontSize: 12 }}>
+                        <i className="ri-calendar-line me-1"></i>
+                        {formatDate(item.date)}
+                      </small>
+                    </div>
+
+                    <h5
+                      className="fw-bold mb-3"
+                      style={{ fontSize: 17, lineHeight: 1.5 }}
+                    >
+                      {item.title}
+                    </h5>
+
+                    <p className="text-muted mb-4 flex-grow-1" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                      {item.excerpt}
+                    </p>
+
+                    <div>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "8px",
+                          background: "linear-gradient(135deg, #f97316, #ea580c)",
+                          color: "#fff",
+                          fontWeight: 600,
+                          fontSize: 14,
+                          padding: "10px 20px",
+                          borderRadius: 30,
+                          textDecoration: "none",
+                          transition: "all 0.3s ease",
+                          boxShadow: "0 2px 8px rgba(249,115,22,0.3)",
+                        }}
+                        onMouseEnter={(e) => {
+                          (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+                          (e.currentTarget as HTMLElement).style.boxShadow = "0 6px 16px rgba(249,115,22,0.4)";
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                          (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 8px rgba(249,115,22,0.3)";
+                        }}
+                      >
+                        Read Full Article <i className="ri-external-link-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+
+          {filteredNews.length === 0 && (
+            <Row className="justify-content-center py-5">
+              <Col md={6} className="text-center">
+                <i className="ri-news-line" style={{ fontSize: 48, color: "#cbd5e1", marginBottom: 16 }}></i>
+                <h4 className="fw-bold mb-2">No news found</h4>
+                <p className="text-muted">Try selecting a different category.</p>
+              </Col>
             </Row>
           )}
         </Container>

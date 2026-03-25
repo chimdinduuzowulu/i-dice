@@ -119,15 +119,15 @@ const ContactPage = () => {
       href: "mailto:media@idice.ng",
       desc: "For press, media, and communications",
     },
-    {
-      icon: "ri-shake-hands-line",
-      color: "#7c3aed",
-      bg: "#f5f3ff",
-      title: "Partnerships",
-      value: "partnerships@idice.ng",
-      href: "mailto:partnerships@idice.ng",
-      desc: "For partnership and collaboration opportunities",
-    },
+    // {
+    //   icon: "ri-shake-hands-line",
+    //   color: "#7c3aed",
+    //   bg: "#f5f3ff",
+    //   title: "Partnerships",
+    //   value: "partnerships@idice.ng",
+    //   href: "mailto:partnerships@idice.ng",
+    //   desc: "For partnership and collaboration opportunities",
+    // },
   ];
 
   const enquiryTypes = [
@@ -220,7 +220,7 @@ const ContactPage = () => {
                   margin: "0 auto",
                 }}
               >
-                For enquiries about the iDICE programme, partnerships, or applications, please reach out to our team.
+                For enquiries about the iDICE programme, partnerships, or applications, please contact us.
               </p>
             </Col>
           </Row>
@@ -358,7 +358,7 @@ const ContactPage = () => {
                   </p>
                   <div className="d-flex gap-3">
                     {[
-                      { icon: "ri-twitter-x-fill", href: "#" },
+                      { icon: "ri-twitter-fill", href: "#" },
                       { icon: "ri-linkedin-fill", href: "#" },
                       { icon: "ri-facebook-fill", href: "#" },
                       { icon: "ri-instagram-fill", href: "#" },
