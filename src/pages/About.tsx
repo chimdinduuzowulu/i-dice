@@ -5,8 +5,6 @@ import AOS from "aos";
 import NavBar from "../components/navbar/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
-import Counter from "../components/Counter";
-import Partnership from "../components/Partnership";
 
 const About = () => {
   useEffect(() => {
@@ -23,10 +21,10 @@ const About = () => {
       title: "Enterprise and Skills Development",
       desc: "This component focuses on building the capacity of entrepreneurs and innovators through:",
       items: [
-        "training programmes",
-        "incubation and acceleration initiatives",
-        "mentorship and ecosystem support",
-        "entrepreneurship development programmes"
+        "Training programmes",
+        "Incubation and acceleration initiatives",
+        "Mentorship and ecosystem support",
+        "Entrepreneurship development programmes"
       ],
       extra: "It also supports collaboration between startups, universities, and industry to strengthen Nigeria's innovation pipeline.",
     },
@@ -38,10 +36,10 @@ const About = () => {
       title: "Expanding Access to Finance",
       desc: "Access to capital remains one of the biggest barriers to startup growth. Through the DICE Funds, the programme provides financial support through:",
       items: [
-        "venture capital investments",
-        "equity and quasi-equity financing",
-        "startup funding programmes",
-        "grants and enterprise development support"
+        "Venture capital investments",
+        "Equity and quasi-equity financing",
+        "Startup funding programmes",
+        "Grants and enterprise development support"
       ],
       extra: "The programme also supports the creation of venture capital funds and investment vehicles to strengthen Nigeria's startup financing ecosystem. ",
       extraLink: {
@@ -57,10 +55,10 @@ const About = () => {
       title: "Enabling Environment and Ecosystem Support",
       desc: "This component focuses on strengthening the broader innovation ecosystem through:",
       items: [
-        "partnerships with universities and research institutions",
-        "support for innovation hubs and accelerators",
-        "investment promotion for digital and creative industries",
-        "collaboration with government agencies and regulators"
+        "Partnerships with universities and research institutions",
+        "Support for innovation hubs and accelerators",
+        "Investment promotion for digital and creative industries",
+        "Collaboration with government agencies and regulators"
       ],
       extra: "The programme also contributes to the implementation of Nigeria's Startup Act and innovation policy framework.",
     },
@@ -91,12 +89,6 @@ const About = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center" style={{ background: "transparent" }}>
-                  <li className="breadcrumb-item"><Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>Home</Link></li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>About iDICE</li>
-                </ol>
-              </nav>
               <h1 style={{ color: "#fff", fontWeight: 800, fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 20 }}>
                 About the <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>iDICE Programme</span>
               </h1>
@@ -122,7 +114,7 @@ const About = () => {
                 The programme supports entrepreneurs, innovators, and creators by providing:
               </p>
               <div className="d-flex flex-wrap gap-2 mb-4">
-                {["skills development and capacity building", "access to financing and investment opportunities", "ecosystem development support", "partnerships with universities, innovation hubs, and private sector actors"].map((item, idx) => (
+                {["Skills development and capacity building", "Access to financing and investment opportunities", "Ecosystem development support", "Partnerships with universities, innovation hubs, and private sector actors"].map((item, idx) => (
                   <span key={idx} style={{ background: "#fef3e2", color: "#f97316", padding: "5px 14px", borderRadius: 20, fontSize: 13 }}>
                     {item}
                   </span>
@@ -148,8 +140,8 @@ const About = () => {
                 </p>
                 {[
                   { icon: "ri-close-circle-line", text: "limited access to early-stage capital", color: "#f87171" },
-                  { icon: "ri-close-circle-line", text: "insufficient ecosystem infrastructure", color: "#f87171" },
-                  { icon: "ri-close-circle-line", text: "gaps in entrepreneurial skills and business development support", color: "#f87171" },
+                  { icon: "ri-close-circle-line", text: "Insufficient ecosystem infrastructure", color: "#f87171" },
+                  { icon: "ri-close-circle-line", text: "Gaps in entrepreneurial skills and business development support", color: "#f87171" },
                 ].map((item, i) => (
                   <div key={i} className="d-flex align-items-start gap-3 mb-3">
                     <i className={item.icon} style={{ color: item.color, fontSize: 20, flexShrink: 0, marginTop: 2 }}></i>

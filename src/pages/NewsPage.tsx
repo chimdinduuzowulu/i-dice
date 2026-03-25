@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import NavBar from "../components/navbar/Navbar";
@@ -85,16 +84,16 @@ const NewsPage = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
+              {/* <nav aria-label="breadcrumb" className="mb-3">
                 <ol className="breadcrumb justify-content-center">
                   <li className="breadcrumb-item"><Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>Home</Link></li>
                   <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>News & Updates</li>
                 </ol>
-              </nav>
+              </nav> */}
               <h1 style={{ color: "#fff", fontWeight: 800, fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 20 }}>
                 Latest{" "}
                 <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                  News & Updates
+                  News & Announcements
                 </span>
               </h1>
               <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8 }}>

@@ -12,7 +12,7 @@ const faqData = [
   {
     title: "Who can apply for iDICE programmes?",
     content:
-      "Eligibility varies by programme but may include:\n\n• startups\n• creative enterprises\n• innovation hubs\n• students and young entrepreneurs\n• enterprise support organisations",
+      "Eligibility varies by programme but may include:\n\n• Startups\n• Creative enterprises\n• Innovation hubs\n• Students and young entrepreneurs\n• Enterprise support organisations",
   },
   {
     title: "How much funding does the iDICE programme provide?",

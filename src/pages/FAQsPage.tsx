@@ -23,7 +23,7 @@ const allFaqs: FAQ[] = [
     category: "Eligibility & Applications",
     title: "Who can apply for iDICE programmes?",
     content:
-      "Eligibility varies by programme but may include:\n\n• startups\n• creative enterprises\n• innovation hubs\n• students and young entrepreneurs\n• enterprise support organisations",
+      "Eligibility varies by programme but may include:\n\n• Startups\n• Creative enterprises\n• Innovation hubs\n• Students and young entrepreneurs\n• Enterprise support organisations",
   },
   {
     category: "Funding & Finance",
@@ -102,18 +102,6 @@ const FAQsPage = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>
-                    FAQs
-                  </li>
-                </ol>
-              </nav>
               <h1
                 style={{
                   color: "#fff",

@@ -200,7 +200,7 @@ const Home = () => {
                     <p style={{ color: "#94a3b8", margin: 0, fontSize: 15 }}>{item.text}</p>
                   </div>
                 ))}
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 24, marginTop: 24 }}>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 10, marginTop: 5 }}>
                   <p style={{ color: "#fdba74", fontWeight: 600, fontSize: 15, margin: 0 }}>
                     AfDB is providing approximately $170 million, AFD €100 million, and IsDB $70 million, while the Bank of Industry provides counterpart financing and implementation support.{" "}
                     <a href="https://www.afdb.org" target="_blank" rel="noopener noreferrer" style={{ color: "#fdba74", fontWeight: 600, textDecoration: "underline" }}>

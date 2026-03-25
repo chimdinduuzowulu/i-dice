@@ -24,10 +24,10 @@ const Opportunities = () => {
       date: "Applications Open: March 16",
       desc: "The Startup Bridge Capacity Building Programme is designed to support early-stage entrepreneurs and innovators in Nigeria's digital economy. Startup Bridge helps founders move from idea stage to investment readiness, equipping them with the tools and networks needed to build scalable businesses.",
       provides: [
-        "structured entrepreneurial training",
-        "mentorship and ecosystem support",
-        "access to startup development resources",
-        "pathways to investment opportunities",
+        "Structured entrepreneurial training",
+        "Mentorship and ecosystem support",
+        "Access to startup development resources",
+        "Pathways to investment opportunities",
       ],
       cta: "Apply Now",
       ctaLink: "https://startupbridge.ng/",
@@ -43,10 +43,10 @@ const Opportunities = () => {
       title: "Business Process Outsourcing (BPO) Programme",
       desc: "The BPO programme is designed to prepare Nigerian youth for employment opportunities in the global digital services economy. The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
       provides: [
-        "remote service delivery",
-        "digital customer support",
-        "business process outsourcing operations",
-        "global freelancing opportunities",
+        "Remote service delivery",
+        "Digital customer support",
+        "Business process outsourcing operations",
+        "Global freelancing opportunities",
       ],
     },
     {
@@ -56,10 +56,10 @@ const Opportunities = () => {
       title: "iDICE Hackathons",
       desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology. Participants collaborate to develop innovative solutions.",
       provides: [
-        "digital services",
-        "artificial intelligence",
-        "fintech",
-        "public sector innovation",
+        "Digital services",
+        "Artificial intelligence",
+        "Fintech",
+        "Public sector innovation",
       ],
     },
     {
@@ -69,10 +69,10 @@ const Opportunities = () => {
       title: "iDICE Creathons",
       desc: "Creathons are innovation challenges designed specifically for the creative industry. These programmes bring together creatives and provide a platform for collaboration, innovation, and creative entrepreneurship.",
       provides: [
-        "film and storytelling",
-        "animation and gaming",
-        "music and digital media",
-        "design and visual arts",
+        "Film and storytelling",
+        "Animation and gaming",
+        "Music and digital media",
+        "Design and visual arts",
       ],
     },
     {
@@ -82,10 +82,10 @@ const Opportunities = () => {
       title: "Innovation and Creativity Centres (ICE Centres)",
       desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria. These centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
       provides: [
-        "33 universities",
-        "33 polytechnics",
-        "startup incubation support",
-        "digital skills training facilities",
+        "33 Universities",
+        "33 Polytechnics",
+        "Startup incubation support",
+        "Digital skills training facilities",
       ],
     },
   ];
@@ -115,12 +115,6 @@ const Opportunities = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center" style={{ background: "transparent" }}>
-                  <li className="breadcrumb-item"><Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>Home</Link></li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>Opportunities</li>
-                </ol>
-              </nav>
               <h1 style={{ color: "#fff", fontWeight: 800, fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 20 }}>
                 Opportunities Under{" "}
                 <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -143,7 +137,7 @@ const Opportunities = () => {
                   These initiatives provide opportunities for:
                 </p>
                 <div className="d-flex flex-wrap gap-2 justify-content-center">
-                  {["skills development", "entrepreneurship training", "business development support", "ecosystem participation", "investment readiness"].map((item, idx) => (
+                  {["Skills development", "Entrepreneurship training", "Business development support", "Ecosystem participation", "Investment readiness"].map((item, idx) => (
                     <span key={idx} style={{ background: "rgba(249,115,22,0.2)", color: "#fdba74", padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
                       {item}
                     </span>
@@ -164,7 +158,6 @@ const Opportunities = () => {
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Apply Now</h6>
               <h2 className="title">Current Opportunities</h2>
             </Col>
           </Row>
@@ -257,7 +250,6 @@ const Opportunities = () => {
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Coming Soon</h6>
               <h2 className="title">Upcoming and Ongoing Initiatives</h2>
               <p className="text-muted">
                 Explore the various programmes being rolled out under the iDICE initiative.

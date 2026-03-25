@@ -195,18 +195,6 @@ const BlogPage = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>
-                    Blog
-                  </li>
-                </ol>
-              </nav>
               <h1
                 style={{
                   color: "#fff",
