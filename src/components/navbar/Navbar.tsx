@@ -64,7 +64,7 @@ const NavBar = () => {
               { path: "/", label: "Home" },
               { path: "/about", label: "About iDICE" },
               { path: "/opportunities", label: "Opportunities / Apply" },
-              { path: "/news", label: "News / updates" },
+              { path: "/news", label: "News / Updates" },
               // { path: "/gallery", label: "Gallery" },
               { path: "/blog", label: "Blog" },
               { path: "/faqs", label: "FAQs" },

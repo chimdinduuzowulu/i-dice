@@ -179,13 +179,13 @@ const Home = () => {
             <Col lg={6} data-aos="fade-left">
               <div
                 style={{
-                  background: "linear-gradient(135deg, #0f0520, #1a0a3c)",
+                  background: "linear-gradient(135deg, #0f0520 0%, #1a0a3c 55%, #2d0a6b 100%)",
                   borderRadius: 24,
                   padding: "30px",
                   color: "#fff",
                 }}
               >
-                <h4 className="fw-bold" style={{ color: "#fff" }}>Funding Overview</h4>
+                <h4 className="fw-bold" style={{ color: "#fff" }}>A $618 Million Investment in Nigeria’s Future</h4>
                 <p style={{ color: "#94a3b8", lineHeight: 1.8}}>
                   The iDICE programme represents one of the largest coordinated investments in Nigeria’s digital and creative sectors.
                 </p>

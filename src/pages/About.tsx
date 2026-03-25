@@ -128,7 +128,7 @@ const About = () => {
             <Col lg={6} data-aos="fade-left">
               <div
                 style={{
-                  background: "linear-gradient(135deg, #0f0520, #1a0a3c)",
+                  background: "linear-gradient(135deg, #0f0520 0%, #1a0a3c 55%, #2d0a6b 100%)",
                   borderRadius: 24,
                   padding: "40px",
                   color: "#fff",
