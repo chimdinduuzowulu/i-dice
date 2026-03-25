@@ -156,13 +156,13 @@ const Home = () => {
             <Col lg={6} data-aos="fade-right">
               <h6 className="subtitle text-primary fw-bold text-uppercase mb-3">The Programme</h6>
               <h2 className="title mb-4">About the Programme</h2>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8, fontSize: 16 }}>
+              <p className="text-muted" style={{ fontSize: 16 }}>
                 The Investment in Digital and Creative Enterprises (iDICE) programme is a national initiative designed to support the growth of Nigeria’s digital technology and creative industries by strengthening entrepreneurial ecosystems, expanding access to finance, and developing the capacity of young innovators.
               </p>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
+              <p className="text-muted" style={{ lineHeight: 1.8 }}>
                 Launched in March 2023, the programme aims to address key challenges faced by entrepreneurs including limited access to capital, insufficient ecosystem support, and gaps in skills development.
               </p>
-              <p className="text-muted mb-4" style={{ lineHeight: 1.8 }}>
+              <p className="text-muted" style={{ lineHeight: 1.8 }}>
                 The programme is also designed to leverage additional private sector investment, potentially mobilizing hundreds of millions of dollars into Nigeria’s startup ecosystem.
               </p>
               <Link to="/opportunities" className="btn btn-primary px-4 py-2 rounded-pill fw-semibold">
@@ -175,12 +175,12 @@ const Home = () => {
                 style={{
                   background: "linear-gradient(135deg, #0f0520, #1a0a3c)",
                   borderRadius: 24,
-                  padding: "40px",
+                  padding: "30px",
                   color: "#fff",
                 }}
               >
-                <h4 className="fw-bold mb-4" style={{ color: "#fff" }}>Funding Overview</h4>
-                <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: 28 }}>
+                <h4 className="fw-bold" style={{ color: "#fff" }}>Funding Overview</h4>
+                <p style={{ color: "#94a3b8", lineHeight: 1.8}}>
                   The iDICE programme represents one of the largest coordinated investments in Nigeria’s digital and creative sectors.
                 </p>
                 {[
@@ -189,8 +189,8 @@ const Home = () => {
                   { icon: "ri-check-double-line", text: "Islamic Development Bank (IsDB)", color: "#fdba74" },
                   { icon: "ri-check-double-line", text: "Bank of Industry (BOI) as the implementing agency", color: "#fdba74" },
                 ].map((item, i) => (
-                  <div key={i} className="d-flex align-items-start gap-3 mb-3">
-                    <i className={item.icon} style={{ color: item.color, fontSize: 20, flexShrink: 0, marginTop: 2 }}></i>
+                  <div key={i} className="d-flex align-items-start gap-3">
+                    <i className={item.icon} style={{ color: item.color, fontSize: 20, flexShrink: 0}}></i>
                     <p style={{ color: "#94a3b8", margin: 0, fontSize: 15 }}>{item.text}</p>
                   </div>
                 ))}
