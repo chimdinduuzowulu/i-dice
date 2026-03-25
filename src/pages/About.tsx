@@ -99,9 +99,9 @@ const About = () => {
               <h1 style={{ color: "#fff", fontWeight: 800, fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 20 }}>
                 About the <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>iDICE Programme</span>
               </h1>
-              <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto" }}>
+              {/* <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto" }}>
                 A national initiative of the Federal Government of Nigeria aimed at strengthening the country's technology and creative ecosystems.
-              </p>
+              </p> */}
             </Col>
           </Row>
         </Container>
