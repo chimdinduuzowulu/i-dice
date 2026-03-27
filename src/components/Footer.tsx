@@ -75,7 +75,7 @@ const Footer = () => {
                 { label: "Opportunities", to: "/opportunities" },
                 { label: "News & Updates", to: "/news" },
                 { label: "Gallery", to: "/gallery" },
-                { label: "Blog", to: "/blog" },
+                // { label: "Blog", to: "/blog" },
                 { label: "FAQs", to: "/faqs" },
               ].map((link, i) => (
                 <li key={i} style={{ marginBottom: 10 }}>
@@ -85,7 +85,7 @@ const Footer = () => {
                     onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#f97316")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#94a3b8")}
                   >
-                    <i className="ri-arrow-right-s-line me-1"></i>{link.label}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -106,7 +106,7 @@ const Footer = () => {
                     onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#f97316")}
                     onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#94a3b8")}
                   >
-                    <i className="ri-arrow-right-s-line me-1"></i>{item}
+                    {item}
                   </Link>
                 </li>
               ))}

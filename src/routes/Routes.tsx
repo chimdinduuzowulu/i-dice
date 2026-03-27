@@ -6,8 +6,8 @@ import NewsPage from "../pages/NewsPage";
 import NewsDetail from "../pages/NewsDetail";
 import GalleryPage from "../pages/GalleryPage";
 import FAQsPage from "../pages/FAQsPage";
-import BlogPage from "../pages/BlogPage";
-import BlogDetail from "../pages/BlogDetail";
+// import BlogPage from "../pages/BlogPage";
+// import BlogDetail from "../pages/BlogDetail";
 import ContactPage from "../pages/ContactPage";
 
 const AppRoutes = () => {
@@ -21,8 +21,8 @@ const AppRoutes = () => {
         <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
+        {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>

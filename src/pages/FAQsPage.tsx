@@ -23,7 +23,7 @@ const allFaqs: FAQ[] = [
     category: "Eligibility & Applications",
     title: "Who can apply for iDICE programmes?",
     content:
-      "Eligibility varies by programme but may include:\n\n• startups\n• creative enterprises\n• innovation hubs\n• students and young entrepreneurs\n• enterprise support organisations",
+      "Eligibility varies by programme but may include:\n\n• Startups\n• Creative enterprises\n• Innovation hubs\n• Students and young entrepreneurs\n• Enterprise support organisations",
   },
   {
     category: "Funding & Finance",
@@ -102,18 +102,6 @@ const FAQsPage = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>
-                    FAQs
-                  </li>
-                </ol>
-              </nav>
               <h1
                 style={{
                   color: "#fff",
@@ -306,16 +294,16 @@ const FAQsPage = () => {
                           width: "100%",
                           background: "none",
                           border: "none",
-                          padding: "22px 28px",
+                          padding: "20px 24px",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
-                          gap: 16,
+                          gap: 12,
                           cursor: "pointer",
                           textAlign: "left",
                         }}
                       >
-                        <div className="d-flex align-items-start gap-3">
+                        <div className="d-flex align-items-center gap-3">
                           <div
                             style={{
                               width: 36,
@@ -327,7 +315,6 @@ const FAQsPage = () => {
                               justifyContent: "center",
                               flexShrink: 0,
                               transition: "all 0.2s",
-                              marginTop: 2,
                             }}
                           >
                             <i
@@ -338,39 +325,22 @@ const FAQsPage = () => {
                               }}
                             ></i>
                           </div>
-                          <div>
-                            {faq.category && (
-                              <span
-                                style={{
-                                  fontSize: 10,
-                                  fontWeight: 700,
-                                  color: "#f97316",
-                                  textTransform: "uppercase",
-                                  letterSpacing: 0.8,
-                                  display: "block",
-                                  marginBottom: 4,
-                                }}
-                              >
-                                {faq.category}
-                              </span>
-                            )}
-                            <span
-                              style={{
-                                fontSize: 16,
-                                fontWeight: 700,
-                                color: isOpen ? "#f97316" : "#1e293b",
-                                lineHeight: 1.4,
-                                transition: "color 0.2s",
-                              }}
-                            >
-                              {faq.title}
-                            </span>
-                          </div>
+                          <span
+                            style={{
+                              fontSize: 16,
+                              fontWeight: 600,
+                              color: isOpen ? "#f97316" : "#1e293b",
+                              lineHeight: 1.4,
+                              transition: "color 0.2s",
+                            }}
+                          >
+                            {faq.title}
+                          </span>
                         </div>
                         <div
                           style={{
-                            width: 32,
-                            height: 32,
+                            width: 28,
+                            height: 28,
                             borderRadius: "50%",
                             background: isOpen ? "#f97316" : "#f1f5f9",
                             display: "flex",
@@ -385,7 +355,7 @@ const FAQsPage = () => {
                             className="ri-arrow-down-s-line"
                             style={{
                               color: isOpen ? "#fff" : "#64748b",
-                              fontSize: 18,
+                              fontSize: 16,
                             }}
                           ></i>
                         </div>
@@ -401,10 +371,10 @@ const FAQsPage = () => {
                       >
                         <div
                           style={{
-                            padding: "0 28px 24px 76px",
+                            padding: "0 24px 20px 72px",
                             color: "#475569",
-                            fontSize: 15,
-                            lineHeight: 1.8,
+                            fontSize: 14,
+                            lineHeight: 1.5,
                             whiteSpace: "pre-line",
                           }}
                         >
