@@ -24,10 +24,10 @@ const Opportunities = () => {
       date: "Applications Open: March 16",
       desc: "The Startup Bridge Capacity Building Programme is designed to support early-stage entrepreneurs and innovators in Nigeria's digital economy. Startup Bridge helps founders move from idea stage to investment readiness, equipping them with the tools and networks needed to build scalable businesses.",
       provides: [
-        "structured entrepreneurial training",
-        "mentorship and ecosystem support",
-        "access to startup development resources",
-        "pathways to investment opportunities",
+        "Structured entrepreneurial training",
+        "Mentorship and ecosystem support",
+        "Access to startup development resources",
+        "Pathways to investment opportunities",
       ],
       cta: "Apply Now",
       ctaLink: "https://startupbridge.ng/",
@@ -41,13 +41,15 @@ const Opportunities = () => {
       iconColor: "#7c3aed",
       iconBg: "#f5f3ff",
       title: "Business Process Outsourcing (BPO) Programme",
-      desc: "The BPO programme is designed to prepare Nigerian youth for employment opportunities in the global digital services economy. The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
+      desc: "The BPO programme is designed to prepare Nigerian youth for employment opportunities in the global digital services economy.",
+      sectionHeader: "Participants will receive training in areas such as:",
       provides: [
-        "remote service delivery",
-        "digital customer support",
-        "business process outsourcing operations",
-        "global freelancing opportunities",
+        "Remote service delivery",
+        "Digital customer support",
+        "Business process outsourcing operations",
+        "Global freelancing opportunities"
       ],
+      extra: "The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
     },
     {
       icon: "ri-code-box-line",
@@ -55,25 +57,29 @@ const Opportunities = () => {
       iconBg: "#f0fdf4",
       title: "iDICE Hackathons",
       desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology. Participants collaborate to develop innovative solutions.",
+      sectionHeader: "Participants collaborate to develop innovative solutions in areas such as:",
       provides: [
-        "digital services",
-        "artificial intelligence",
-        "fintech",
-        "public sector innovation",
+        "Digital services",
+        "Artificial intelligence",
+        "Fintech",
+        "Public sector innovation"
       ],
+      extra: "Winning teams may receive mentorship, incubation support, and opportunities to scale their solutions.",
     },
     {
       icon: "ri-palette-line",
-      iconColor: "#dc2626",
-      iconBg: "#fff1f2",
+      iconColor: "#6b21d6",
+      iconBg: "#f0fdf4",
       title: "iDICE Creathons",
       desc: "Creathons are innovation challenges designed specifically for the creative industry. These programmes bring together creatives and provide a platform for collaboration, innovation, and creative entrepreneurship.",
+      sectionHeader: "These programmes bring together creatives across fields such as:",
       provides: [
-        "film and storytelling",
-        "animation and gaming",
-        "music and digital media",
-        "design and visual arts",
+        "Film and storytelling",
+        "Animation and gaming",
+        "Music and digital media",
+        "Design and visual arts"
       ],
+      extra: "Creathons provide a platform for collaboration, innovation, and creative entrepreneurship.",
     },
     {
       icon: "ri-building-2-line",
@@ -81,12 +87,19 @@ const Opportunities = () => {
       iconBg: "#f0f9ff",
       title: "Innovation and Creativity Centres (ICE Centres)",
       desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria. These centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
+      sectionHeader: "These centres will be located in:",
       provides: [
-        "33 universities",
-        "33 polytechnics",
-        "startup incubation support",
-        "digital skills training facilities",
+        "33 Universities",
+        "33 Polytechnics"
       ],
+      secondSectionHeader: "The centres will serve as hubs for:",
+      secondProvides: [
+        "Student innovation",
+        "Startup incubation",
+        "Digital skills training",
+        "Collaboration between academia and industry"
+      ],
+      extra: "ICE Centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
     },
   ];
 
@@ -115,12 +128,6 @@ const Opportunities = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center" style={{ background: "transparent" }}>
-                  <li className="breadcrumb-item"><Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>Home</Link></li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>Opportunities</li>
-                </ol>
-              </nav>
               <h1 style={{ color: "#fff", fontWeight: 800, fontSize: "clamp(1.8rem, 4vw, 3rem)", marginBottom: 20 }}>
                 Opportunities Under{" "}
                 <span style={{ background: "linear-gradient(90deg, #fdba74, #fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -142,15 +149,14 @@ const Opportunities = () => {
                 <p style={{ color: "#fff", marginBottom: 12, fontWeight: 600, fontSize: 14 }}>
                   These initiatives provide opportunities for:
                 </p>
-                <div className="d-flex flex-wrap gap-2 justify-content-center">
-                  {["skills development", "entrepreneurship training", "business development support", "ecosystem participation", "investment readiness"].map((item, idx) => (
-                    <span key={idx} style={{ background: "rgba(249,115,22,0.2)", color: "#fdba74", padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ marginTop: 8 }}>
+                  {["Skills development", "Entrepreneurship training", "Business development support", "Ecosystem participation", "Investment readiness"].map((item, idx) => (
+                    <span key={idx} style={{ background: "rgba(249,115,22,0.2)", color: "#fdba74", padding: "6px 14px", borderRadius: 20, fontSize: 13, fontWeight: 500 }}>
                       {item}
                     </span>
                   ))}
                 </div>
-                <p style={{ color: "#fb923c", marginTop: 16, fontSize: 13 }}>
-                  {/* <i className="ri-information-line me-2"></i> */}
+                <p style={{ color: "#fb923c", marginTop: 16, fontSize: 13, marginBottom: 0 }}>
                   Applications for programmes are announced periodically and will be published on this page.
                 </p>
               </div>
@@ -164,7 +170,6 @@ const Opportunities = () => {
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Apply Now</h6>
               <h2 className="title">Current Opportunities</h2>
             </Col>
           </Row>
@@ -257,7 +262,6 @@ const Opportunities = () => {
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Coming Soon</h6>
               <h2 className="title">Upcoming and Ongoing Initiatives</h2>
               <p className="text-muted">
                 Explore the various programmes being rolled out under the iDICE initiative.
@@ -295,14 +299,44 @@ const Opportunities = () => {
                     <h3 className="fw-bold mb-0" style={{ fontSize: 18, lineHeight: 1.4 }}>{initiative.title}</h3>
                   </div>
                   <p className="text-muted mb-3" style={{ fontSize: 14, lineHeight: 1.7 }}>{initiative.desc}</p>
-                  <p style={{ fontSize: 12, fontWeight: 700, color: initiative.iconColor, marginBottom: 8 }}>Participants will receive training in areas such as:</p>
-                  <div className="d-flex flex-wrap gap-2">
-                    {initiative.provides.map((item, idx) => (
-                      <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  
+                  {/* First section header and items */}
+                  {initiative.sectionHeader && (
+                    <p style={{ fontSize: 12, fontWeight: 700, color: initiative.iconColor, marginBottom: 8 }}>
+                      {initiative.sectionHeader}
+                    </p>
+                  )}
+                  {initiative.provides && (
+                    <div className="d-flex flex-wrap gap-2 mb-3">
+                      {initiative.provides.map((item, idx) => (
+                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Second section header and items (for ICE Centres) */}
+                  {initiative.secondSectionHeader && (
+                    <p style={{ fontSize: 12, fontWeight: 700, color: initiative.iconColor, marginBottom: 8, marginTop: 12 }}>
+                      {initiative.secondSectionHeader}
+                    </p>
+                  )}
+                  {initiative.secondProvides && (
+                    <div className="d-flex flex-wrap gap-2 mb-3">
+                      {initiative.secondProvides.map((item, idx) => (
+                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {initiative.extra && (
+                    <p className="text-muted mt-2" style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 0 }}>
+                      {initiative.extra}
+                    </p>
+                  )}
                 </div>
               </Col>
             ))}
@@ -345,7 +379,7 @@ const Opportunities = () => {
                     (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0";
                   }}
                 >
-                  <span style={{ position: "absolute", top: 16, right: 20, fontSize: 36, fontWeight: 900, color: "#f9731615" }}>{step.step}</span>
+                  <span style={{ position: "absolute", top: 16, right: 20, fontSize: 38, fontWeight: 900, color: "#f97316", opacity: 0.35 }}>{step.step}</span>
                   <div style={{ width: 60, height: 60, borderRadius: "50%", background: "#fef3e2", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                     <i className={step.icon} style={{ fontSize: 26, color: "#f97316" }}></i>
                   </div>

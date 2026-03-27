@@ -71,7 +71,6 @@ const ContactPage = () => {
       return;
     }
     setSubmitting(true);
-    // Simulate submission — replace with real endpoint (e.g. Formspree, EmailJS, WP REST)
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
@@ -180,18 +179,7 @@ const ContactPage = () => {
         <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="justify-content-center text-center">
             <Col lg={8} data-aos="fade-up">
-              <nav aria-label="breadcrumb" className="mb-3">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <Link to="/" style={{ color: "#94a3b8", textDecoration: "none" }}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" style={{ color: "#fdba74" }}>
-                    Contact
-                  </li>
-                </ol>
-              </nav>
+             
               <h1
                 style={{
                   color: "#fff",
@@ -228,7 +216,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Cards */}
-      <section style={{ background: "#f8fafc", paddingTop: 64, paddingBottom: 0 }}>
+      {/* <section style={{ background: "#f8fafc", paddingTop: 64, paddingBottom: 0 }}>
         <Container>
           <Row className="g-4 justify-content-center">
             {contactCards.map((card, i) => (
@@ -291,7 +279,7 @@ const ContactPage = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* Contact Form + Info */}
       <section className="section" style={{ background: "#f8fafc" }}>

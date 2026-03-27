@@ -22,8 +22,8 @@ const NavBar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   // Pages with dark hero backgrounds — show light logo
-  const darkHeroPages = ["/", "/about", "/opportunities", "/news", "/gallery", "/faqs", "/blog", "/contact"];
-  const onDarkPage = darkHeroPages.includes(location.pathname) || location.pathname.startsWith("/news/") || location.pathname.startsWith("/blog/");
+  const darkHeroPages = ["/", "/about", "/opportunities", "/news", "/faqs", "/contact"];
+  const onDarkPage = darkHeroPages.includes(location.pathname) || location.pathname.startsWith("/news/");
 
   return (
     <Navbar
@@ -64,9 +64,9 @@ const NavBar = () => {
               { path: "/", label: "Home" },
               { path: "/about", label: "About iDICE" },
               { path: "/opportunities", label: "Opportunities / Apply" },
-              { path: "/news", label: "News / updates" },
-              { path: "/gallery", label: "Gallery" },
-              { path: "/blog", label: "Blog" },
+              { path: "/news", label: "News / Updates" },
+              // { path: "/gallery", label: "Gallery" },
+              // { path: "/blog", label: "Blog" },
               { path: "/faqs", label: "FAQs" },
             ].map((item) => {
               const active = isActive(item.path);
