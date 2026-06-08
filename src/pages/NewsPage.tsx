@@ -17,6 +17,43 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    id: 6,
+    title: "iDICE: Nigeria's plan for its next generation of founders",
+    excerpt: "An op-ed by Bank of Industry MD, Dr. Olasupo Olusi, discussing how iDICE is building a pipeline of scalable businesses that can create jobs, attract investment, and contribute meaningfully to Nigeria's economic transformation.",
+    date: "2026-06-08",
+    category: "Op-ed",
+    image: "/users/BOIMD.png",
+    link: "https://guardian.ng/issue/idice-nigerias-plan-for-its-next-generation-of-founders/",
+  },
+  {
+    id: 5,
+    title: "Federal Government's iDICE Programme Onboards 185 Founders into the First Cohort of its Startup Bridge Initiative",
+    excerpt: "Following a painstaking assessment of over 7,000 applications, the iDICE Startup Bridge has onboarded 185 founders into the inaugural cohort of its Founders Lab. Women entrepreneurs account for 38% of the cohort, surpassing the programme's 30% gender inclusion target.",
+    date: "2026-06-01",
+    category: "Startup Bridge",
+    image: "https://cdn.punchng.com/wp-content/uploads/2026/03/25023049/iDICE-Startup-Bridge-1000x600-1.jpg",
+    link: "https://guardian.ng/issue/idice-nigerias-plan-for-its-next-generation-of-founders/",
+  },
+  {
+    id: 4,
+    title: "FG unveils iDICE programme to support startups",
+    excerpt: "The Federal Government has unveiled the iDICE programme as part of its broader agenda to drive innovation, youth enterprise, and economic diversification through digital technology and creative industries.",
+    date: "2026-03-25",
+    category: "Government Initiative",
+    image: "https://cdn.punchng.com/wp-content/uploads/2026/03/25023049/iDICE-Startup-Bridge-1000x600-1.jpg",
+    link: "https://punchng.com/fg-unveils-idice-programme-to-support-startups/",
+  },
+  {
+    id: 7,
+    title: "Nigeria's iDICE Startup Bridge launches with grants and $100,000 equity",
+    excerpt: "The iDICE Startup Bridge initiative launches, offering founders access to grants, up to $100,000 in equity financing, and a 12-week intensive programme focused on mentorship, operational strengthening, and investment preparedness.",
+    date: "2026-03-16",
+    category: "Startup Bridge",
+    image: "https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/09/desola-lanre-ologun-ZQO-AA7ceKE-unsplash-e1757676703852.jpg",
+    link: "https://techcabal.com/2026/03/16/idice-first-cohort-now-open/",
+  },
+  // EXISTING ITEMS - Pushed down
+  {
     id: 1,
     title: "Federal Government Launches iDICE Programme",
     excerpt: "The Federal Government launched the iDICE programme to strengthen Nigeria's digital technology and creative industries and create opportunities for young innovators and entrepreneurs.",
