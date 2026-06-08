@@ -10,6 +10,7 @@ import Faqs from "../components/Faqs";
 import BackToTop from "../components/BackToTop";
 import NavBar from "../components/navbar/Navbar";
 import heroImage from "../assets/images/heros/hero-hackathon.png";
+//
 
 const Home = () => {
   useEffect(() => {
