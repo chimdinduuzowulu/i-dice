@@ -14,24 +14,143 @@ const Opportunities = () => {
 
   const opportunities = [
     {
-      tag: "Applications Open",
-      tagColor: "#6b21d6",
-      tagBg: "#f0fdf4",
+      tag: "Applications Closed",
+      tagColor: "#dc2626",
+      tagBg: "#fef2f2",
       icon: "ri-rocket-2-line",
       iconColor: "#f97316",
       iconBg: "#fef3e2",
-      title: "iDICE Startup Bridge – Capacity Building Programme",
-      date: "Applications Open: March 16",
-      desc: "The Startup Bridge Capacity Building Programme is designed to support early-stage entrepreneurs and innovators in Nigeria's digital economy. Startup Bridge helps founders move from idea stage to investment readiness, equipping them with the tools and networks needed to build scalable businesses.",
+      title: "iDICE Startup Bridge – Founders Lab (Cohort 1)",
+      date: "Status: Cohort 1 training currently underway",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>The Founders Lab is the idea-stage track of the iDICE Startup Bridge programme, designed to help entrepreneurs transform innovative ideas into viable, investment-ready businesses. Through intensive training, mentorship, business development support, and ecosystem engagement, participants gain the knowledge, networks, and resources required to build scalable enterprises.</p>
+          <p style={{ marginBottom: 0 }}><strong style={{ color: "#f97316" }}>In addition to capacity-building support</strong>, selected startups may qualify for non-equity grant funding to accelerate product development, market validation, and business growth.</p>
+        </>
+      ),
+      fundingTag: "Funding Type: Non-Equity Grants",
       provides: [
-        "Structured entrepreneurial training",
-        "Mentorship and ecosystem support",
-        "Access to startup development resources",
-        "Pathways to investment opportunities",
+        "Intensive entrepreneurial training",
+        "Mentorship and ecosystem engagement",
+        "Business development support",
+        "Non-equity grant funding for selected startups",
       ],
-      cta: "Apply Now",
-      ctaLink: "https://startupbridge.ng/",
+      cta: "Learn More",
+      ctaLink: "https://idicestartupbridge.ng/founders-lab/",
       external: true,
+    },
+    {
+      tag: "Applications Opening Soon",
+      tagColor: "#16a34a",
+      tagBg: "#f0fdf4",
+      icon: "ri-line-chart-line",
+      iconColor: "#0891b2",
+      iconBg: "#f0f9ff",
+      title: "iDICE Startup Bridge – Growth Lab",
+      date: "Status: Applications Opening Soon",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>The Growth Lab is designed for post-MVP startups that have demonstrated traction and are ready to scale operations, expand markets, strengthen business fundamentals, and prepare for growth-stage investment. Participants receive specialized support focused on growth strategy, operational excellence, financial readiness, investor engagement, and market expansion.</p>
+          <p style={{ marginBottom: 12 }}><strong style={{ color: "#0891b2" }}>Eligible startups may also access equity-based funding opportunities</strong> to support business growth and scale.</p>
+          <p style={{ marginBottom: 0 }}><em style={{ color: "#64748b" }}>Further information on eligibility criteria, funding opportunities, and application dates will be announced shortly.</em></p>
+        </>
+      ),
+      fundingTag: "Funding Type: Equity-Based Investment",
+      provides: [
+        "Growth strategy and operational excellence",
+        "Financial readiness and investor engagement",
+        "Market expansion support",
+        "Equity-based funding opportunities",
+      ],
+      cta: "Learn More",
+      ctaLink: "https://idicestartupbridge.ng/growth-lab/",
+      external: true,
+    },
+    {
+      tag: "Active Fund",
+      tagColor: "#6b21d6",
+      tagBg: "#f5f3ff",
+      icon: "ri-bank-line",
+      iconColor: "#7c3aed",
+      iconBg: "#f5f3ff",
+      title: "BOI–iDICE Startup Debt Fund",
+      date: "$45 Million Fund Provided by the Bank of Industry",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>The BOI–iDICE Startup Debt Fund expands access to affordable financing for qualifying technology and creative enterprises seeking capital to grow and scale their businesses.</p>
+          
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}>📌 Funding Available:</strong>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>Up to ₦1 Billion per enterprise</li>
+              <li>6-month moratorium period</li>
+              <li>Maximum interest rate of 10% per annum</li>
+            </ul>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}>🎯 Eligible Sectors:</strong>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>FinTech • HealthTech • EdTech</li>
+              <li>Film • Music • Animation • Fashion</li>
+              <li>Other qualifying digital and creative enterprises</li>
+            </ul>
+          </div>
+
+          <div style={{ marginBottom: 0 }}>
+            <strong style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}>🏦 How to Access the Fund:</strong>
+            <p style={{ marginBottom: 4 }}>Applications are processed through Bank of Industry State Offices nationwide.</p>
+            <p style={{ marginBottom: 0 }}><strong>Email:</strong> customercare@boi.ng | <strong>Call:</strong> 0700 225 5264</p>
+          </div>
+        </>
+      ),
+      fundingTag: "Funding Type: Debt Financing",
+      provides: [
+        "Up to ₦1 Billion per enterprise",
+        "6-month moratorium period",
+        "Maximum interest rate of 10% per annum",
+        "Eligible sectors: FinTech, HealthTech, EdTech, Film, Music, Animation, Fashion, and more",
+      ],
+      cta: "Contact BOI",
+      ctaLink: "mailto:customercare@boi.ng",
+      external: true,
+    },
+    {
+      tag: "Active Fund",
+      tagColor: "#6b21d6",
+      tagBg: "#f5f3ff",
+      icon: "ri-hand-coin-line",
+      iconColor: "#059669",
+      iconBg: "#ecfdf5",
+      title: "IsDB–iDICE Non-Interest Financing",
+      date: "$65 Million Sharia-Compliant Financing Facility",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>The IsDB–iDICE Non-Interest Financing Facility is provided under the <strong>Federal Government of Nigeria–Islamic Development Bank Wakalah Agreement</strong> and forms part of the broader iDICE financing framework.</p>
+          <p style={{ marginBottom: 12 }}>The facility provides <strong style={{ color: "#059669" }}>ethical, Sharia-compliant financing</strong> to eligible digital and creative enterprises seeking business growth and expansion capital.</p>
+          
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ color: "#059669", display: "block", marginBottom: 6 }}>🏛️ Available Through:</strong>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>SunTrust Bank</li>
+              <li>Lotus Bank</li>
+              <li>Summit Bank</li>
+            </ul>
+          </div>
+
+          <p style={{ marginBottom: 0, fontStyle: "italic", color: "#64748b" }}>Interested enterprises should contact participating financial institutions directly for eligibility requirements, financing terms, and application procedures.</p>
+        </>
+      ),
+      fundingTag: "Funding Type: Non-Interest Financing",
+      provides: [
+        "Sharia-compliant ethical financing",
+        "Available through SunTrust Bank, Lotus Bank, and Summit Bank",
+        "For digital and creative enterprises",
+        "Business growth and expansion capital",
+      ],
+      cta: "View Participating Banks",
+      ctaLink: "#",
+      external: false,
     },
   ];
 
@@ -134,7 +253,7 @@ const Opportunities = () => {
                   the iDICE Programme
                 </span>
               </h1>
-              <p style={{ color: "#94a3b8", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto 24px" }}>
+              <p style={{ color: "#cbd5e1", fontSize: 17, lineHeight: 1.8, maxWidth: 620, margin: "0 auto 24px" }}>
                 The iDICE programme delivers a range of initiatives designed to support entrepreneurs, innovators, and ecosystem actors across Nigeria's digital and creative sectors.
               </p>
               <div
@@ -171,6 +290,9 @@ const Opportunities = () => {
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
               <h2 className="title">Current Opportunities</h2>
+              <p className="text-secondary" style={{ color: "#475569 !important" }}>
+                Explore active programmes, funding facilities, and upcoming application windows under the iDICE initiative.
+              </p>
             </Col>
           </Row>
 
@@ -202,28 +324,35 @@ const Opportunities = () => {
                       <div style={{ width: 60, height: 60, borderRadius: 16, background: opp.iconBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                         <i className={opp.icon} style={{ fontSize: 28, color: opp.iconColor }}></i>
                       </div>
-                      <div>
+                      <div style={{ flex: 1 }}>
                         <div className="d-flex align-items-center gap-2 mb-2 flex-wrap">
                           <span style={{ background: opp.tagBg, color: opp.tagColor, fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 20, border: `1px solid ${opp.tagColor}30` }}>
                             {opp.tag}
                           </span>
-                          <span style={{ color: "#94a3b8", fontSize: 13 }}>
+                          <span style={{ color: "#64748b", fontSize: 13 }}>
                             <i className="ri-calendar-line me-1"></i>{opp.date}
                           </span>
                         </div>
-                        <h3 className="fw-bold mb-3" style={{ fontSize: 20 }}>{opp.title}</h3>
-                        <p className="text-muted mb-3" style={{ lineHeight: 1.8, fontSize: 15 }}>{opp.desc}</p>
+                        <h3 className="fw-bold mb-2" style={{ fontSize: 20, color: "#0f172a" }}>{opp.title}</h3>
+                        {opp.fundingTag && (
+                          <span style={{ background: "#eef2ff", color: "#4f46e5", fontSize: 11, fontWeight: 600, padding: "3px 10px", borderRadius: 20, display: "inline-block", marginBottom: 12 }}>
+                            {opp.fundingTag}
+                          </span>
+                        )}
+                        <div style={{ color: "#1e293b", fontSize: 15, lineHeight: 1.7 }}>
+                          {opp.desc}
+                        </div>
                       </div>
                     </div>
                   </Col>
                   <Col lg={4}>
                     <div style={{ background: "#f8fafc", borderRadius: 12, padding: 20 }}>
-                      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", color: "#64748b", letterSpacing: 0.5, marginBottom: 12 }}>The programme provides:</p>
+                      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", color: "#475569", letterSpacing: 0.5, marginBottom: 12 }}>Key highlights:</p>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                         {opp.provides.map((p, j) => (
                           <li key={j} className="d-flex align-items-center gap-2 mb-2">
                             <i className="ri-check-line" style={{ color: opp.iconColor, fontSize: 14, flexShrink: 0 }}></i>
-                            <span style={{ fontSize: 13, color: "#475569" }}>{p}</span>
+                            <span style={{ fontSize: 13, color: "#334155" }}>{p}</span>
                           </li>
                         ))}
                       </ul>
@@ -263,7 +392,7 @@ const Opportunities = () => {
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
               <h2 className="title">Upcoming and Ongoing Initiatives</h2>
-              <p className="text-muted">
+              <p className="text-secondary" style={{ color: "#475569 !important" }}>
                 Explore the various programmes being rolled out under the iDICE initiative.
               </p>
             </Col>
@@ -296,9 +425,9 @@ const Opportunities = () => {
                     <div style={{ width: 48, height: 48, borderRadius: 12, background: initiative.iconBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                       <i className={initiative.icon} style={{ fontSize: 24, color: initiative.iconColor }}></i>
                     </div>
-                    <h3 className="fw-bold mb-0" style={{ fontSize: 18, lineHeight: 1.4 }}>{initiative.title}</h3>
+                    <h3 className="fw-bold mb-0" style={{ fontSize: 18, lineHeight: 1.4, color: "#0f172a" }}>{initiative.title}</h3>
                   </div>
-                  <p className="text-muted mb-3" style={{ fontSize: 14, lineHeight: 1.7 }}>{initiative.desc}</p>
+                  <p className="mb-3" style={{ fontSize: 14, lineHeight: 1.7, color: "#334155" }}>{initiative.desc}</p>
                   
                   {/* First section header and items */}
                   {initiative.sectionHeader && (
@@ -309,7 +438,7 @@ const Opportunities = () => {
                   {initiative.provides && (
                     <div className="d-flex flex-wrap gap-2 mb-3">
                       {initiative.provides.map((item, idx) => (
-                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12, fontWeight: 500 }}>
                           {item}
                         </span>
                       ))}
@@ -325,7 +454,7 @@ const Opportunities = () => {
                   {initiative.secondProvides && (
                     <div className="d-flex flex-wrap gap-2 mb-3">
                       {initiative.secondProvides.map((item, idx) => (
-                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12 }}>
+                        <span key={idx} style={{ background: initiative.iconBg, color: initiative.iconColor, padding: "4px 12px", borderRadius: 20, fontSize: 12, fontWeight: 500 }}>
                           {item}
                         </span>
                       ))}
@@ -333,7 +462,7 @@ const Opportunities = () => {
                   )}
 
                   {initiative.extra && (
-                    <p className="text-muted mt-2" style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 0 }}>
+                    <p className="mt-2" style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 0, color: "#475569" }}>
                       {initiative.extra}
                     </p>
                   )}
@@ -349,9 +478,9 @@ const Opportunities = () => {
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2">Application Process</h6>
+              <h6 className="subtitle text-primary fw-bold text-uppercase mb-2" style={{ color: "#f97316" }}>Application Process</h6>
               <h2 className="title">How to Apply</h2>
-              <p className="text-muted">
+              <p className="text-secondary" style={{ color: "#475569 !important" }}>
                 Applications for each initiative are conducted through designated application portals. All official calls for applications will be published on this page and through iDICE communication channels.
               </p>
             </Col>
@@ -383,8 +512,8 @@ const Opportunities = () => {
                   <div style={{ width: 60, height: 60, borderRadius: "50%", background: "#fef3e2", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                     <i className={step.icon} style={{ fontSize: 26, color: "#f97316" }}></i>
                   </div>
-                  <h5 className="fw-bold mb-3">{step.title}</h5>
-                  <p className="text-muted mb-0" style={{ fontSize: 14, lineHeight: 1.7 }}>{step.desc}</p>
+                  <h5 className="fw-bold mb-3" style={{ color: "#0f172a" }}>{step.title}</h5>
+                  <p className="mb-0" style={{ fontSize: 14, lineHeight: 1.7, color: "#475569" }}>{step.desc}</p>
                 </div>
               </Col>
             ))}
