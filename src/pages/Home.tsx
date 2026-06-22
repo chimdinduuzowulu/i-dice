@@ -962,7 +962,7 @@ const Home = () => {
       <News />
 
       {/* ── PARTNERSHIP ── */}
-      <Partnership />
+      {/* <Partnership /> */}
 
       {/* ── FAQS PREVIEW ── */}
       <Faqs />

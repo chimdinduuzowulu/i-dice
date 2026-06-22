@@ -14,34 +14,124 @@ interface FAQ {
 
 const allFaqs: FAQ[] = [
   {
-    category: "About iDICE",
-    title: "What is the iDICE programme?",
+    category: "General",
+    title: "What is the iDICE Program?",
     content:
-      "iDICE (Investment in Digital and Creative Enterprises) is a Federal Government initiative designed to support Nigeria's digital and creative sectors through skills development, ecosystem support, and access to financing.",
-  },
-  {
-    category: "Eligibility & Applications",
-    title: "Who can apply for iDICE programmes?",
-    content:
-      "Eligibility varies by programme but may include:\n\n• Startups\n• Creative enterprises\n• Innovation hubs\n• Students and young entrepreneurs\n• Enterprise support organisations",
+      "iDICE stands for Investment in Digital and Creative Enterprises. It is an initiative of the Federal Government of Nigeria to promote entrepreneurship and innovation in the digital technology and creative industries in the context of efforts to create jobs, especially for young people. iDICE responds to specific gaps in Nigeria's technology and creativity ecosystem and is designed to address constraints in these industries including access to risk capital and innovation ecosystem capacity challenges faced by Start-ups.",
   },
   {
     category: "Funding & Finance",
-    title: "How much funding does the iDICE programme provide?",
+    title: "Who is financing the iDICE program?",
     content:
-      "The programme has a total funding envelope of approximately $618 million, mobilised through partnerships between the Federal Government of Nigeria and international development partners.",
+      "The total Program cost is estimated at $618 million, out of which the African Development Bank is providing $170 million; the Agence Française de Développement, €100 million ($116 million); and the Islamic Development Bank $70 million in co-financing. The Bank of Industry (BOI) will provide $45 million as FGN's Counterpart contribution to be availed through loans for qualifying Start-ups. This financing is expected to leverage further equity investments from the private sector and institutional investors to the tune of $217 million.",
+  },
+  {
+    category: "General",
+    title: "What are the different intervention components of the iDICE program?",
+    content:
+      "The iDICE program has three main intervention components as follows:\n\ni. Enterprise and Skills Development: To equip youths with skills and nurture talents to generate high potential Start-ups; building a community of developers, software engineers, designers, thinkers, and tech talents and linking them to jobs in collaboration with selected Universities and Polytechnics, major technology companies, and other actors in the private sector. The Program will also support innovation in Artificial Intelligence and Internet of Things to incentivize discovery, Incubation and Acceleration, and nurturing Start-ups to be investable.\n\nii. Expanding Access to Finance: Promote funding and nurturing of Tech-enabled and Creative Sector Enterprises, including SMEs, to address existing funding gaps in Nigeria's debt, private equity and impact investment spaces. This will be done through two sub-components: DICE Funds, which seek to strengthen start-ups, early and growth stage enterprises through injection of equity and quasi equity capital, loans, training and capacity building for Start-ups, as well as support grants. Independent Fund Managers will be recruited competitively to run the venture capital funds.\n\niii. Enabling Environment and Institutional Support: Entails support to operationalise the National Start-up Act; Investment and export promotion activities for technology and creative businesses; Support for development of ICT national qualification framework; Revamping curricula and pedagogy for STEM and training for regulators.",
   },
   {
     category: "Eligibility & Applications",
-    title: "Is there a cost to apply?",
+    title: "Who are the primary targets of the iDICE program?",
     content:
-      "No. Applying to iDICE initiatives is free.",
+      "iDICE targets Nigeria's young women and men (15-35 years), entrepreneurs, innovative early-stage growth technology-enabled ventures and creative sector micro, small and medium enterprises (MSMEs) as well as Enterprise Support Organizations (ESOs), including Hubs, Accelerators, Venture Capital, and Private Equity Firms. It also targets Federal, State and Private Universities and Polytechnics, and key Participating Federal Ministries, Departments and Agencies (MDAs).",
+  },
+  {
+    category: "General",
+    title: "How will the iDICE program benefit youth in Nigeria?",
+    content:
+      "The program is expected to create over 6 million jobs (552,000 direct and 5,580,000 indirect), especially for young people. Over 175,000 youths will be equipped with skills in digital technology and creative industries to foster innovation and support the emergence of more entrepreneurs. 75 Enterprise Support Organizations, 226 creative enterprises and 451 digital technology Startups will benefit from the Program. Overall, the economic benefits to be generated from the iDICE Program to the Nigerian economy are estimated at $6.4 billion.",
   },
   {
     category: "Eligibility & Applications",
-    title: "How will beneficiaries be selected?",
+    title: "What types of businesses will benefit from the iDICE program?",
     content:
-      "Applications are evaluated through competitive selection processes based on programme-specific criteria.",
+      "a) Hardware, software, and technology-enabled companies catalysing disruption in traditional industries; and (b) Creative sector businesses cutting across gaming, animation, content distribution (music, film), social media among other innovations.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "What are Enterprise Support Organizations (ESOs) and how will they benefit from the program?",
+    content:
+      "Enterprise Support Organizations (ESOs) such as hubs, incubators, accelerators, venture capital and private equity firms, Federal, State, and Private universities and polytechnics, will benefit from the program by receiving support to strengthen their capacity and better support startups and entrepreneurs.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "How will the program support women-led startups in the technology and creative sectors?",
+    content:
+      "The program has a dedicated budget of US$1.14 million to nurture women-led startups in the technology and creative sectors.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "How will beneficiaries be selected for the program?",
+    content:
+      "The direct beneficiaries of the program will be selected based on transparent selection criteria or competitive calls.",
+  },
+  {
+    category: "General",
+    title: "What is the geographic coverage of the program?",
+    content:
+      "The program will have a national coverage with all the 36 States of Nigeria and the Federal Capital Territory eligible to benefit from the program.",
+  },
+  {
+    category: "General",
+    title: "What digital skills programs will iDICE offer for youths?",
+    content:
+      "iDICE will provide an opportunity for 175,000 youths to benefit from a variety of digital skills programs, including virtual, hybrid, and onsite training. The programs will range from basic to advanced digital literacy training, with a focus on emerging technologies like Artificial Intelligence, Gaming, Animation, and Robotics. Selected universities, vocational centers, polytechnics, and hubs across Nigeria's key regions will serve as onsite training centers.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "How can my University/Hub/Vocational Center become an iDICE training center, and what are the incentives?",
+    content:
+      "The iDICE Program will support 66 Digital and Creative Incubation Hubs/Innovation Centers of Excellence/Digital Satellite Labs in universities and polytechnics. To become an iDICE training center, your institution will be selected through a transparent gap analysis and mapping process. Institutions will be assessed based on various criteria, such as their location, access to youth, experience with similar interventions, willingness to provide space, among others. The incentives for selected institutions include access to iDICE resources, equipment, and support to become operational training centers.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "How can my private sector/NGO organization partner with the iDICE Program if we specialize in digital skills training?",
+    content:
+      "The iDICE Program welcomes strong public-private partnerships and is excited to partner with organizations in the private sector on all Program components. To express interest in partnering with iDICE, please fill out the contact us form on the Program website.",
+  },
+  {
+    category: "Funding & Finance",
+    title: "How are the DICE Funds managed?",
+    content:
+      "The iDICE fund is managed by three main bodies. The independent Fund Manager(s) will be competitively recruited and responsible for all investment tasks, including screening, monitoring, and reporting. The Investment Committee, composed of at least 7 members and at least three independent industry experts, ensures that the Fund Manager's investments follow set criteria and limits. The Fund Advisory Board, composed of representatives of the main investors, advises on audit, compliance, and conflicts of interest, and makes decisions related to minor changes in fund documents and strategy.",
+  },
+  {
+    category: "Funding & Finance",
+    title: "How can my company become a fund manager for the DICE Funds?",
+    content:
+      "There will be a public call for expressions of interest from firms with fund management experience to bid for the opportunity to become one of the iDICE fund managers. Keep an eye on the Program website and local newspapers for updates.",
+  },
+  {
+    category: "Funding & Finance",
+    title: "How can I invest in the DICE Funds as a private investor?",
+    content:
+      "Private investors are welcome to invest in the DICE Funds as equal limited partners alongside the government. To express your interest, please fill out the 'contact us' form on the iDICE website and one of our agents will respond to you in due course.",
+  },
+  {
+    category: "Funding & Finance",
+    title: "I am a creative / I own a startup and I need funding for my upcoming Program, how will iDICE support?",
+    content:
+      "Details on how to apply for funding through the iDICE Program will be published on the Program website and made accessible to all interested parties. Entrepreneurs and businesses in the digital and creative industries who meet the eligibility criteria can send an enquiry email by filling out a form on the Program website. The form will require basic information about the applicant and their business, as well as a brief description of the Program for which funding is being sought.",
+  },
+  {
+    category: "General",
+    title: "Which agency is responsible for implementing the iDICE Program in Nigeria?",
+    content:
+      "The Bank of Industry (BOI) is the primary Executing Agency for the iDICE Program in Nigeria. The BOI is a Nigerian development finance institution that provides funding and technical support to entrepreneurs and businesses in various sectors of the economy. The BOI is responsible for the disbursement of funds, the provision of technical support, and the monitoring of Program activities and outcomes.",
+  },
+  {
+    category: "General",
+    title: "Will the BOI work with other implementing partners for the iDICE Program?",
+    content:
+      "Yes, the BOI would work with other implementing partners (such as fund managers, private equity firms, training institutions, incubators, accelerators etc.) to implement the various components of the iDICE Program, particularly in areas where the partners have specific expertise or experience and value add. The Program would also leverage additional funding from other sources, including the private sector and development partners, to support the growth of the digital and creative industries in Nigeria. The BOI will work closely with these partners to ensure that the Program is implemented effectively and efficiently.",
+  },
+  {
+    category: "Eligibility & Applications",
+    title: "What are the eligibility criteria for financing through the iDICE Program?",
+    content:
+      "Please check the iDICE website – www.idice.ng for regular updates. A transparent criterion will be published on eligibility of financing for entrepreneurs and businesses based on specific requirements depending on the type of financing being sought.",
   },
 ];
 
@@ -364,7 +454,7 @@ const FAQsPage = () => {
                       {/* Answer */}
                       <div
                         style={{
-                          maxHeight: isOpen ? 400 : 0,
+                          maxHeight: isOpen ? 800 : 0,
                           overflow: "hidden",
                           transition: "max-height 0.35s ease",
                         }}
@@ -374,7 +464,7 @@ const FAQsPage = () => {
                             padding: "0 24px 20px 72px",
                             color: "#475569",
                             fontSize: 14,
-                            lineHeight: 1.5,
+                            lineHeight: 1.6,
                             whiteSpace: "pre-line",
                           }}
                         >
