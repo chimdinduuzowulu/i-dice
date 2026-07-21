@@ -57,14 +57,14 @@ const Opportunities = () => {
       external: true,
     },
     {
-      tag: "Applications Opening Soon",
+      tag: "Applications now open",
       tagColor: "#16a34a",
       tagBg: "#f0fdf4",
       icon: "ri-line-chart-line",
       iconColor: "#0891b2",
       iconBg: "#f0f9ff",
       title: "iDICE Startup Bridge – Growth Lab",
-      date: "Status: Applications Opening Soon",
+      date: "Status: Applications Now Open",
       desc: (
         <>
           <p style={{ marginBottom: 12 }}>
