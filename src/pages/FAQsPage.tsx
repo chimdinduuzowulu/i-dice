@@ -133,6 +133,108 @@ const allFaqs: FAQ[] = [
     content:
       "Please check the iDICE website – www.idice.ng for regular updates. A transparent criterion will be published on eligibility of financing for entrepreneurs and businesses based on specific requirements depending on the type of financing being sought.",
   },
+  {
+    category: "Debt Funds",
+    title: "What is the iDICE Debt Fund Programme?",
+    content:
+      "The iDICE Debt Fund Programme provides affordable financing to eligible technology and creative startups through two financing windows: the BOI–iDICE Debt Fund and the IsDB–iDICE Debt Fund, helping businesses access the capital they need to grow and scale.",
+  },
+  {
+    category: "Debt Funds",
+    title: "What is the difference between the two funds?",
+    content:
+      "The BOI–iDICE Debt Fund is a conventional debt financing facility provided by the Bank of Industry, while the IsDB–iDICE Debt Fund is a Sharia-compliant, non-interest financing facility structured using the Murabaha model.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Who can apply for the Debt Funds?",
+    content:
+      "Eligible technology and creative startups operating in Nigeria that satisfy the programme's eligibility requirements.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Which sectors are eligible?",
+    content:
+      "Eligible sectors include technology businesses such as FinTech, HealthTech, EdTech, AgriTech, ClimateTech, AI, Software, Cybersecurity, SaaS and Digital Services, as well as creative businesses including Film, Television, Music, Animation, Gaming, Fashion, Photography, Publishing, Performing Arts, Visual Arts, Digital Content and other qualifying enterprises.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Do I need to be a registered business?",
+    content:
+      "Yes. Applicants must be registered business entities operating in Nigeria and meet the applicable eligibility criteria.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Can established businesses apply?",
+    content:
+      "Yes. Depending on the financing window and eligibility requirements, both startups and qualifying established technology or creative enterprises may be eligible.",
+  },
+  {
+    category: "Debt Funds",
+    title: "How much financing can I access through the BOI–iDICE Debt Fund?",
+    content:
+      "Eligible businesses can access financing ranging from ₦10 million to ₦1 billion, subject to assessment and approval.",
+  },
+  {
+    category: "Debt Funds",
+    title: "What is the interest rate on the BOI–iDICE Debt Fund?",
+    content:
+      "The facility carries a maximum interest rate of 10% per annum.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Is there a moratorium on the BOI–iDICE Debt Fund?",
+    content:
+      "Yes. Successful applicants may receive a moratorium of up to six months, subject to the approved facility terms.",
+  },
+  {
+    category: "Debt Funds",
+    title: "How long is the repayment period for the BOI–iDICE Debt Fund?",
+    content:
+      "The repayment period is up to five years, depending on the approved facility.",
+  },
+  {
+    category: "Debt Funds",
+    title: "What is Murabaha financing?",
+    content:
+      "Murabaha (cost-plus-markup) is a Sharia-compliant financing model where the financier purchases an asset on behalf of the customer and resells it at an agreed price with a disclosed profit margin.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Is the IsDB–iDICE Debt Fund only for Muslims?",
+    content:
+      "No. The facility is open to all eligible Nigerian technology and creative startups, regardless of religion or background.",
+  },
+  {
+    category: "Debt Funds",
+    title: "What can the IsDB–iDICE Debt Fund financing be used for?",
+    content:
+      "The facility is primarily intended to finance productive business assets such as equipment, technology, creative infrastructure, and other eligible business assets.",
+  },
+  {
+    category: "Debt Funds",
+    title: "How do I apply for the Debt Funds?",
+    content:
+      "Applications for both funds can be submitted through the official application portal: idice.boi.ng",
+  },
+  {
+    category: "Debt Funds",
+    title: "Can I apply for the IsDB–iDICE Debt Fund through a bank?",
+    content:
+      "Yes. Applications may also be submitted through participating non-interest financial institutions, including Lotus Bank, SunTrust Bank, and Summit Bank. Additional partner institutions may be added over time.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Can I apply for both Debt Funds?",
+    content:
+      "Applicants should review the objectives and eligibility requirements of each financing window and apply for the fund that best suits their business needs.",
+  },
+  {
+    category: "Debt Funds",
+    title: "Who can I contact for enquiries about the Debt Funds?",
+    content:
+      "For support, contact the Bank of Industry:\nEmail: customercare@boi.ng\nTelephone: 0700 225 5264",
+  },
 ];
 
 const FAQsPage = () => {

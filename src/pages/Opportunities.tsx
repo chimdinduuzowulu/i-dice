@@ -12,36 +12,222 @@ const Opportunities = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const opportunities = [
+  // Active opportunities (applications open)
+  const activeOpportunities = [
     {
-      tag: "Cohort 2 Applications Open",
+      tag: "Applications Open",
       tagColor: "#16a34a",
       tagBg: "#f0fdf4",
+      icon: "ri-bank-line",
+      iconColor: "#7c3aed",
+      iconBg: "#f5f3ff",
+      title: "BOI–iDICE Debt Fund",
+      fundSize: "Fund Size: US$45 Million",
+      date: "Funding Type: Debt Financing | Status: Applications Open",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>
+            The BOI–iDICE Debt Fund is a US$45 million financing facility 
+            provided by the Bank of Industry (BOI) on behalf of the Federal 
+            Government of Nigeria under the Investment in Digital and Creative 
+            Enterprises (iDICE) Programme.
+          </p>
+          <p style={{ marginBottom: 12 }}>
+            Designed for eligible technology and creative startups with 
+            demonstrated growth potential, the Fund provides affordable financing 
+            to help businesses expand operations, acquire assets, increase 
+            capacity, and scale sustainably.
+          </p>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong
+              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
+            >
+              📌 Fund Highlights:
+            </strong>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>Financing from ₦10 Million to ₦1 Billion</li>
+              <li>Maximum interest rate of 10% per annum</li>
+              <li>Up to 6-month moratorium</li>
+              <li>Repayment period of up to 5 years</li>
+            </ul>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong
+              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
+            >
+              🎯 Eligible Beneficiaries:
+            </strong>
+            <p style={{ marginBottom: 6, color: "#334155" }}>
+              The Fund is open to eligible technology and creative startups 
+              operating in sectors including:
+            </p>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>FinTech</li>
+              <li>HealthTech</li>
+              <li>EdTech</li>
+              <li>AgriTech</li>
+              <li>ClimateTech</li>
+              <li>AI &amp; Data</li>
+              <li>E-commerce</li>
+              <li>Software &amp; Digital Services</li>
+              <li>Film &amp; Television</li>
+              <li>Music</li>
+              <li>Animation &amp; VFX</li>
+              <li>Gaming</li>
+              <li>Fashion &amp; Beauty</li>
+              <li>Digital Content</li>
+              <li>Publishing</li>
+              <li>Photography &amp; Cinematography</li>
+              <li>Performing Arts</li>
+              <li>Visual Arts</li>
+              <li>And other qualifying digital and creative enterprises</li>
+            </ul>
+          </div>
+
+          <div style={{ marginBottom: 0 }}>
+            <strong
+              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
+            >
+              🏦 How to Apply:
+            </strong>
+            <p style={{ marginBottom: 0 }}>
+              Applications can be submitted through the official iDICE 
+              financing portal: <strong>idice.boi.ng</strong>
+            </p>
+          </div>
+        </>
+      ),
+      fundingTag: "Funding Type: Debt Financing",
+      provides: [
+        "Financing from ₦10 Million to ₦1 Billion",
+        "Maximum interest rate of 10% per annum",
+        "Up to 6-month moratorium",
+        "Repayment period of up to 5 years",
+        "Open to eligible technology and creative startups",
+      ],
+      cta: "Apply for the BOI-iDICE Debt Fund",
+      ctaLink: "https://idice.boi.ng/",
+      external: true,
+    },
+    {
+      tag: "Applications Open",
+      tagColor: "#16a34a",
+      tagBg: "#f0fdf4",
+      icon: "ri-hand-coin-line",
+      iconColor: "#059669",
+      iconBg: "#ecfdf5",
+      title: "IsDB–iDICE Debt Fund",
+      fundSize: "Fund Size: US$65 Million",
+      date: "Funding Type: Non-Interest (Sharia-Compliant) Debt Financing | Status: Applications Open",
+      desc: (
+        <>
+          <p style={{ marginBottom: 12 }}>
+            The IsDB–iDICE Debt Fund is a US$65 million Sharia-compliant 
+            financing facility established under the{" "}
+            <strong>
+              Federal Government of Nigeria–Islamic Development Bank (IsDB) 
+              partnership
+            </strong>{" "}
+            as part of the iDICE Programme.
+          </p>
+          <p style={{ marginBottom: 12 }}>
+            Structured using a{" "}
+            <strong style={{ color: "#059669" }}>
+              Murabaha (cost-plus-markup) financing model
+            </strong>
+            , the Fund provides ethical, non-interest financing for eligible 
+            technology and creative startups seeking to acquire equipment, 
+            technology, creative infrastructure, and other productive business 
+            assets. The facility is open to all eligible Nigerians, regardless 
+            of faith or background.
+          </p>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong
+              style={{ color: "#059669", display: "block", marginBottom: 6 }}
+            >
+              📌 Fund Highlights:
+            </strong>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>US$65 million financing facility</li>
+              <li>Sharia-compliant, non-interest financing</li>
+              <li>Designed primarily for productive asset financing</li>
+              <li>Open to eligible technology and creative startups nationwide</li>
+            </ul>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong
+              style={{ color: "#059669", display: "block", marginBottom: 6 }}
+            >
+              🏛️ How to Apply:
+            </strong>
+            <p style={{ marginBottom: 6 }}>
+              Applications can be submitted through the official iDICE 
+              financing portal: <strong>idice.boi.ng</strong>
+            </p>
+            <p style={{ marginBottom: 6 }}>
+              Applicants may also apply through participating non-interest 
+              financial institutions, including:
+            </p>
+            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
+              <li>Lotus Bank</li>
+              <li>SunTrust Bank</li>
+              <li>Summit Bank</li>
+            </ul>
+            <p style={{ marginTop: 6, marginBottom: 0, fontSize: 13, color: "#64748b" }}>
+              Additional participating financial institutions may be announced.
+            </p>
+          </div>
+        </>
+      ),
+      fundingTag: "Funding Type: Non-Interest (Sharia-Compliant) Debt Financing",
+      provides: [
+        "US$65 million financing facility",
+        "Sharia-compliant, non-interest financing (Murabaha model)",
+        "Designed primarily for productive asset financing",
+        "Open to eligible technology and creative startups nationwide",
+        "Available through Lotus Bank, SunTrust Bank, and Summit Bank",
+      ],
+      cta: "Apply for the IsDB-iDICE Debt Fund",
+      ctaLink: "https://idice.boi.ng/",
+      external: true,
+    },
+  ];
+
+  // Closed opportunities
+  const closedOpportunities = [
+    {
+      tag: "Cohort 2 Applications Closed",
+      tagColor: "#dc2626",
+      tagBg: "#fef2f2",
       icon: "ri-rocket-2-line",
       iconColor: "#f97316",
       iconBg: "#fef3e2",
       title: "iDICE Startup Bridge – Founders Lab",
-      date: "Status: Cohort 2 Applications Now Open | Cohort 1 Training Ongoing",
+      date: "Status: Cohort 2 Applications Closed | Cohort 1 Training Ongoing",
       desc: (
         <>
           <p style={{ marginBottom: 12 }}>
             The Founders Lab is the idea-stage track of the iDICE Startup Bridge
             programme, equipping aspiring entrepreneurs with the skills,
             mentorship, and support needed to build investment-ready startups.
-            <p style={{ marginBottom: 12 }}>
-              While Cohort 1 founders are already learning, building, and
-              validating their ventures, applications are now open for Cohort 2.
-              Selected participants will receive world-class entrepreneurial
-              training, mentorship, ecosystem access, and the opportunity to
-              qualify for non-equity grant funding to accelerate their startup
-              journey.
-            </p>
+          </p>
+          <p style={{ marginBottom: 12 }}>
+            While Cohort 1 founders are already learning, building, and
+            validating their ventures, applications for Cohort 2 have now
+            closed. Selected participants will receive world-class
+            entrepreneurial training, mentorship, ecosystem access, and the
+            opportunity to qualify for non-equity grant funding to
+            accelerate their startup journey.
           </p>
           <p style={{ marginBottom: 0 }}>
             <strong style={{ color: "#f97316" }}>
-              Apply now and take the first step 
+              Stay tuned
             </strong> 
-              &nbsp;towards building Nigeria's next generation of innovative businesses.
+            &nbsp;for updates on the next application window.
           </p>
         </>
       ),
@@ -56,184 +242,37 @@ const Opportunities = () => {
       ctaLink: "https://idicestartupbridge.ng/founders-lab/",
       external: true,
     },
+  ];
+
+  const upcomingInitiatives = [
     {
-      tag: "Applications now open",
-      tagColor: "#16a34a",
-      tagBg: "#f0fdf4",
       icon: "ri-line-chart-line",
       iconColor: "#0891b2",
       iconBg: "#f0f9ff",
       title: "iDICE Startup Bridge – Growth Lab",
-      date: "Status: Applications Now Open",
-      desc: (
-        <>
-          <p style={{ marginBottom: 12 }}>
-            The Growth Lab is designed for post-MVP startups that have
-            demonstrated traction and are ready to scale operations, expand
-            markets, strengthen business fundamentals, and prepare for
-            growth-stage investment. Participants receive specialized support
-            focused on growth strategy, operational excellence, financial
-            readiness, investor engagement, and market expansion.
-          </p>
-          <p style={{ marginBottom: 12 }}>
-            <strong style={{ color: "#0891b2" }}>
-              Eligible startups may also access equity-based funding
-              opportunities
-            </strong>{" "}
-            to support business growth and scale.
-          </p>
-          <p style={{ marginBottom: 0 }}>
-            <em style={{ color: "#64748b" }}>
-              Further information on eligibility criteria, funding
-              opportunities, and application dates will be announced shortly.
-            </em>
-          </p>
-        </>
-      ),
-      fundingTag: "Funding Type: Equity-Based Investment",
+      desc: "The Growth Lab is designed for post-MVP startups that have demonstrated traction and are ready to scale operations, expand markets, strengthen business fundamentals, and prepare for growth-stage investment.",
+      sectionHeader: "Participants receive specialized support focused on:",
       provides: [
         "Growth strategy and operational excellence",
         "Financial readiness and investor engagement",
         "Market expansion support",
         "Equity-based funding opportunities",
       ],
-      cta: "Learn More",
-      ctaLink: "https://idicestartupbridge.ng/growth-lab/",
-      external: true,
-    },
-    {
-      tag: "Active Fund",
-      tagColor: "#6b21d6",
-      tagBg: "#f5f3ff",
-      icon: "ri-bank-line",
-      iconColor: "#7c3aed",
-      iconBg: "#f5f3ff",
-      title: "BOI–iDICE Startup Debt Fund",
-      date: "$45 Million Fund Provided by the Bank of Industry",
-      desc: (
+      extra: (
         <>
-          <p style={{ marginBottom: 12 }}>
-            The BOI–iDICE Startup Debt Fund expands access to affordable
-            financing for qualifying technology and creative enterprises seeking
-            capital to grow and scale their businesses.
-          </p>
-
-          <div style={{ marginBottom: 12 }}>
-            <strong
-              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
-            >
-              📌 Funding Available:
-            </strong>
-            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
-              <li>Up to ₦1 Billion per enterprise</li>
-              <li>6-month moratorium period</li>
-              <li>Maximum interest rate of 10% per annum</li>
-            </ul>
-          </div>
-
-          <div style={{ marginBottom: 12 }}>
-            <strong
-              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
-            >
-              🎯 Eligible Sectors:
-            </strong>
-            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
-              <li>FinTech • HealthTech • EdTech</li>
-              <li>Film • Music • Animation • Fashion</li>
-              <li>Other qualifying digital and creative enterprises</li>
-            </ul>
-          </div>
-
-          <div style={{ marginBottom: 0 }}>
-            <strong
-              style={{ color: "#7c3aed", display: "block", marginBottom: 6 }}
-            >
-              🏦 How to Access the Fund:
-            </strong>
-            <p style={{ marginBottom: 4 }}>
-              Applications are processed through Bank of Industry State Offices
-              nationwide.
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              <strong>Email:</strong> customercare@boi.ng |{" "}
-              <strong>Call:</strong> 0700 225 5264
-            </p>
-          </div>
-        </>
-      ),
-      fundingTag: "Funding Type: Debt Financing",
-      provides: [
-        "Up to ₦1 Billion per enterprise",
-        "6-month moratorium period",
-        "Maximum interest rate of 10% per annum",
-        "Eligible sectors: FinTech, HealthTech, EdTech, Film, Music, Animation, Fashion, and more",
-      ],
-      cta: "Contact BOI",
-      ctaLink: "mailto:customercare@boi.ng",
-      external: true,
-    },
-    {
-      tag: "Active Fund",
-      tagColor: "#6b21d6",
-      tagBg: "#f5f3ff",
-      icon: "ri-hand-coin-line",
-      iconColor: "#059669",
-      iconBg: "#ecfdf5",
-      title: "IsDB–iDICE Non-Interest Financing",
-      date: "$65 Million Sharia-Compliant Financing Facility",
-      desc: (
-        <>
-          <p style={{ marginBottom: 12 }}>
-            The IsDB–iDICE Non-Interest Financing Facility is provided under the{" "}
-            <strong>
-              Federal Government of Nigeria–Islamic Development Bank Wakalah
-              Agreement
+          <p style={{ marginBottom: 6 }}>
+            <strong style={{ color: "#0891b2" }}>
+              Eligible startups may also access equity-based funding opportunities
             </strong>{" "}
-            and forms part of the broader iDICE financing framework.
+            to support business growth and scale.
           </p>
-          <p style={{ marginBottom: 12 }}>
-            The facility provides{" "}
-            <strong style={{ color: "#059669" }}>
-              ethical, Sharia-compliant financing
-            </strong>{" "}
-            to eligible digital and creative enterprises seeking business growth
-            and expansion capital.
-          </p>
-
-          <div style={{ marginBottom: 12 }}>
-            <strong
-              style={{ color: "#059669", display: "block", marginBottom: 6 }}
-            >
-              🏛️ Available Through:
-            </strong>
-            <ul style={{ margin: 0, paddingLeft: 20, color: "#334155" }}>
-              <li>SunTrust Bank</li>
-              <li>Lotus Bank</li>
-              <li>Summit Bank</li>
-            </ul>
-          </div>
-
           <p style={{ marginBottom: 0, fontStyle: "italic", color: "#64748b" }}>
-            Interested enterprises should contact participating financial
-            institutions directly for eligibility requirements, financing terms,
-            and application procedures.
+            Further information on eligibility criteria, funding opportunities, 
+            and application dates will be announced shortly.
           </p>
         </>
       ),
-      fundingTag: "Funding Type: Non-Interest Financing",
-      provides: [
-        "Sharia-compliant ethical financing",
-        "Available through SunTrust Bank, Lotus Bank, and Summit Bank",
-        "For digital and creative enterprises",
-        "Business growth and expansion capital",
-      ],
-      cta: "View Participating Banks",
-      ctaLink: "#",
-      external: false,
     },
-  ];
-
-  const upcomingInitiatives = [
     {
       icon: "ri-customer-service-2-line",
       iconColor: "#7c3aed",
@@ -247,49 +286,44 @@ const Opportunities = () => {
         "Business process outsourcing operations",
         "Global freelancing opportunities",
       ],
-      extra:
-        "The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
+      extra: "The programme aims to position Nigeria as a leading destination for global digital services and outsourcing talent.",
     },
     {
       icon: "ri-code-box-line",
       iconColor: "#6b21d6",
       iconBg: "#f0fdf4",
       title: "iDICE Hackathons",
-      desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology. Participants collaborate to develop innovative solutions.",
-      sectionHeader:
-        "Participants collaborate to develop innovative solutions in areas such as:",
+      desc: "Hackathons under the iDICE programme bring together developers, designers, entrepreneurs, and innovators to solve real-world problems using technology.",
+      sectionHeader: "Participants collaborate to develop innovative solutions in areas such as:",
       provides: [
         "Digital services",
         "Artificial intelligence",
         "Fintech",
         "Public sector innovation",
       ],
-      extra:
-        "Winning teams may receive mentorship, incubation support, and opportunities to scale their solutions.",
+      extra: "Winning teams may receive mentorship, incubation support, and opportunities to scale their solutions.",
     },
     {
       icon: "ri-palette-line",
       iconColor: "#6b21d6",
       iconBg: "#f0fdf4",
       title: "iDICE Creathons",
-      desc: "Creathons are innovation challenges designed specifically for the creative industry. These programmes bring together creatives and provide a platform for collaboration, innovation, and creative entrepreneurship.",
-      sectionHeader:
-        "These programmes bring together creatives across fields such as:",
+      desc: "Creathons are innovation challenges designed specifically for the creative industry.",
+      sectionHeader: "These programmes bring together creatives across fields such as:",
       provides: [
         "Film and storytelling",
         "Animation and gaming",
         "Music and digital media",
         "Design and visual arts",
       ],
-      extra:
-        "Creathons provide a platform for collaboration, innovation, and creative entrepreneurship.",
+      extra: "Creathons provide a platform for collaboration, innovation, and creative entrepreneurship.",
     },
     {
       icon: "ri-building-2-line",
       iconColor: "#0891b2",
       iconBg: "#f0f9ff",
       title: "Innovation and Creativity Centres (ICE Centres)",
-      desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria. These centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
+      desc: "iDICE is establishing Innovation and Creativity Enterprise (ICE) Centres across Nigeria.",
       sectionHeader: "These centres will be located in:",
       provides: ["33 Universities", "33 Polytechnics"],
       secondSectionHeader: "The centres will serve as hubs for:",
@@ -299,9 +333,105 @@ const Opportunities = () => {
         "Digital skills training",
         "Collaboration between academia and industry",
       ],
-      extra:
-        "ICE Centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
+      extra: "ICE Centres will play a critical role in strengthening Nigeria's innovation pipeline and supporting the next generation of entrepreneurs.",
     },
+  ];
+
+  // FAQs data
+  const faqs = [
+    {
+      category: "General",
+      questions: [
+        {
+          q: "What is the iDICE Debt Fund Programme?",
+          a: "The iDICE Debt Fund Programme provides affordable financing to eligible technology and creative startups through two financing windows: the BOI–iDICE Debt Fund and the IsDB–iDICE Debt Fund, helping businesses access the capital they need to grow and scale."
+        },
+        {
+          q: "What is the difference between the two funds?",
+          a: "The BOI–iDICE Debt Fund is a conventional debt financing facility provided by the Bank of Industry, while the IsDB–iDICE Debt Fund is a Sharia-compliant, non-interest financing facility structured using the Murabaha model."
+        },
+        {
+          q: "Who can apply?",
+          a: "Eligible technology and creative startups operating in Nigeria that satisfy the programme's eligibility requirements."
+        }
+      ]
+    },
+    {
+      category: "Eligibility",
+      questions: [
+        {
+          q: "Which sectors are eligible?",
+          a: "Eligible sectors include technology businesses such as FinTech, HealthTech, EdTech, AgriTech, ClimateTech, AI, Software, Cybersecurity, SaaS and Digital Services, as well as creative businesses including Film, Television, Music, Animation, Gaming, Fashion, Photography, Publishing, Performing Arts, Visual Arts, Digital Content and other qualifying enterprises."
+        },
+        {
+          q: "Do I need to be a registered business?",
+          a: "Yes. Applicants must be registered business entities operating in Nigeria and meet the applicable eligibility criteria."
+        },
+        {
+          q: "Can established businesses apply?",
+          a: "Yes. Depending on the financing window and eligibility requirements, both startups and qualifying established technology or creative enterprises may be eligible."
+        }
+      ]
+    },
+    {
+      category: "BOI–iDICE Debt Fund",
+      questions: [
+        {
+          q: "How much financing can I access?",
+          a: "Eligible businesses can access financing ranging from ₦10 million to ₦1 billion, subject to assessment and approval."
+        },
+        {
+          q: "What is the interest rate?",
+          a: "The facility carries a maximum interest rate of 10% per annum."
+        },
+        {
+          q: "Is there a moratorium?",
+          a: "Yes. Successful applicants may receive a moratorium of up to six months, subject to the approved facility terms."
+        },
+        {
+          q: "How long is the repayment period?",
+          a: "The repayment period is up to five years, depending on the approved facility."
+        }
+      ]
+    },
+    {
+      category: "IsDB–iDICE Debt Fund",
+      questions: [
+        {
+          q: "What is Murabaha financing?",
+          a: "Murabaha (cost-plus-markup) is a Sharia-compliant financing model where the financier purchases an asset on behalf of the customer and resells it at an agreed price with a disclosed profit margin."
+        },
+        {
+          q: "Is the IsDB–iDICE Debt Fund only for Muslims?",
+          a: "No. The facility is open to all eligible Nigerian technology and creative startups, regardless of religion or background."
+        },
+        {
+          q: "What can the financing be used for?",
+          a: "The facility is primarily intended to finance productive business assets such as equipment, technology, creative infrastructure, and other eligible business assets."
+        }
+      ]
+    },
+    {
+      category: "Applications",
+      questions: [
+        {
+          q: "How do I apply?",
+          a: "Applications for both funds can be submitted through the official application portal: idice.boi.ng"
+        },
+        {
+          q: "Can I apply for the IsDB–iDICE Debt Fund through a bank?",
+          a: "Yes. Applications may also be submitted through participating non-interest financial institutions, including Lotus Bank, SunTrust Bank, and Summit Bank. Additional partner institutions may be added over time."
+        },
+        {
+          q: "Can I apply for both funds?",
+          a: "Applicants should review the objectives and eligibility requirements of each financing window and apply for the fund that best suits their business needs."
+        },
+        {
+          q: "Who can I contact for enquiries?",
+          a: "For support, contact the Bank of Industry: Email: customercare@boi.ng | Telephone: 0700 225 5264"
+        }
+      ]
+    }
   ];
 
   const howToApply = [
@@ -455,24 +585,24 @@ const Opportunities = () => {
         </Container>
       </section>
 
-      {/* Current Opportunities */}
+      {/* Active Opportunities */}
       <section className="section" style={{ background: "#f8fafc" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
-              <h2 className="title">Current Opportunities</h2>
+              <h2 className="title">Active Opportunities</h2>
               <p
                 className="text-secondary"
                 style={{ color: "#475569 !important" }}
               >
-                Explore active programmes, funding facilities, and upcoming
-                application windows under the iDICE initiative.
+                Explore active programmes and funding facilities currently 
+                accepting applications under the iDICE initiative.
               </p>
             </Col>
           </Row>
 
           <div className="d-flex flex-column gap-4">
-            {opportunities.map((opp, i) => (
+            {activeOpportunities.map((opp, i) => (
               <div
                 key={i}
                 data-aos="fade-up"
@@ -542,6 +672,22 @@ const Opportunities = () => {
                         >
                           {opp.title}
                         </h3>
+                        {opp.fundSize && (
+                          <span
+                            style={{
+                              background: "#eef2ff",
+                              color: "#4f46e5",
+                              fontSize: 11,
+                              fontWeight: 600,
+                              padding: "3px 10px",
+                              borderRadius: 20,
+                              display: "inline-block",
+                              marginBottom: 12,
+                            }}
+                          >
+                            {opp.fundSize}
+                          </span>
+                        )}
                         {opp.fundingTag && (
                           <span
                             style={{
@@ -553,6 +699,7 @@ const Opportunities = () => {
                               borderRadius: 20,
                               display: "inline-block",
                               marginBottom: 12,
+                              marginLeft: 8,
                             }}
                           >
                             {opp.fundingTag}
@@ -647,8 +794,187 @@ const Opportunities = () => {
         </Container>
       </section>
 
+      {/* Closed Opportunities */}
+      {closedOpportunities.length > 0 && (
+        <section className="section" style={{ background: "#fff" }}>
+          <Container>
+            <Row className="justify-content-center mb-5">
+              <Col lg={8} className="text-center" data-aos="fade-up">
+                <h2 className="title">Closed Opportunities</h2>
+                <p
+                  className="text-secondary"
+                  style={{ color: "#475569 !important" }}
+                >
+                  These programmes have closed for applications. Stay tuned for 
+                  future application windows.
+                </p>
+              </Col>
+            </Row>
+
+            <div className="d-flex flex-column gap-4">
+              {closedOpportunities.map((opp, i) => (
+                <div
+                  key={i}
+                  data-aos="fade-up"
+                  data-aos-delay={i * 60}
+                  style={{
+                    background: "#fafafa",
+                    borderRadius: 20,
+                    border: "1px solid #e2e8f0",
+                    padding: "36px 40px",
+                    opacity: 0.85,
+                    transition: "all 0.3s",
+                  }}
+                >
+                  <Row className="align-items-start gy-4">
+                    <Col lg={8}>
+                      <div className="d-flex align-items-start gap-4">
+                        <div
+                          style={{
+                            width: 60,
+                            height: 60,
+                            borderRadius: 16,
+                            background: opp.iconBg,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}
+                        >
+                          <i
+                            className={opp.icon}
+                            style={{ fontSize: 28, color: opp.iconColor }}
+                          ></i>
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <div className="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                            <span
+                              style={{
+                                background: opp.tagBg,
+                                color: opp.tagColor,
+                                fontSize: 11,
+                                fontWeight: 700,
+                                padding: "4px 12px",
+                                borderRadius: 20,
+                                border: `1px solid ${opp.tagColor}30`,
+                              }}
+                            >
+                              {opp.tag}
+                            </span>
+                            <span style={{ color: "#64748b", fontSize: 13 }}>
+                              <i className="ri-calendar-line me-1"></i>
+                              {opp.date}
+                            </span>
+                          </div>
+                          <h3
+                            className="fw-bold mb-2"
+                            style={{ fontSize: 20, color: "#0f172a" }}
+                          >
+                            {opp.title}
+                          </h3>
+                          {opp.fundingTag && (
+                            <span
+                              style={{
+                                background: "#eef2ff",
+                                color: "#4f46e5",
+                                fontSize: 11,
+                                fontWeight: 600,
+                                padding: "3px 10px",
+                                borderRadius: 20,
+                                display: "inline-block",
+                                marginBottom: 12,
+                              }}
+                            >
+                              {opp.fundingTag}
+                            </span>
+                          )}
+                          <div
+                            style={{
+                              color: "#1e293b",
+                              fontSize: 15,
+                              lineHeight: 1.7,
+                            }}
+                          >
+                            {opp.desc}
+                          </div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col lg={4}>
+                      <div
+                        style={{
+                          background: "#f1f5f9",
+                          borderRadius: 12,
+                          padding: 20,
+                        }}
+                      >
+                        <p
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 700,
+                            textTransform: "uppercase",
+                            color: "#475569",
+                            letterSpacing: 0.5,
+                            marginBottom: 12,
+                          }}
+                        >
+                          Key highlights:
+                        </p>
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                          {opp.provides.map((p, j) => (
+                            <li
+                              key={j}
+                              className="d-flex align-items-center gap-2 mb-2"
+                            >
+                              <i
+                                className="ri-check-line"
+                                style={{
+                                  color: opp.iconColor,
+                                  fontSize: 14,
+                                  flexShrink: 0,
+                                }}
+                              ></i>
+                              <span style={{ fontSize: 13, color: "#334155" }}>
+                                {p}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-3">
+                          {opp.external ? (
+                            <a
+                              href={opp.ctaLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="btn btn-outline-secondary w-100 py-2 rounded-pill fw-semibold"
+                              style={{ fontSize: 14 }}
+                            >
+                              {opp.cta}{" "}
+                              <i className="ri-external-link-line ms-1"></i>
+                            </a>
+                          ) : (
+                            <Link
+                              to={opp.ctaLink}
+                              className="btn btn-outline-secondary w-100 py-2 rounded-pill fw-semibold"
+                              style={{ fontSize: 14 }}
+                            >
+                              {opp.cta}{" "}
+                              <i className="ri-arrow-right-line ms-1"></i>
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Upcoming and Ongoing Initiatives */}
-      <section className="section" style={{ background: "#fff" }}>
+      <section className="section" style={{ background: "#f8fafc" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
@@ -668,7 +994,7 @@ const Opportunities = () => {
               <Col lg={6} key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div
                   style={{
-                    background: "#f8fafc",
+                    background: "#fff",
                     borderRadius: 20,
                     padding: "32px",
                     height: "100%",
@@ -727,7 +1053,6 @@ const Opportunities = () => {
                     {initiative.desc}
                   </p>
 
-                  {/* First section header and items */}
                   {initiative.sectionHeader && (
                     <p
                       style={{
@@ -760,7 +1085,6 @@ const Opportunities = () => {
                     </div>
                   )}
 
-                  {/* Second section header and items (for ICE Centres) */}
                   {initiative.secondSectionHeader && (
                     <p
                       style={{
@@ -795,7 +1119,7 @@ const Opportunities = () => {
                   )}
 
                   {initiative.extra && (
-                    <p
+                    <div
                       className="mt-2"
                       style={{
                         fontSize: 13,
@@ -805,7 +1129,7 @@ const Opportunities = () => {
                       }}
                     >
                       {initiative.extra}
-                    </p>
+                    </div>
                   )}
                 </div>
               </Col>
@@ -815,7 +1139,7 @@ const Opportunities = () => {
       </section>
 
       {/* How to Apply */}
-      <section className="section" style={{ background: "#f8fafc" }}>
+      <section className="section" style={{ background: "#fff" }}>
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center" data-aos="fade-up">
@@ -848,7 +1172,7 @@ const Opportunities = () => {
               >
                 <div
                   style={{
-                    background: "#fff",
+                    background: "#f8fafc",
                     borderRadius: 20,
                     padding: 32,
                     textAlign: "center",
@@ -864,7 +1188,8 @@ const Opportunities = () => {
                       "#f97316";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "#fff";
+                    (e.currentTarget as HTMLElement).style.background =
+                      "#f8fafc";
                     (e.currentTarget as HTMLElement).style.borderColor =
                       "#e2e8f0";
                   }}
@@ -908,6 +1233,90 @@ const Opportunities = () => {
                   >
                     {step.desc}
                   </p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section" style={{ background: "#f8fafc" }}>
+        <Container>
+          <Row className="justify-content-center mb-5">
+            <Col lg={8} className="text-center" data-aos="fade-up">
+              <h6
+                className="subtitle text-primary fw-bold text-uppercase mb-2"
+                style={{ color: "#f97316" }}
+              >
+                Frequently Asked Questions
+              </h6>
+              <h2 className="title">FAQs</h2>
+              <p
+                className="text-secondary"
+                style={{ color: "#475569 !important" }}
+              >
+                Find answers to common questions about the iDICE Debt Fund 
+                Programme.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="g-4">
+            {faqs.map((category, idx) => (
+              <Col lg={6} key={idx} data-aos="fade-up" data-aos-delay={idx * 80}>
+                <div
+                  style={{
+                    background: "#fff",
+                    borderRadius: 20,
+                    padding: "28px 30px",
+                    border: "1px solid #e2e8f0",
+                    height: "100%",
+                    transition: "all 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "0 8px 24px rgba(0,0,0,0.06)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                  }}
+                >
+                  <h4
+                    className="fw-bold mb-3"
+                    style={{
+                      fontSize: 18,
+                      color: "#0f172a",
+                      borderBottom: "2px solid #f97316",
+                      paddingBottom: 12,
+                    }}
+                  >
+                    {category.category}
+                  </h4>
+                  {category.questions.map((faq, i) => (
+                    <div key={i} style={{ marginBottom: i < category.questions.length - 1 ? 16 : 0 }}>
+                      <p
+                        style={{
+                          fontWeight: 700,
+                          fontSize: 14,
+                          color: "#1e293b",
+                          marginBottom: 4,
+                        }}
+                      >
+                        {faq.q}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: "#475569",
+                          marginBottom: 0,
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {faq.a}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </Col>
             ))}
