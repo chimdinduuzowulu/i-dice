@@ -36,8 +36,7 @@ const BPOTrainingProgramme = () => {
     { icon: "ri-global-line", text: "Access pathways to employment opportunities within Nigeria's growing BPO ecosystem and the global outsourcing industry" },
   ];
 
-  // Apply by Geopolitical Zone — clickable cards (per reviewer's UX recommendation, in place of a table)
-  // Each zone has its own unique application link (iDICE Programme Business Outsourcing - Skills to Employability).
+
   const zones = [
     {
       name: "North Central",
