@@ -37,7 +37,7 @@ const BPOTrainingProgramme = () => {
   ];
 
   // Apply by Geopolitical Zone — clickable cards (per reviewer's UX recommendation, in place of a table)
-  // NOTE: ctaLink values are placeholders ("#") — replace with each zone's live application URL.
+  // Each zone has its own unique application link (iDICE Programme Business Outsourcing - Skills to Employability).
   const zones = [
     {
       name: "North Central",
@@ -45,7 +45,7 @@ const BPOTrainingProgramme = () => {
       color: "#0891b2",
       bg: "#f0f9ff",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/chlhps4mseisp7suc/3303a3",
     },
     {
       name: "North East",
@@ -53,7 +53,7 @@ const BPOTrainingProgramme = () => {
       color: "#16a34a",
       bg: "#f0fdf4",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/c44do6imseisnpuub/9c6d1f",
     },
     {
       name: "North West",
@@ -61,7 +61,7 @@ const BPOTrainingProgramme = () => {
       color: "#d97706",
       bg: "#fffbeb",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/ci0vzd6mseisjr9fo/e026f9",
     },
     {
       name: "South East",
@@ -69,7 +69,7 @@ const BPOTrainingProgramme = () => {
       color: "#f97316",
       bg: "#fef3e2",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/cif8rkemseissxrud/946930",
     },
     {
       name: "South South",
@@ -77,7 +77,7 @@ const BPOTrainingProgramme = () => {
       color: "#dc2626",
       bg: "#fef2f2",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/c8gxwt6mseisu57ue/4cda0f",
     },
     {
       name: "South West",
@@ -85,7 +85,7 @@ const BPOTrainingProgramme = () => {
       color: "#7c3aed",
       bg: "#f5f3ff",
       icon: "ri-map-pin-line",
-      ctaLink: "#",
+      ctaLink: "https://www.activityinfo.org/c/czdef32mquxqezemvd/2767a3",
     },
   ];
 
@@ -449,6 +449,8 @@ const BPOTrainingProgramme = () => {
 
                   <a
                     href={zone.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="fw-semibold"
                     style={{
                       marginTop: "auto",
