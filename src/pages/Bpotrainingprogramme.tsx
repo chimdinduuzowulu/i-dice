@@ -131,7 +131,7 @@ const BPOTrainingProgramme = () => {
                   marginBottom: 20,
                 }}
               >
-                iDICE BPO Training-to-Jobs Programme
+                iDICE Skills to job Programme
               </span>
               <h1
                 style={{
@@ -167,7 +167,7 @@ const BPOTrainingProgramme = () => {
           <Row className="justify-content-center mb-5">
             <Col lg={9} data-aos="fade-up">
               <p className="text-muted mb-4" style={{ lineHeight: 1.9, fontSize: 16 }}>
-                The <strong>iDICE BPO Training-to-Jobs Programme</strong> is a flagship initiative under the{" "}
+                The <strong>iDICE Skills to job Programme</strong> is a flagship initiative under the{" "}
                 <strong>Investment in Digital and Creative Enterprises (iDICE)</strong> Programme, designed to
                 equip <strong>300,000 young Nigerians</strong> with industry-relevant digital and creative skills
                 that lead to employment opportunities in Nigeria's growing Business Process Outsourcing (BPO)

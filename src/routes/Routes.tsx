@@ -26,7 +26,7 @@ const AppRoutes = () => {
         {/* <Route path="/blog" element={<BlogPage />} /> */}
         {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/bpo-training-to-jobs" element={<BPOTrainingProgramme />} />
+        <Route path="/skills-training-to-jobs" element={<BPOTrainingProgramme />} />
       </Routes>
     </BrowserRouter>
   );

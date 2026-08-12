@@ -65,7 +65,7 @@ const NavBar = () => {
               { path: "/about", label: "About iDICE" },
               { path: "/opportunities", label: "Opportunities / Apply" },
               { path: "/news", label: "News / Updates" },
-              { path: "/bpo-training-to-jobs", label: "BPO Training Programme" },
+              { path: "/skills-training-to-jobs", label: "Skills to job Programme" },
               // { path: "/gallery", label: "Gallery" },
               // { path: "/blog", label: "Blog" },
               { path: "/faqs", label: "FAQs" },
