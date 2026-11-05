@@ -42,8 +42,8 @@ const Counter = () => {
     {
       icon: "mdi-account-group-outline",
       color: "#f97316",
-      target: 175000,
-      suffix: "+",
+      target: 1.2,
+      suffix: "M+",
       label: "Young Nigerians trained in digital and creative skills",
     },
     {

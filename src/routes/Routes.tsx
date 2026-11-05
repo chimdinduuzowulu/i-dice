@@ -9,6 +9,8 @@ import FAQsPage from "../pages/FAQsPage";
 // import BlogPage from "../pages/BlogPage";
 // import BlogDetail from "../pages/BlogDetail";
 import ContactPage from "../pages/ContactPage";
+import BPOTrainingProgramme from "../pages/Bpotrainingprogramme";
+
 
 const AppRoutes = () => {
   return (
@@ -24,9 +26,10 @@ const AppRoutes = () => {
         {/* <Route path="/blog" element={<BlogPage />} /> */}
         {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/skills-training-to-jobs" element={<BPOTrainingProgramme />} />
       </Routes>
     </BrowserRouter>
   );
 };
-
+       
 export default AppRoutes;

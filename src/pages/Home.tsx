@@ -4,8 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import Footer from "../components/Footer";
 import Counter from "../components/Counter";
-import Partnership from "../components/Partnership";
 import News from "../components/News";
+import PressCoverage from "../components/PressCoverage";
 import Faqs from "../components/Faqs";
 import BackToTop from "../components/BackToTop";
 import NavBar from "../components/navbar/Navbar";
@@ -961,8 +961,11 @@ const Home = () => {
       {/* ── NEWS ── */}
       <News />
 
+      {/* ── PRESS COVERAGE (under News and Updates) ── */}
+      <PressCoverage />
+
       {/* ── PARTNERSHIP ── */}
-      <Partnership />
+      {/* <Partnership /> */}
 
       {/* ── FAQS PREVIEW ── */}
       <Faqs />
