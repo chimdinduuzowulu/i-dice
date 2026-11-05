@@ -613,7 +613,7 @@ const FAQsPage = () => {
                 </div>
                 <div className="d-flex gap-3 flex-wrap">
                   <a
-                    href="mailto:info@idice.ng"
+                    href="mailto:idiceprogramme@boi.ng"
                     className="btn"
                     style={{
                       background: "rgba(255,255,255,0.1)",
@@ -625,7 +625,7 @@ const FAQsPage = () => {
                       fontSize: 14,
                     }}
                   >
-                    <i className="ri-mail-line me-2"></i>info@idice.ng
+                    <i className="ri-mail-line me-2"></i>idiceprogramme@boi.ng
                   </a>
                   <Link
                     to="/contact"
